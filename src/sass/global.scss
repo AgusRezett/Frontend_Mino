@@ -1,0 +1,32 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	//font-family: 'Nunito', sans-serif;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+	background-color: $primary-color;
+	/* overflow: hidden;
+	Si se descomenta se imposibilita el scroll para recargar el navegador */
+}
+
+p {
+	margin-bottom: 0 !important;
+}
+
+.father-container-view {
+	width: 100%;
+	height: calc(100% - 45px);
+	background-color: $white-background;
+	overflow-y: scroll;
+	transition: all 170ms ease-in-out;
+}
