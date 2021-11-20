@@ -11121,6 +11121,12 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: "RooneySans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("RooneySans Bold"), url("../assets/fonts/rooneysans/RooneySansBold.woff") format("woff");
+}
 * {
   padding: 0;
   margin: 0;
@@ -11131,7 +11137,7 @@ html,
 body,
 #root {
   height: 100%;
-  background-color: #ffc000;
+  background-color: #fffffd;
   /* overflow: hidden;
   Si se descomenta se imposibilita el scroll para recargar el navegador */
 }
@@ -11143,7 +11149,7 @@ p {
 .father-container-view {
   width: 100%;
   height: calc(100% - 45px);
-  background-color: #f5f9fc;
+  background-color: #fffffd;
   overflow-y: scroll;
   transition: all 170ms ease-in-out;
 }

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+@font-face {
+  font-family: "RooneySans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("RooneySans Bold"), url("../assets/fonts/rooneysans/RooneySansBold.woff") format("woff");
+}
+.welcome-default-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fefcff;
+}
+.welcome-default-container .circle-open-key {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc000;
+  -webkit-animation: growUp 1s;
+  -moz-animation: growUp 1s;
+  -ms-animation: growUp 1s;
+  -o-animation: growUp 1s;
+  animation: growUp 500ms ease-in-out;
+}
+.welcome-default-container .circle-open-key .welcome-logo {
+  width: 300px;
+  height: auto;
+  padding: 30px 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  visibility: visible;
+  opacity: 1;
+  animation: fadeInFromLeft 1000ms;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.063));
+  transition: all 250ms ease-in-out;
+}
+.welcome-default-container .circle-open-key .welcome-logo-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.welcome-default-container .circle-open-key .welcome-brand {
+  width: 200px;
+  height: auto;
+  text-align: center;
+  visibility: visible;
+  opacity: 1;
+  font-family: "RooneySans Bold";
+  font-weight: normal;
+  font-size: 64px;
+  color: #fff;
+  animation: fadeInFromRight 1000ms;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.063);
+  transition: all 250ms ease-in-out;
+}
+.welcome-default-container .circle-open-key .welcome-brand-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@-webkit-keyframes growUp {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes growUp {
+  0% {
+    /* transform: scale(0);
+    border-radius: 50%; */
+    clip-path: circle(0% at calc(100% - 0px - var(--page-component-margin, 10px)) calc(0px + var(--page-component-margin, 10px)));
+  }
+  100% {
+    /* transform: scale(1);
+    border-radius: 0%; */
+    clip-path: circle(150% at calc(100% - 0px - var(--page-component-margin, 10px)) calc(0px + var(--page-component-margin, 10px)));
+  }
+}
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

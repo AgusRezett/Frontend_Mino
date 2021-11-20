@@ -1,8 +1,8 @@
-/* eslint-disable no-sequences */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 // Components
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 // Hooks
 import { NavbarContext } from './hooks/useContext/NavbarContext';
@@ -23,24 +23,22 @@ export default function App() {
 	return (
 		<Router basename="/">
 			<NavbarContext.Provider
-				value={{
-					activeSidebar,
+				value={
+					{
+						/* activeSidebar,
 					setActiveSidebar,
 					searchValue,
 					setSearchValue,
-					homePageLocation,
-				}}
+					homePageLocation, */
+					}
+				}
 			>
 				{/* {showNavbar && <TopNavbar />}
 				{showNavbar && <SideNavbar />} */}
-				<NavLink to="/home">Home</NavLink>
-				<NavLink to="/login">Login</NavLink>
+				{/* <NavLink to="/login">Login</NavLink> */}
 			</NavbarContext.Provider>
 			<Routes>
-				<Route path="/home" element={<Home />} />
-				{/* <Route path="/" exact>
-					<Login hideNavbar={() => setShowNavbar(false)} />
-				</Route> */}
+				<Route path="/login" element={<Login />} />
 			</Routes>
 		</Router>
 	);
