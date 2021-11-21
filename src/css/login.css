@@ -9,8 +9,8 @@
 }
 .welcome-default-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -24,7 +24,9 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #ffc000;
+  background: #ffec30;
+  background: linear-gradient(129deg, #ffec30 0%, #ffc000 100%);
+  transition: all 0.7s ease;
   -webkit-animation: growUp 1s;
   -moz-animation: growUp 1s;
   -ms-animation: growUp 1s;
@@ -64,6 +66,20 @@
 .welcome-default-container .circle-open-key .welcome-brand-hide {
   visibility: hidden;
   opacity: 0;
+}
+.welcome-default-container .first-screen-transform {
+  width: 60%;
+}
+.welcome-default-container .form-container {
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.7s ease;
+}
+.welcome-default-container .open-form-container {
+  width: 40%;
+  height: 100%;
+  overflow: auto;
+  box-shadow: -5px 0px 20px 0px #0000000a;
 }
 
 @-webkit-keyframes growUp {

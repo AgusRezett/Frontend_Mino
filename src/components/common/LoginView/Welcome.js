@@ -7,30 +7,25 @@ import Logo from '../../../assets/svgs/MinoLogo.svg';
 //import { NavbarContext } from './hooks/useContext/NavbarContext';
 
 // Functions
+import { welcomeTransition } from '../../../functions/WelcomeFunctions';
 
 // Styles
 
 export default function Welcome() {
 	useEffect(() => {
-		// wait 1.5s to add a class to welcome-logo id
-		setTimeout(() => {
-			document.getElementById('welcome-logo').classList.add('welcome-logo-hide');
-			document.getElementById('welcome-brand').classList.add('welcome-brand-hide');
-			//sleep for 1.5s
-			setTimeout(() => {
-				document.getElementById('welcome-logo').classList.add('welcome-logo-show');
-				document.getElementById('welcome-brand').classList.add('welcome-brand-show');
-			}, 1500);
-		}, 1750);
+		welcomeTransition();
 	}, []);
 
 	return (
 		<div className="welcome-default-container">
-			<div className="circle-open-key">
+			<div className="circle-open-key" id="first-screen">
 				<img className="welcome-logo" id="welcome-logo" src={Logo} alt="mino-logo" />
 				<p className="welcome-brand" id="welcome-brand">
 					Mino
 				</p>
+			</div>
+			<div id="form-container" className="form-container">
+				Formulario
 			</div>
 		</div>
 	);

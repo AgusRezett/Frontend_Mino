@@ -3,7 +3,7 @@
 @import '../../mixins';
 
 .welcome-default-container {
-	@include displayFlex(column, center, center);
+	@include displayFlex(row, flex-start, center);
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -13,7 +13,10 @@
 		@include displayFlex(column, center, center);
 		width: 100%;
 		height: 100%;
-		background-color: $primary-color;
+		//background-color: $primary-color;
+		background: rgb(255, 236, 48);
+		background: linear-gradient(129deg, rgba(255, 236, 48, 1) 0%, rgba(255, 192, 0, 1) 100%);
+		transition: all 0.7s ease;
 
 		-webkit-animation: growUp 1s;
 		-moz-animation: growUp 1s;
@@ -65,6 +68,23 @@
 			opacity: 0;
 		}
 	}
+
+	.first-screen-transform {
+		width: 60%;
+	}
+
+	.form-container {
+		width: 0%;
+		overflow: hidden;
+		transition: all 0.7s ease;
+	}
+
+	.open-form-container {
+		width: 40%;
+		height: 100%;
+		overflow: auto;
+		box-shadow: -5px 0px 20px 0px #0000000a;
+	}
 }
 
 @-webkit-keyframes growUp {
@@ -75,6 +95,7 @@
 		-webkit-transform: scale(1);
 	}
 }
+
 @keyframes growUp {
 	0% {
 		/* transform: scale(0);
