@@ -1,11 +1,21 @@
 import React from 'react';
 
+// Components
+//import Logo from '../../../assets/svgs/MinoLogo.svg';
+// Hooks
+//import { NavbarContext } from './hooks/useContext/NavbarContext';
+
+// Functions
+import LoginForm from './LoginForm';
+
+// Styles
+
 export default function LoginView() {
 	return (
 		<div className="welcome-default-container">
 			<div className="circle-open-key first-screen-transform" style={{ animation: 0 }} id="first-screen"></div>
 			<div id="form-container" className="form-container open-form-container">
-				Formulario
+				<LoginForm />
 			</div>
 		</div>
 	);

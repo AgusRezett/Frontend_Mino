@@ -1,11 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 @font-face {
   font-family: "RooneySans Bold";
   font-style: normal;
   font-weight: normal;
   src: local("RooneySans Bold"), url("../assets/fonts/rooneysans/RooneySansBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Scorno Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno Bold"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo heavy.otf") format("woff");
+}
+@font-face {
+  font-family: "Scorno";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo Medium.otf") format("woff");
 }
 .welcome-default-container {
   display: flex;
@@ -25,7 +42,7 @@
   width: 100%;
   height: 100%;
   background: #ffec30;
-  background: linear-gradient(129deg, #ffec30 0%, #ffc000 100%);
+  background: linear-gradient(180deg, #ffec30 0%, #ffa500 100%);
   transition: all 0.7s ease;
   -webkit-animation: growUp 1s;
   -moz-animation: growUp 1s;
@@ -68,18 +85,29 @@
   opacity: 0;
 }
 .welcome-default-container .first-screen-transform {
-  width: 60%;
+  width: 40%;
 }
 .welcome-default-container .form-container {
   width: 0%;
   overflow: hidden;
   transition: all 0.7s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .welcome-default-container .open-form-container {
-  width: 40%;
+  width: 60%;
   height: 100%;
   overflow: auto;
   box-shadow: -5px 0px 20px 0px #0000000a;
+}
+@media screen and (max-width: 960px) {
+  .welcome-default-container .first-screen-transform {
+    width: 0%;
+  }
+  .welcome-default-container .open-form-container {
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes growUp {
@@ -125,6 +153,178 @@
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+}
+@font-face {
+  font-family: "RooneySans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("RooneySans Bold"), url("../assets/fonts/rooneysans/RooneySansBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Scorno Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno Bold"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo heavy.otf") format("woff");
+}
+@font-face {
+  font-family: "Scorno";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo Medium.otf") format("woff");
+}
+.login-form-brand-text {
+  font-family: "RooneySans Bold";
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffc000;
+}
+
+.login-form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 400px;
+  height: 500px;
+  font-size: 46px;
+  transition: all 150ms ease-in-out;
+}
+@media screen and (max-width: 490px) {
+  .login-form-content {
+    width: 75%;
+  }
+}
+.login-form-content .login-form-title {
+  margin-top: 10px;
+  height: auto;
+}
+.login-form-content .login-form-title h1 {
+  white-space: nowrap;
+  font-weight: 800;
+}
+.login-form-content .login-form-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+}
+.login-form-content .login-form-fields .login-form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.login-form-content .login-form-fields .login-form-field .eye-icon {
+  width: 24px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+  stroke: #888a91;
+}
+.login-form-content .login-form-fields .login-form-field label {
+  position: absolute;
+  font-weight: 600;
+  font-size: 16px;
+  color: #a5a7af;
+  top: 10px;
+  transition: all 100ms ease-in-out;
+  z-index: 0;
+}
+.login-form-content .login-form-fields .login-form-field .login-form-input-active {
+  top: -18px;
+}
+.login-form-content .login-form-fields .login-form-field .login-form-input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid #a5a7af;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  transition: all 150ms ease-in-out;
+  z-index: 1;
+}
+.login-form-content .login-form-fields .login-form-field .login-form-input:focus {
+  outline: none;
+  border-color: #ffc000;
+}
+.login-form-content .login-form-fields .login-form-field .login-form-input:focus + label {
+  top: -18px;
+  color: #ffc000;
+}
+.login-form-content .login-form-fields .login-form-field .login-form-input:-webkit-autofill {
+  transition: background-color 50000s ease-in-out 0s !important;
+}
+.login-form-content .login-form-fields .input-error {
+  color: #e81f37;
+  margin-top: 6px;
+  font-size: 12px;
+  top: 45px;
+  position: absolute;
+}
+.login-form-content .login-form-fields .login-forgot-password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ffc000;
+  font-weight: 600;
+  text-shadow: 0px 0px 1px #55370012;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+.login-form-content .login-form-fields .login-forgot-password:hover {
+  color: #ffae00;
+}
+.login-form-content div {
+  width: 100%;
+}
+.login-form-content div .login-submit-btn {
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #ffd34d;
+  transition: all 150ms ease-in-out;
+}
+.login-form-content div .login-submit-btn:hover {
+  background-color: #ffc000;
+}
+.login-form-content div .login-submit-btn--disabled {
+  background-color: #dddddd;
+}
+.login-form-content div .login-submit-btn--disabled:hover {
+  background-color: #ccc;
+}
+.login-form-content div .login-register-btn {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #a3a3a3;
+  font-weight: 600;
+}
+.login-form-content div .login-register-btn span {
+  color: #ffc000;
+  text-shadow: 0px 0px 1px #55370012;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+.login-form-content div .login-register-btn span:hover {
+  color: #ffae00;
 }
 
 /*# sourceMappingURL=login.css.map */

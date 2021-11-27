@@ -1,0 +1,171 @@
+@import '../../colors';
+@import '../../fonts';
+@import '../../mixins';
+
+.login-form-brand-text {
+	font-family: 'RooneySans Bold';
+	font-weight: normal;
+	font-size: 20px;
+	color: $logo-color-orange;
+}
+
+.login-form-content {
+	@include displayFlex(column, space-between, flex-start);
+	width: 400px;
+	height: 500px;
+	//border: 1px solid rgb(19, 18, 79);
+	font-size: 46px;
+	transition: all 150ms ease-in-out;
+
+	@media screen and (max-width: 490px) {
+		width: 75%;
+	}
+
+	.login-form-title {
+		margin-top: 10px;
+		height: auto;
+
+		h1 {
+			white-space: nowrap;
+			//font-family: 'Scorno', sans-serif;
+			font-weight: 800;
+		}
+	}
+
+	.login-form-fields {
+		@include displayFlex(column, space-between, flex-start);
+		width: 100%;
+		height: auto;
+
+		.login-form-field {
+			@include displayFlex(column, center, flex-start);
+			position: relative;
+			width: 100%;
+			height: auto;
+
+			.eye-icon {
+				width: 24px;
+				height: 20px;
+				position: absolute;
+				right: 0;
+				z-index: 1;
+				cursor: pointer;
+				stroke: #888a91;
+			}
+
+			label {
+				position: absolute;
+				font-weight: 600;
+				font-size: 16px;
+				//padding: 10px 20px;
+				color: #a5a7af;
+				top: 10px;
+
+				transition: all 100ms ease-in-out;
+				z-index: 0;
+			}
+
+			.login-form-input-active {
+				top: -18px;
+			}
+
+			.login-form-input {
+				width: 100%;
+				height: 40px;
+				border: 0;
+				border-bottom: 1px solid #a5a7af;
+				font-size: 16px;
+				font-weight: 600;
+				background-color: transparent;
+
+				transition: all 150ms ease-in-out;
+				z-index: 1;
+
+				&:focus {
+					outline: none;
+					border-color: $logo-color-orange;
+				}
+
+				&:focus + label {
+					top: -18px;
+					color: $logo-color-orange;
+				}
+
+				&:-webkit-autofill {
+					transition: background-color 50000s ease-in-out 0s !important;
+				}
+			}
+		}
+
+		.input-error {
+			color: #e81f37;
+			margin-top: 6px;
+			font-size: 12px;
+			top: 45px;
+			position: absolute;
+		}
+
+		.login-forgot-password {
+			@include displayFlex(column, center, flex-start);
+			width: 100%;
+			height: auto;
+			margin-top: 15px;
+			font-size: 14px;
+			color: $logo-color-orange;
+			font-weight: 600;
+			text-shadow: 0px 0px 1px #55370012;
+			cursor: pointer;
+			transition: all 150ms ease-in-out;
+
+			&:hover {
+				color: $logo-color-orange--hover;
+			}
+		}
+	}
+
+	div {
+		width: 100%;
+		.login-submit-btn {
+			width: 100%;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 700;
+			padding: 10px;
+			border: 0;
+			border-radius: 5px;
+			background-color: $logo-color-orange--15;
+			transition: all 150ms ease-in-out;
+
+			&:hover {
+				background-color: $logo-color-orange;
+			}
+		}
+
+		.login-submit-btn--disabled {
+			background-color: rgb(221, 221, 221);
+
+			&:hover {
+				background-color: #ccc;
+			}
+		}
+
+		.login-register-btn {
+			width: 100%;
+			margin-top: 15px;
+			font-size: 15px;
+			color: #a3a3a3;
+			font-weight: 600;
+
+			span {
+				color: $logo-color-orange;
+				text-shadow: 0px 0px 1px #55370012;
+				cursor: pointer;
+				transition: all 150ms ease-in-out;
+
+				&:hover {
+					color: $logo-color-orange--hover;
+				}
+			}
+		}
+	}
+}

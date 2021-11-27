@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router';
 
 // Components
 import Logo from '../../../assets/svgs/MinoLogo.svg';
@@ -8,6 +7,7 @@ import Logo from '../../../assets/svgs/MinoLogo.svg';
 
 // Functions
 import { welcomeTransition } from '../../../functions/WelcomeFunctions';
+import LoginForm from './LoginForm';
 
 // Styles
 
@@ -25,7 +25,7 @@ export default function Welcome() {
 				</p>
 			</div>
 			<div id="form-container" className="form-container">
-				Formulario
+				<LoginForm />
 			</div>
 		</div>
 	);
