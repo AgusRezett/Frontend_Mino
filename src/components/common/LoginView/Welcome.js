@@ -7,7 +7,7 @@ import Logo from '../../../assets/svgs/MinoLogo.svg';
 
 // Functions
 import { welcomeTransition } from '../../../functions/WelcomeFunctions';
-import LoginForm from './LoginForm';
+import FormContainer from './Form';
 
 // Styles
 
@@ -25,7 +25,7 @@ export default function Welcome() {
 				</p>
 			</div>
 			<div id="form-container" className="form-container">
-				<LoginForm />
+				<FormContainer />
 			</div>
 		</div>
 	);
