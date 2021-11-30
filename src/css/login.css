@@ -373,10 +373,10 @@
 }
 .login-form-content div .login-submit-btn--disabled {
   cursor: default;
-  background-color: #dddddd;
+  background-color: #e2e2e2;
 }
 .login-form-content div .login-submit-btn--disabled:hover {
-  background-color: #dddddd;
+  background-color: #e2e2e2;
 }
 .login-form-content div .login-register-btn {
   width: 100%;

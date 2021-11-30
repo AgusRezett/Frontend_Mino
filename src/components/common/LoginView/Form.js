@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 // Components
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { useLocation } from 'react-router';
 
 // Config
 //import config from '../../../appconfig.json';
@@ -438,7 +439,7 @@ function RecoverPassword({ changeForm }) {
 				<div>
 					<h4 className="login-form-brand-text">Mino</h4>
 					<div className="login-form-title">
-						<h1>Cambiar contraseña</h1>
+						<h1>Recuperar contraseña</h1>
 					</div>
 					<div className="login-form-fields">
 						<p className="recoverpassword-form-instructions">
@@ -479,8 +480,170 @@ function RecoverPassword({ changeForm }) {
 	);
 }
 
+function ChangePassword({ searchVars }) {
+	const [registerPasswordLabel, setRegisterPasswordLabel] = useState(null);
+	const [registerConfirmPasswordLabel, setRegisterConfirmPasswordLabel] = useState(null);
+
+	const pswValMayusc = document.getElementById("password-validation-mayusc-bubble");
+	const pswValNumber = document.getElementById("password-validation-number-bubble");
+	const pswValSymbol = document.getElementById("password-validation-symbol-bubble");
+	const pswValLength = document.getElementById("password-validation-length-bubble");
+	const pswValMatch = document.getElementsByName('confirmPassword')[0];
+
+	useEffect(() => {
+		setRegisterPasswordLabel(document.getElementById('register-password-label'));
+		setRegisterConfirmPasswordLabel(document.getElementById('register-confirm-password-label'));
+	}, [])
+
+	const [visiblePassword, setVisiblePassword] = useState(false);
+
+	const marginTopField = { marginTop: "30px" };
+	const heightForm = { height: "500px" };
+
+	return (
+		<Formik
+			initialValues={{ email: '' }}
+			validate={(values) => {
+				const errors = {};
+
+				if (values.password) {
+					//? Longitud mínima de 8 caracteres
+					if (values.password.length >= 8) {
+						pswValLength.classList.add('password-validation-bubble--active');
+					} else {
+						errors.password = 'La contraseña debe tener al menos 8 caracteres';
+						pswValLength.classList.remove('password-validation-bubble--active');
+					}
+					//? Incluye al menos una mayúscula
+					if (values.password.match(/[A-Z]/)) {
+						pswValMayusc.classList.add('password-validation-bubble--active');
+					} else {
+						errors.password = 'La contraseña debe tener al menos una mayúscula';
+						pswValMayusc.classList.remove('password-validation-bubble--active');
+					}
+					//? Incluye al menos un número
+					if (values.password.match(/[0-9]/)) {
+						pswValNumber.classList.add('password-validation-bubble--active');
+					} else {
+						errors.password = 'La contraseña debe tener al menos un número';
+						pswValNumber.classList.remove('password-validation-bubble--active');
+					}
+					//? Incluye al menos un símbolo
+					if (values.password.match(/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/)) {
+						pswValSymbol.classList.add('password-validation-bubble--active');
+					} else {
+						errors.password = 'La contraseña debe tener al menos un símbolo';
+						pswValSymbol.classList.remove('password-validation-bubble--active');
+					}
+				} else {
+					pswValLength.classList.remove('password-validation-bubble--active');
+					pswValMayusc.classList.remove('password-validation-bubble--active');
+					pswValNumber.classList.remove('password-validation-bubble--active');
+					pswValSymbol.classList.remove('password-validation-bubble--active');
+					errors.password = 'Requerido';
+				}
+
+				if (values.confirmPassword) {
+					if (values.confirmPassword !== values.password) {
+						pswValMatch.classList.add('login-form-field--error');
+						errors.confirmPassword = 'Las contraseñas no coinciden';
+					} else {
+						pswValMatch.classList.remove('login-form-field--error');
+					}
+				} else {
+					errors.confirmPassword = 'Requerido';
+				}
+
+				//? if errors is empty, the form is fine to submit
+				const loginButton = document.getElementsByClassName('login-submit-btn')[0];
+				if (Object.keys(errors).length === 0) {
+					loginButton.classList.remove('login-submit-btn--disabled');
+				} else {
+					loginButton.classList.add('login-submit-btn--disabled');
+				}
+
+				return errors;
+			}}
+			onSubmit={(values, { setSubmitting }) => {
+				setSubmitting(false);
+				alert(JSON.stringify(values, null, 2));
+				/* Axios.post(`http://${config.host}:${config.port}/login`, values).then((res) => {
+					console.log();
+				}); */
+			}}
+		>
+			<Form className="login-form-content" style={heightForm}>
+				<div>
+					<h4 className="login-form-brand-text">Mino</h4>
+					<div className="login-form-title">
+						<h1>Cambiar contraseña</h1>
+					</div>
+					<div className="login-form-fields">
+						<p className="recoverpassword-form-instructions">
+							Último paso! Ingresa la nueva contraseña con la que iniciarás sesión. Recordá que debe cumplir con los cuatro requisitos para tu cuenta sea lo mas segura posible. <span role="img" aria-label="emoji">🔑</span>
+						</p>
+						<div className="login-form-field" style={marginTopField}>
+							<Field
+								className="login-form-input"
+								type={visiblePassword ? "text" : "password"}
+								name="password"
+								onInput={(e) => {
+									e.target.value && registerPasswordLabel.classList.add('login-form-input-active')
+								}}
+								onFocus={() => {
+									registerPasswordLabel.classList.add('login-form-input-active')
+								}}
+								onBlur={(e) => {
+									!e.target.value && registerPasswordLabel.classList.remove('login-form-input-active')
+								}}
+							/>
+							{visiblePassword ? (
+								<svg onClick={() => setVisiblePassword(false)} className="eye-icon" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" color="#000"><title id="eyeIconTitle">Visible</title><path d="M22 12C22 12 19 18 12 18C5 18 2 12 2 12C2 12 5 6 12 6C19 6 22 12 22 12Z" /><circle cx="12" cy="12" r="3" /></svg>
+							) : (
+								<svg onClick={() => setVisiblePassword(true)} className="eye-icon" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" color="#000"> <title id="eyeClosedIconTitle">Oculto</title> <path d="M20 9C20 9 19.6797 9.66735 19 10.5144M12 14C10.392 14 9.04786 13.5878 7.94861 13M12 14C13.608 14 14.9521 13.5878 16.0514 13M12 14V17.5M4 9C4 9 4.35367 9.73682 5.10628 10.6448M7.94861 13L5 16M7.94861 13C6.6892 12.3266 5.75124 11.4228 5.10628 10.6448M16.0514 13L18.5 16M16.0514 13C17.3818 12.2887 18.3535 11.3202 19 10.5144M5.10628 10.6448L2 12M19 10.5144L22 12" /> </svg>
+							)}
+							<label htmlFor="password" id="register-password-label">Contraseña</label>
+						</div>
+						<div className="validation-bubbles-container">
+							<div className="validation-bubble" id="password-validation-mayusc-bubble"><span>1 mayúscula</span></div>
+							<div className="validation-bubble" id="password-validation-number-bubble"><span>1 número</span></div>
+							<div className="validation-bubble" id="password-validation-symbol-bubble"><span>1 símbolo</span></div>
+							<div className="validation-bubble" id="password-validation-length-bubble"><span>8 caracteres</span></div>
+						</div>
+						<div className="login-form-field" style={marginTopField}>
+							<Field
+								className="login-form-input"
+								type={visiblePassword ? "text" : "password"}
+								name="confirmPassword"
+								onInput={(e) => {
+									e.target.value && registerConfirmPasswordLabel.classList.add('login-form-input-active')
+								}}
+								onFocus={() => {
+									registerConfirmPasswordLabel.classList.add('login-form-input-active')
+								}}
+								onBlur={(e) => {
+									!e.target.value && registerConfirmPasswordLabel.classList.remove('login-form-input-active')
+								}}
+							/>
+							<label htmlFor="confirmPassword" id="register-confirm-password-label">Confirmar contraseña</label>
+							<ErrorMessage className="input-error" name="confirmPassword" component="div" />
+						</div>
+					</div>
+				</div>
+				<div>
+					<button className="login-submit-btn login-submit-btn--disabled" type="submit" >
+						Continuar
+					</button>
+				</div>
+			</Form>
+		</Formik >
+	);
+}
+
 export default function FormContainer() {
-	const [formulario, setFormulario] = useState('Login');
+	const [formulario, setFormulario] = useState('ChangePassword');
+	const location = useLocation();
+	console.log(location);
 
 	function changeForm(typeForm) {
 		setFormulario(typeForm);
@@ -495,7 +658,7 @@ export default function FormContainer() {
 			) : formulario === 'RecoverPassword' ? (
 				<RecoverPassword changeForm={changeForm} />
 			) : (
-				formulario === 'ChangePassword' && null//<ChangePassword searchVars={location.search} />
+				formulario === 'ChangePassword' && <ChangePassword searchVars={location.search} />
 			)}
 		</>
 	);

@@ -207,10 +207,10 @@
 
 		.login-submit-btn--disabled {
 			cursor: default;
-			background-color: #dddddd;
+			background-color: $disabled-color;
 
 			&:hover {
-				background-color: #dddddd;
+				background-color: $disabled-color;
 			}
 		}
 
