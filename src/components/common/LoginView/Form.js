@@ -10,6 +10,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 function LoginForm({ changeForm }) {
 	const [emailLabel, setEmailLabel] = useState(null)
 	const [passwordLabel, setPasswordLabel] = useState(null)
+	const loginEmailInput = document.getElementsByName('email')[0];
 
 	useEffect(() => {
 		setEmailLabel(document.getElementById('login-email-label'));
@@ -27,9 +28,13 @@ function LoginForm({ changeForm }) {
 			initialValues={{ email: '', password: '' }}
 			validate={(values) => {
 				const errors = {};
+
 				if (values.email) {
 					if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+						loginEmailInput.classList.add('login-form-field--error');
 						errors.email = 'Correo electrónico inválido';
+					} else {
+						loginEmailInput.classList.remove('login-form-field--error');
 					}
 				} else {
 					errors.email = 'Requerido';
@@ -114,7 +119,7 @@ function LoginForm({ changeForm }) {
 						Continuar
 					</button>
 					<div className="login-register-btn">
-						Aún no tenés una cuenta? <span onClick={() => changeForm("Register")}>Regístrate</span>
+						Aún no tenés una cuenta? <span onClick={() => changeForm("Register")}>Registrate</span>
 					</div>
 				</div>
 			</Form>
@@ -220,7 +225,7 @@ function RegisterForm({ changeForm }) {
 						pswValNumber.classList.remove('password-validation-bubble--active');
 					}
 					//? Incluye al menos un símbolo
-					if (values.password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/)) {
+					if (values.password.match(/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/)) {
 						pswValSymbol.classList.add('password-validation-bubble--active');
 					} else {
 						errors.password = 'La contraseña debe tener al menos un símbolo';
@@ -385,8 +390,97 @@ function RegisterForm({ changeForm }) {
 	);
 }
 
+function RecoverPassword({ changeForm }) {
+	const [emailLabel, setEmailLabel] = useState(null)
+	const loginEmailInput = document.getElementsByName('email')[0];
+
+	useEffect(() => {
+		setEmailLabel(document.getElementById('login-email-label'));
+	}, [])
+
+	const heightForm = { height: "500px" };
+
+	return (
+		<Formik
+			initialValues={{ email: '' }}
+			validate={(values) => {
+				const errors = {};
+				if (values.email) {
+					if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+						loginEmailInput.classList.add('login-form-field--error');
+						errors.email = 'Correo electrónico inválido';
+					} else {
+						loginEmailInput.classList.remove('login-form-field--error');
+					}
+				} else {
+					errors.email = 'Requerido';
+				}
+
+				//? if errors is empty, the form is fine to submit
+				const loginButton = document.getElementsByClassName('login-submit-btn')[0];
+				if (Object.keys(errors).length === 0) {
+					loginButton.classList.remove('login-submit-btn--disabled');
+				} else {
+					loginButton.classList.add('login-submit-btn--disabled');
+				}
+
+				return errors;
+			}}
+			onSubmit={(values, { setSubmitting }) => {
+				setSubmitting(false);
+				alert(JSON.stringify(values, null, 2));
+				/* Axios.post(`http://${config.host}:${config.port}/login`, values).then((res) => {
+					console.log();
+				}); */
+			}}
+		>
+			<Form className="login-form-content" style={heightForm}>
+				<div>
+					<h4 className="login-form-brand-text">Mino</h4>
+					<div className="login-form-title">
+						<h1>Cambiar contraseña</h1>
+					</div>
+					<div className="login-form-fields">
+						<p className="recoverpassword-form-instructions">
+							En caso de que no recuerdes tu contraseña, ingresá tu correo electrónico y te enviaremos un enlace para que puedas cambiarla.
+						</p>
+						<div className="login-form-field" style={{ marginTop: "30px" }}>
+							<Field
+								className="login-form-input"
+								type="email"
+								name="email"
+								autoComplete="false"
+								onInput={(e) => {
+									e.target.value && emailLabel.classList.add('login-form-input-active');
+									e.target.value = e.target.value.toLowerCase();
+								}}
+								onFocus={(e) => {
+									emailLabel.classList.add('login-form-input-active');
+									e.target.addEventListener('blur', () => {
+										!e.target.value && emailLabel.classList.remove('login-form-input-active')
+									});
+								}}
+							/>
+							<label htmlFor="email" id="login-email-label">Email</label>
+							<ErrorMessage className="input-error" name="email" component="div" />
+						</div>
+					</div>
+				</div>
+				<div>
+					<button className="login-submit-btn login-submit-btn--disabled" type="submit" >
+						Enviar
+					</button>
+					<div className="login-register-btn">
+						Recordaste tu contraseña? <span onClick={() => changeForm("Login")}>Iniciá sesión</span>
+					</div>
+				</div>
+			</Form>
+		</Formik >
+	);
+}
+
 export default function FormContainer() {
-	const [formulario, setFormulario] = useState('Register');
+	const [formulario, setFormulario] = useState('Login');
 
 	function changeForm(typeForm) {
 		setFormulario(typeForm);
@@ -399,8 +493,7 @@ export default function FormContainer() {
 			) : formulario === 'Register' ? (
 				<RegisterForm changeForm={changeForm} />
 			) : formulario === 'RecoverPassword' ? (
-				//<RecoverPassword changeForm={changeForm} />
-				null
+				<RecoverPassword changeForm={changeForm} />
 			) : (
 				formulario === 'ChangePassword' && null//<ChangePassword searchVars={location.search} />
 			)}

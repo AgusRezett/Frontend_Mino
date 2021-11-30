@@ -207,6 +207,12 @@
   white-space: nowrap;
   font-weight: 800;
 }
+.login-form-content .recoverpassword-form-instructions {
+  margin-top: 10px;
+  height: auto;
+  font-size: 14px;
+  color: #a3a3a3;
+}
 .login-form-content .login-form-fields {
   display: flex;
   flex-direction: column;

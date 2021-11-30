@@ -36,6 +36,13 @@
 		}
 	}
 
+	.recoverpassword-form-instructions {
+		margin-top: 10px;
+		height: auto;
+		font-size: 14px;
+		color: #a3a3a3;
+	}
+
 	.login-form-fields {
 		@include displayFlex(column, space-between, flex-start);
 		width: 100%;

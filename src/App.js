@@ -19,7 +19,6 @@ import Login from './components/pages/Login';
 export default function App() {
 	// Verify if there is a session
 	const [userSessionFounded, setUserSessionFounded] = useState(null);
-
 	useEffect(() => {
 		setUserSessionFounded(getSession());
 	}, [userSessionFounded]);
