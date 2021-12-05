@@ -15,18 +15,25 @@ body,
 #root {
 	height: 100%;
 	background-color: $white-background;
-	/* overflow: hidden;
-	Si se descomenta se imposibilita el scroll para recargar el navegador */
+	overflow-y: hidden;
+	//Si se descomenta se imposibilita el scroll para recargar el navegador
 }
 
 p {
 	margin-bottom: 0 !important;
 }
 
-.father-container-view {
-	width: 100%;
-	height: calc(100% - 45px);
+main {
+	width: calc(100% - 240px);
+	height: calc(100% - 65px);
+	padding: 20px;
+	margin: 65px 0px 0px 240px;
 	background-color: $white-background;
 	overflow-y: scroll;
 	transition: all 170ms ease-in-out;
+
+	@media screen and (max-width: 991px) {
+		width: calc(100% - 75px);
+		margin-left: 75px;
+	}
 }

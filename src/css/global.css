@@ -11151,21 +11151,28 @@ html,
 body,
 #root {
   height: 100%;
-  background-color: #fffffd;
-  /* overflow: hidden;
-  Si se descomenta se imposibilita el scroll para recargar el navegador */
+  background-color: #faf9f9;
+  overflow-y: hidden;
 }
 
 p {
   margin-bottom: 0 !important;
 }
 
-.father-container-view {
-  width: 100%;
-  height: calc(100% - 45px);
-  background-color: #fffffd;
+main {
+  width: calc(100% - 240px);
+  height: calc(100% - 65px);
+  padding: 20px;
+  margin: 65px 0px 0px 240px;
+  background-color: #faf9f9;
   overflow-y: scroll;
   transition: all 170ms ease-in-out;
+}
+@media screen and (max-width: 991px) {
+  main {
+    width: calc(100% - 75px);
+    margin-left: 75px;
+  }
 }
 
 /*# sourceMappingURL=global.css.map */

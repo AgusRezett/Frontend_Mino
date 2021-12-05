@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-// Components
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Hooks
-import { NavbarContext } from './hooks/useContext/NavbarContext';
-
 // Functions
 import { getSession } from './functions/LoginFunctions';
 
@@ -13,7 +7,7 @@ import { getSession } from './functions/LoginFunctions';
 import './css/global.css';
 
 // Navigation
-import Home from './components/pages/Home';
+import ApplicationContent from './components/pages/ApplicationContent';
 import Login from './components/pages/Login';
 
 export default function App() {
@@ -24,30 +18,16 @@ export default function App() {
 	}, [userSessionFounded]);
 
 	/* const [activeSidebar, setActiveSidebar] = useState(false);
-	const [homePageLocation, setHomePageLocation] = useState(null);
 	const [searchValue, setSearchValue] = useState('');
 	const [showNavbar, setShowNavbar] = useState(false); */
 
+	/**
+	 * Application content provide the whole application functions instead of Login,
+	 * which is the only page that can be accessed without a session.
+	 */
 	return (
-		<Router basename="/">
-			<NavbarContext.Provider
-				value={
-					{
-						/* activeSidebar,
-					setActiveSidebar,
-					searchValue,
-					setSearchValue,
-					homePageLocation, */
-					}
-				}
-			>
-				{/* {showNavbar && <TopNavbar />}
-				{showNavbar && <SideNavbar />} */}
-				{/* <NavLink to="/login">Login</NavLink> */}
-			</NavbarContext.Provider>
-			<Routes>
-				{userSessionFounded ? <Route path="/" element={<Home />} /> : <Route path="/" element={<Login />} />}
-			</Routes>
-		</Router>
+		<>
+			{userSessionFounded ? <ApplicationContent /> : <Login />}
+		</>
 	);
 }

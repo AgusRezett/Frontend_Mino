@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 
 // Components
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import { useLocation } from 'react-router';
 
 // Config
 //import config from '../../../appconfig.json';
@@ -641,9 +640,9 @@ function ChangePassword({ searchVars }) {
 }
 
 export default function FormContainer() {
-	const [formulario, setFormulario] = useState('ChangePassword');
-	const location = useLocation();
-	console.log(location);
+	const [formulario, setFormulario] = useState('Login');
+	//const location = useLocation();
+	//console.log(location);
 
 	function changeForm(typeForm) {
 		setFormulario(typeForm);
@@ -658,7 +657,7 @@ export default function FormContainer() {
 			) : formulario === 'RecoverPassword' ? (
 				<RecoverPassword changeForm={changeForm} />
 			) : (
-				formulario === 'ChangePassword' && <ChangePassword searchVars={location.search} />
+				formulario === 'ChangePassword' && <ChangePassword searchVars={window.location.search} />
 			)}
 		</>
 	);

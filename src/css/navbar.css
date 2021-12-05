@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@font-face {
+  font-family: "RooneySans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("RooneySans Bold"), url("../assets/fonts/rooneysans/RooneySansBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Scorno Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno Bold"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo heavy.otf") format("woff");
+}
+@font-face {
+  font-family: "Scorno";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo Medium.otf") format("woff");
+}
+header {
+  width: calc(100% - 240px);
+  height: 65px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  transition: all 170ms ease-in-out;
+}
+@media screen and (max-width: 991px) {
+  header {
+    width: calc(100% - 75px);
+  }
+}
+header .top-navbar-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-shadow: 10px 1px 10px -2px #0000000c;
+}
+header .top-navbar-container .top-navbar-logo {
+  width: fit-content;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header .top-navbar-container .top-navbar-logo li {
+  width: fit-content;
+  height: 100%;
+}
+header .top-navbar-container .top-navbar-logo li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  left: -210px;
+  transition: all 170ms ease-in-out;
+}
+@media screen and (max-width: 991px) {
+  header .top-navbar-container .top-navbar-logo li a {
+    left: 20px;
+  }
+}
+header .top-navbar-container .top-navbar-logo li a img {
+  width: 100%;
+  height: 100%;
+}
+header .top-navbar-container .top-navbar-logo li a h1 {
+  margin-bottom: 0;
+  font-family: "RooneySans Bold";
+  font-weight: normal;
+  font-size: 32px;
+  color: #ffc000;
+}
+
+@font-face {
+  font-family: "RooneySans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("RooneySans Bold"), url("../assets/fonts/rooneysans/RooneySansBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Scorno Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno Bold"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo heavy.otf") format("woff");
+}
+@font-face {
+  font-family: "Scorno";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo Medium.otf") format("woff");
+}
+.side-navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 15px 0px;
+  box-shadow: 1px 0px 10px -2px #0000000c;
+  transition: all 170ms ease-in-out;
+}
+@media screen and (max-width: 991px) {
+  .side-navbar-container {
+    width: 75px;
+  }
+}
+.side-navbar-container .side-navbar-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-top: 60px;
+  list-style: none;
+}
+@media screen and (max-width: 991px) {
+  .side-navbar-container .side-navbar-links {
+    margin-top: 55px;
+  }
+}
+.side-navbar-container .side-navbar-links li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 85%;
+  height: 50px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+.side-navbar-container .side-navbar-links li .nav-element-icon, .side-navbar-container .side-navbar-links li .nav-element-icon-special {
+  width: auto;
+  height: 23px;
+  margin-bottom: 1px;
+  margin-right: 10px;
+  stroke: #7e7e7e;
+  transition: all 100ms ease-in-out;
+}
+@media screen and (max-width: 991px) {
+  .side-navbar-container .side-navbar-links li .nav-element-icon, .side-navbar-container .side-navbar-links li .nav-element-icon-special {
+    margin: 0px 0px 0px 10px;
+  }
+}
+.side-navbar-container .side-navbar-links li .nav-element-icon-special {
+  stroke: none;
+  fill: #7e7e7e;
+}
+.side-navbar-container .side-navbar-links li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  list-style: none;
+  color: #7e7e7e;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "RooneySans Bold";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 50px;
+  transition: all 150ms ease-in-out;
+}
+.side-navbar-container .side-navbar-links li a:hover {
+  color: #000;
+}
+@media screen and (max-width: 991px) {
+  .side-navbar-container .side-navbar-links li a:hover span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 30px;
+    padding: 0px 10px;
+    opacity: 75%;
+    position: absolute;
+    left: 65px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3d0052;
+  }
+}
+.side-navbar-container .side-navbar-links li a:hover .nav-element-icon, .side-navbar-container .side-navbar-links li a:hover .nav-element-icon-special {
+  stroke: #ffb71c;
+}
+.side-navbar-container .side-navbar-links li a:hover .nav-element-icon-special {
+  fill: #ffb71c;
+}
+.side-navbar-container .side-navbar-links li a span {
+  white-space: nowrap;
+}
+@media screen and (max-width: 991px) {
+  .side-navbar-container .side-navbar-links li a span {
+    display: none;
+  }
+}
+.side-navbar-container .side-navbar-links li .active {
+  color: #fff;
+}
+.side-navbar-container .side-navbar-links li .active:hover {
+  color: #fff;
+}
+.side-navbar-container .side-navbar-links li .active .nav-element-icon, .side-navbar-container .side-navbar-links li .active .nav-element-icon-special {
+  stroke: #ffb71c;
+  stroke-width: 1.5;
+}
+.side-navbar-container .side-navbar-links li .active .nav-element-icon-special {
+  fill: #ffb71c;
+}
+.side-navbar-container .side-navbar-links .active-navlink-background {
+  width: 220px;
+  height: 50px;
+  position: absolute;
+  left: -300px;
+  z-index: 1;
+  background-color: #3d0052;
+  transition: all 150ms ease-in-out;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+@media screen and (max-width: 991px) {
+  .side-navbar-container .side-navbar-links .active-navlink-background {
+    width: 55px;
+    height: 50px;
+    left: 10px !important;
+    border-radius: 10px;
+  }
+  .side-navbar-container .side-navbar-links .active-navlink-background .active-navlink-background-stick {
+    display: none;
+  }
+  .side-navbar-container .side-navbar-links .active-navlink-background::before {
+    display: none;
+  }
+  .side-navbar-container .side-navbar-links .active-navlink-background::after {
+    display: none;
+  }
+}
+.side-navbar-container .side-navbar-links .active-navlink-background .active-navlink-background-stick {
+  width: 30px;
+  height: 100px;
+  background-color: #3d0052;
+  position: absolute;
+  z-index: 1;
+  top: -25px;
+  left: 0;
+}
+.side-navbar-container .side-navbar-links .active-navlink-background::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 2;
+  top: -30px;
+  left: 0;
+  background-color: #ffffff;
+  border-bottom-left-radius: 25px;
+  transition: all 150ms ease-in-out;
+}
+.side-navbar-container .side-navbar-links .active-navlink-background::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+  left: 0;
+  background-color: #ffffff;
+  border-top-left-radius: 25px;
+  transition: all 150ms ease-in-out;
+}
+
+/*# sourceMappingURL=navbar.css.map */
