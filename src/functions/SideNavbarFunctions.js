@@ -1,10 +1,14 @@
 export const pressNavigateButton = (button) => {
     const selectedElement = document.getElementById("sideNavbarContainer").getElementsByClassName("active")
+    const selectedElement2 = document.getElementById("sideNavbarContainer2").getElementsByClassName("active")
     const navlinkBackground = document.getElementById("activeNavlinkBackground");
     let rec;
+
     if (!button || !button.tagName) {
         if (selectedElement.length > 0) {
             rec = selectedElement[0].getBoundingClientRect();
+        } else if (selectedElement2.length > 0) {
+            rec = selectedElement2[0].getBoundingClientRect();
         }
     } else {
         if (button.tagName === "svg" || button.tagName === "SPAN") {
