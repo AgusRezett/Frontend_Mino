@@ -1,13 +1,16 @@
 import React from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // Components
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopNavbar from '../common/Navbar/TopNavbar';
 import SideNavbar from '../common/Navbar/SideNavbar';
 
 // Hooks
 //import { NavbarContext } from '../../hooks/useContext/NavbarContext';
+
+// Navigation
+import Home from './Home';
 
 export default function ApplicationContent() {
 	return (
@@ -18,18 +21,7 @@ export default function ApplicationContent() {
 			<SideNavbar />
 			<HelmetProvider>
 				<Routes>
-					<Route
-						path="/"
-						element={
-							<main>
-								<Helmet>
-									<title>Mino - Inicio</title>
-									<meta name="description" content="Nested component" />
-								</Helmet>
-								<h1>Inicio</h1>
-							</main>
-						}
-					/>
+					<Route path="/" element={<Home />} />
 					<Route
 						path="/billeteras"
 						element={

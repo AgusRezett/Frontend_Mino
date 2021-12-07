@@ -168,6 +168,7 @@ header .top-navbar-container .top-navbar-account li span {
   padding: 15px 0px;
   box-shadow: 1px 0px 10px -2px #0000000c;
   transition: all 170ms ease-in-out;
+  resize: horizontal;
 }
 @media screen and (max-width: 991px) {
   .side-navbar-container {

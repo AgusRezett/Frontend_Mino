@@ -1,0 +1,80 @@
+@import '../../colors';
+@import '../../fonts';
+@import '../../mixins';
+
+.balance-card-space {
+	@include displayFlex(column, center, center);
+	position: relative;
+	height: 150px;
+	transition: all 170ms ease-in-out;
+
+	@media screen and (max-width: 767px) {
+		margin-top: 20px;
+
+		&:first-child {
+			margin-top: 10px;
+		}
+	}
+
+	.balance-card-coin {
+		position: absolute;
+		top: 10px;
+		left: 28px;
+		z-index: 2;
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	.balance-card-container {
+		@include displayFlex(null, flex-end, flex-end);
+		width: 100%;
+		height: 100%;
+		padding: 5px;
+		overflow: hidden;
+		//filter: brightness(90%);
+
+		border-radius: 12px 12px 0 0;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		img {
+			width: 60px;
+			height: 60px;
+			margin: 0 10px 10px 0;
+			filter: drop-shadow(0px 0px 5px #0000001f);
+		}
+	}
+
+	.balance-card-bottom {
+		@include displayFlex(row, flex-start, center);
+		width: calc(100%);
+		height: 70px;
+		padding-left: 15px;
+
+		font-size: 18px;
+		font-weight: bold;
+		color: rgb(46, 46, 46);
+
+		border-radius: 0 0 12px 12px;
+		box-shadow: 0px 2px 5px #00000014;
+		background-color: #ffffff;
+	}
+}
+
+.arg-flag {
+	background: linear-gradient(90deg, #338af3 0%, #094af7 100%);
+}
+
+.eur-flag {
+	background: linear-gradient(90deg, #004aa2 0%, #001f45 100%);
+}
+
+.usd-flag {
+	background: linear-gradient(90deg, #2da06e 0%, #147a4d 100%);
+}
+
+.btc-flag {
+	background: linear-gradient(90deg, #ffae00 0%, #f57f00 100%);
+}

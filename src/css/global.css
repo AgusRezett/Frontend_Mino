@@ -11160,6 +11160,8 @@ p {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   width: calc(100% - 240px);
   height: calc(100% - 65px);
   padding: 20px;
