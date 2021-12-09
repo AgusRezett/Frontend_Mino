@@ -9,24 +9,78 @@ export const badgeDictionary = [
         title: 'Bitcoin',
         flag: Btc,
         badge: 'BTC',
-        backgroundClass: "btc-flag"
+        color: "#ffae00",
+        backgroundClass: "btc-flag",
     },
     {
         title: 'Dólares americanos',
         flag: Usd,
         badge: 'US$',
-        backgroundClass: "usd-flag"
+        color: "#2da06e",
+        backgroundClass: "usd-flag",
     },
     {
         title: 'Euros',
         flag: Eur,
         badge: '€',
+        color: "#004aa2",
         backgroundClass: "eur-flag"
     },
     {
         title: 'Pesos argentinos',
         flag: Arg,
         badge: 'AR$',
+        color: "#338af3",
         backgroundClass: "arg-flag"
     },
 ];
+
+export const nationalBadgeDictionary = ["ARS", "USD", "EUR"];
+
+export const getPrincipalCurrency = () => {
+    return localStorage.getItem('principal-currency');
+}
+
+//? Get the current blue usd price in Argentina
+export const getUsdPrice = async () => {
+    return fetch(`https://www.dolarsi.com/api/api.php?type=valoresprincipales`)
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            return parseFloat(data[1].casa.venta).toFixed(2);
+            /* data.forEach((item) => {
+                if (item.casa.nombre === 'Dolar Blue') {
+                    return (parseFloat(item.casa.venta));
+                }
+            }); */
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+};
+
+export const getTokenPrice = async (token) => {
+    let api;
+    token = token.toUpperCase();
+    if (token !== "MDX") {
+        api = `https://api.binance.com/api/v3/ticker/price?symbol=${token}USDT`;
+    } else {
+        api = `https://api.huobi.pro/market/trade?symbol=mdxusdt`;
+    }
+
+    return await fetch(api)
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            if (api.includes("binance")) {
+                return parseFloat(data.price).toFixed(2);
+            } else {
+                return parseFloat(data.tick.data[0].price).toFixed(2);
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+};

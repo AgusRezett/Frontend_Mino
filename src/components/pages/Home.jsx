@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 // Components
 import { Helmet } from 'react-helmet-async';
 import TotalBalanceCard from '../common/HomeView/TotalBalanceCard';
+import DonutChart from '../common/HomeView/DonutChart';
 
 // Functions
 import { getSelectedBadges } from '../../functions/HomeFunctions';
@@ -29,6 +30,16 @@ export default function Home() {
 					selectedBadges.map((badge) => (
 						<TotalBalanceCard key={badge.id} badgeId={badge.id} value={badge.value} />
 					))}
+			</div>
+			<div className="row">
+				<div className="money-line-chart col-md-8">
+					<div className="money-line-chart-container"></div>
+				</div>
+				<div className="money-line-chart col-md-4">
+					<div className="money-line-chart-container" id="chart">
+						<DonutChart />
+					</div>
+				</div>
 			</div>
 		</main>
 	);
