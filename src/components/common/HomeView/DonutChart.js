@@ -85,7 +85,7 @@ export default function DonutChart() {
                             }
                             ],
                         });
-                }, 400);
+                }, 500);
             });
             setFirtstFetch(false)
         }
@@ -93,6 +93,8 @@ export default function DonutChart() {
     }, [firtstFetch, series])
 
     return (
-        <ReactApexChart className="donut-chart" options={options} series={series} type="donut" />
+        <div className='chart-space'>
+            <ReactApexChart className="donut-chart" options={options} series={series} type="donut" />
+        </div>
     )
 }

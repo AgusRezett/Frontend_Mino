@@ -1,0 +1,108 @@
+@import '../../colors';
+@import '../../fonts';
+@import '../../mixins';
+
+.my-wallets-space {
+	@include displayFlex(column, center, center);
+	position: relative;
+	margin-top: 20px;
+	height: 350px;
+	padding: 0;
+	transition: all 170ms ease-in-out;
+
+	.my-wallets-container {
+		@include displayFlex(column, flex-start, center);
+		width: 100%;
+		height: 100%;
+		//padding: 10px;
+		border-radius: 12px;
+
+		.section-title-container {
+			width: 100%;
+			height: auto;
+			padding: 0px 12.5px 10px 12.5px;
+
+			.section-title {
+				width: 100%;
+				padding: 20px;
+				border-radius: 12px;
+				//margin: 5px 0 0 10px;
+				font-size: 18px;
+				font-weight: bold;
+				color: #000000;
+				box-shadow: 0px 2px 5px #00000014;
+				background-color: #fff;
+			}
+		}
+
+		.wallets-items-container {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;
+
+			width: 100%;
+			max-height: calc(100% - 75px);
+			overflow: auto;
+
+			font-size: 18px;
+			font-weight: bold;
+			color: #fff;
+
+			//webkit scroll style
+			&::-webkit-scrollbar {
+				width: 5px;
+			}
+			&::-webkit-scrollbar-track {
+				background: #f1f1f1;
+				border-radius: 20px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: #888;
+				border-radius: 20px;
+			}
+			&::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
+
+			/* .fog-container {
+				width: 100%;
+				height: 40px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: black;
+			} */
+
+			.wallet-card-container {
+				border-radius: 10px;
+				padding: 15px 13px 0 13px;
+
+				.wallet-card-content {
+					@include displayFlex(row, center, center);
+					width: 100%;
+					height: 60px;
+					padding: 20px;
+					cursor: pointer;
+					border-radius: 10px;
+					box-shadow: 0px 2px 5px #00000014;
+					background-color: #fff;
+					transition: all 150ms ease-in-out;
+
+					&:hover {
+						background-color: #fafafa;
+					}
+
+					.wallet-icon {
+						width: 40px;
+						height: 40px;
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: cover;
+					}
+				}
+			}
+		}
+	}
+}
