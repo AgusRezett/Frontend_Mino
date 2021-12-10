@@ -6,6 +6,10 @@ import TotalBalanceCard from '../common/HomeView/TotalBalanceCard';
 import DonutChart from '../common/HomeView/DonutChart';
 import Wallets from '../common/HomeView/Wallets';
 
+// Images
+import AppStore from '../../assets/images/app-store-available.svg';
+import GooglePlay from '../../assets/images/google-play-available.svg';
+
 // Functions
 import { getSelectedBadges } from '../../functions/HomeFunctions';
 
@@ -53,7 +57,13 @@ export default function Home() {
 			</div>
 			<div className="row">
 				<div className="application-promo-container col-12">
-					<div className="application-promo">asd</div>
+					<div className="application-promo">
+						<div className="application-promo-title">Obtené Mino en tú dispositivo móvil</div>
+						<div className="application-promo-download-container">
+							<img src={AppStore} className="app-store-button" alt="" />
+							<img src={GooglePlay} className="google-play-button" alt="" />
+						</div>
+					</div>
 				</div>
 			</div>
 		</main>
