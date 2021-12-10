@@ -52,8 +52,8 @@ export default function Home() {
 				</div>
 			</div>
 			<div className="row">
-				<div className=" col-12">
-					<div className=""></div>
+				<div className="application-promo-container col-12">
+					<div className="application-promo">asd</div>
 				</div>
 			</div>
 		</main>
