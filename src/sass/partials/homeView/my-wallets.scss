@@ -18,9 +18,11 @@
 		border-radius: 12px;
 
 		.section-title-container {
+			position: relative;
+			z-index: 1;
 			width: 100%;
 			height: auto;
-			padding: 0px 12.5px 10px 12.5px;
+			padding: 0px 12.5px 5px 12.5px;
 
 			.section-title {
 				width: 100%;
@@ -46,6 +48,7 @@
 			max-height: calc(100% - 75px);
 			overflow: auto;
 
+			opacity: 1;
 			font-size: 18px;
 			font-weight: bold;
 			color: #fff;
@@ -66,15 +69,6 @@
 				background: #555;
 			}
 
-			/* .fog-container {
-				width: 100%;
-				height: 40px;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				background-color: black;
-			} */
-
 			.wallet-card-container {
 				border-radius: 10px;
 				padding: 15px 13px 0 13px;
@@ -87,6 +81,8 @@
 					cursor: pointer;
 					border-radius: 10px;
 					box-shadow: 0px 2px 5px #00000014;
+					color: #fff;
+					text-decoration: none;
 					background-color: #fff;
 					transition: all 150ms ease-in-out;
 
@@ -103,6 +99,82 @@
 					}
 				}
 			}
+
+			.new-wallet-item-container {
+				.new-wallet-item-content {
+					background-color: #fafafa;
+					font-weight: 600;
+					color: #b8b8b8;
+					background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23FFAE00FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+					border-radius: 10px;
+					transition: all 150ms ease-in-out;
+
+					&:hover {
+						color: #5f5f5f;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+
+		.fade {
+			opacity: 0;
+			transition: all 150ms ease-in-out;
+		}
+
+		.new-wallet-container {
+			@include displayFlex(column, flex-start, flex-start);
+			width: calc(100% - 25px);
+			height: 0px;
+
+			position: absolute;
+			bottom: calc(100% - 67px);
+			left: 12px;
+			z-index: 0;
+
+			overflow: hidden;
+			padding: 20px;
+
+			border-radius: 10px;
+			background-color: #fff;
+			box-shadow: 0px 2px 5px #00000014;
+			transition: all 150ms ease-in-out;
+
+			.close-btn {
+				position: absolute;
+				top: 15px;
+				right: 18px;
+				cursor: pointer;
+				border-radius: 50%;
+				transition: all 100ms ease-in-out;
+
+				svg {
+					transform: rotateX(0deg);
+					transition: all 150ms ease-in-out;
+				}
+
+				&:hover {
+					svg {
+						transform: rotateX(180deg);
+					}
+				}
+
+				&:active {
+					background-color: rgba(194, 194, 194, 0.09);
+				}
+			}
+
+			.new-wallet-title {
+				max-width: 90%;
+				font-size: 16px;
+				color: #000000;
+			}
+		}
+
+		.open {
+			overflow: visible;
+			height: calc(100% - 87px);
+			bottom: 1px;
 		}
 	}
 }

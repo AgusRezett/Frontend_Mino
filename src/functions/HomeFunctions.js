@@ -7,8 +7,8 @@ export const getSelectedBadges = (setSelectedBadges) => {
             value: "9600",
         },
         {
-            id: 1,
-            value: "31,11",
+            id: 2,
+            value: "25",
         },
         {
             id: 0,
@@ -69,8 +69,6 @@ export const getAccountsSeries = (accounts, usdValue) => {
     const principalCurrency = getPrincipalCurrency();
 
     accounts.forEach(account => {
-        console.log(account);
-
         //? In case the account isn't in the principal currency, we need to know the account value in the principal currency
         if (account.currency === principalCurrency.toUpperCase()) {
             series.push(parseFloat(account.balance));
@@ -79,7 +77,6 @@ export const getAccountsSeries = (accounts, usdValue) => {
                 series.push(parseFloat(account.balance) * usdValue);
             } else {
                 getTokenPrice(account.currency).then(res => {
-                    console.log(res);
                     series.push(parseFloat((account.balance * (res * usdValue)).toFixed(2)));
                 });
             }
@@ -124,3 +121,20 @@ export const darkenColor = (col, amt) => {
     return (usePound ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16);
 }
 
+export const toggleNewWallet = (option) => {
+    const newWallet = document.getElementById("new-wallet-container");
+    const walletConatiner = document.getElementById("wallet-items-container");
+
+    switch (option) {
+        case "open":
+            newWallet.classList.add("open");
+            walletConatiner.classList.add("fade");
+            break;
+        case "close":
+            newWallet.classList.remove("open");
+            walletConatiner.classList.remove("fade");
+            break;
+        default:
+            break;
+    }
+}
