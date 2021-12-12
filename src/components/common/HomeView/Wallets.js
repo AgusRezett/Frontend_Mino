@@ -21,7 +21,7 @@ export default function Wallets() {
             <div className='wallets-items-container col-12' id='wallet-items-container'>
                 <div className='wallet-card-container new-wallet-item-container col-12 col-sm-4 col-md-4 col-lg-3 col-xl-4'>
                     <div className='wallet-card-content new-wallet-item-content' onClick={() => toggleNewWallet("open")}>
-                        Añadir una tarjeta
+                        Añadir billetera
                     </div>
                 </div>
                 {wallets && wallets.map((wallet, index) => {
@@ -44,8 +44,43 @@ export default function Wallets() {
                     </svg>
                 </div>
                 <p className='new-wallet-title'><b>Elegí una billetera para vincular a tu cuenta Mino</b> 💳</p>
+                <NewWalletContainer />
             </div>
         </>
+    )
+}
+
+const NewWalletContainer = () => {
+    return (
+        <div className='wallet-options-container'>
+            <div className="wallet-option-item">
+                <svg viewBox="0 0 32 32" style={{ enableBackground: "new 0 0 32 32" }} fill="none" stroke="#000000" strokeWidth="1" strokeLinecap="round" strokelinejoin="round" strokeMiterlimit="10">
+                    <polygon class="st0" points="17,1 6,6.6 6,9 28,9 28,6.6 " />
+                    <path class="st0" d="M3,25l2.6-4.2c1.5-2.3,4-3.8,6.8-3.8H19v0c0,2.2-1.8,4-4,4h-2" />
+                    <path class="st0" d="M15,21h8l1.2-1.6c1.1-1.5,2.9-2.4,4.8-2.4h0l-2.7,4.8c-1.4,2.6-4.2,4.2-7.1,4.2h0c-4.7,0-9.3,1.4-13.2,4l0,0" />
+                    <line class="st0" x1="17" y1="9" x2="17" y2="17" />
+                    <line class="st0" x1="21" y1="9" x2="21" y2="21" />
+                    <line class="st0" x1="25" y1="9" x2="25" y2="18" />
+                    <line class="st0" x1="9" y1="9" x2="9" y2="17" />
+                    <line class="st0" x1="13" y1="9" x2="13" y2="17" />
+                </svg>
+                Cuenta bancaria
+            </div>
+            <div className="wallet-option-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                Aplicaciones asociadas
+            </div>
+            <div className="wallet-option-item">
+                <svg viewBox="0 0 25 25">
+                    <title>Wallet</title>
+                    <path id="Wallet" d="M20,15a1,1,0,1,1-1-1A1,1,0,0,1,20,15Zm5-1.75v3.5A1.23,1.23,0,0,1,24,18v3.8A1.25,1.25,0,0,1,22.75,23H2.5A2.5,2.5,0,0,1,0,20.5V5.5A2.5,2.5,0,0,1,2.5,3H20.75A1.25,1.25,0,0,1,22,4.25V7h.75A1.25,1.25,0,0,1,24,8.25v3.8A1.23,1.23,0,0,1,25,13.25ZM1,5.5a1.46,1.46,0,0,0,.46,1.08A1.49,1.49,0,0,0,2.5,7H21V6H3V5H21V4.25A.25.25,0,0,0,20.75,4H2.5A1.5,1.5,0,0,0,1,5.5ZM23,18H19a3,3,0,1,1,0-6h4V8.25A.25.25,0,0,0,22.75,8H2.5A2.47,2.47,0,0,1,1,7.48v13A1.5,1.5,0,0,0,2.5,22H22.75a.25.25,0,0,0,.25-.25Zm1-4.75a.25.25,0,0,0-.25-.25H19a2,2,0,0,0-2,2.34A2.08,2.08,0,0,0,19.11,17h4.64a.25.25,0,0,0,.25-.25Z" fill="#0e1d25" />
+                </svg>
+                Nueva billetera
+            </div>
+        </div >
     )
 }
 

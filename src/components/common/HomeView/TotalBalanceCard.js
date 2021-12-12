@@ -8,8 +8,6 @@ import { badgeDictionary } from '../../../functions/GlobalFunctions';
 export default function TotalBalanceCard({ badgeId, value }) {
     const expandCardBottom = (e) => {
         const polyline = document.getElementById(`cardArrow${badgeId}`);
-        console.log(e.target);
-
         if (e.target !== polyline) {
             e.target.classList.toggle('rotate')
             e.target.parentNode.parentNode.classList.toggle('expanded')

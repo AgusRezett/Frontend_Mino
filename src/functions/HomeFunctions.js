@@ -17,6 +17,16 @@ export const getSelectedBadges = (setSelectedBadges) => {
     ]);
 }
 
+export const getAllAccounts = () => {
+    return [
+        {
+            id: 1,
+            name: "Brubank",
+            logo: "asd",
+        }
+    ]
+}
+
 export const getLinkedAccounts = () => {
     return [
         {
@@ -35,7 +45,7 @@ export const getLinkedAccounts = () => {
         },
         {
             id: 3,
-            name: "BBVA Francés",
+            name: "BBVA",
             balance: "2100",
             currency: "ARS",
             color: "#005096",
