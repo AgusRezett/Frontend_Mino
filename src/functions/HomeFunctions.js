@@ -17,7 +17,7 @@ export const getSelectedBadges = (setSelectedBadges) => {
     ]);
 }
 
-export const getAllAccounts = () => {
+/* export const getAllAccounts = () => {
     return [
         {
             id: 1,
@@ -25,7 +25,7 @@ export const getAllAccounts = () => {
             logo: "asd",
         }
     ]
-}
+} */
 
 export const getLinkedAccounts = () => {
     return [

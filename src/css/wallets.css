@@ -1,0 +1,151 @@
+.wallets-row {
+  height: auto;
+  margin-bottom: 30px;
+  /* .carrousel-title {
+  } */
+}
+.wallets-row:last-child {
+  margin-bottom: 0;
+}
+.wallets-row .alice-carousel {
+  position: relative;
+}
+.wallets-row .alice-carousel div .alice-carousel__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+}
+.wallets-row .alice-carousel .alice-carousel__prev-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  transition: all 150s ease-in-out;
+}
+.wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper .alice-carousel__prev-btn-item {
+  background: transparent;
+  color: red;
+}
+.wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper .alice-carousel__prev-btn-item:hover {
+  background: linear-gradient(90deg, #f2f2f2 0%, #a91f1f00 100%);
+}
+.wallets-row .alice-carousel .alice-carousel__next-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  transition: all 150ms ease-in-out;
+}
+.wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper .alice-carousel__next-btn-item {
+  background: transparent;
+  color: red;
+}
+.wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper .alice-carousel__next-btn-item:hover {
+  background: linear-gradient(90deg, #f2f2f2 0%, #a91f1f00 100%);
+}
+.wallets-row .alice-carousel .arrow-size, .wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper, .wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper .alice-carousel__prev-btn-item, .wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper, .wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper .alice-carousel__next-btn-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: all 150s ease-in-out;
+}
+
+.wallet-carrousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  margin-right: 20px;
+  cursor: pointer;
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  transition: all 150ms ease-in-out;
+}
+.wallet-carrousel-container:hover {
+  filter: brightness(1.1);
+}
+.wallet-carrousel-container .wallet-carrousel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  padding-left: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.wallet-carrousel-container .wallet-carrousel-item .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-image {
+  width: auto;
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 20px;
+}
+.wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-name {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 7px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.wallet-carrousel-container .wallet-carrousel-item .balance {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  padding-right: 20px;
+  margin-top: 7px;
+}
+.wallet-carrousel-container .wallet-carrousel-item .balance .wallet-carrousel-item-currency {
+  font-weight: 600;
+  margin-right: 5px;
+}
+.wallet-carrousel-container .wallet-carrousel-item .balance .wallet-carrousel-item-balance {
+  font-weight: 700;
+}
+
+.__inactive {
+  display: none !important;
+}
+
+/*# sourceMappingURL=wallets.css.map */

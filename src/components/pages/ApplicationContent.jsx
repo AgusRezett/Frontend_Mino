@@ -11,6 +11,7 @@ import SideNavbar from '../common/Navbar/SideNavbar';
 
 // Navigation
 import Home from './Home';
+import Wallets from './Wallets';
 
 export default function ApplicationContent() {
 	return (
@@ -22,18 +23,7 @@ export default function ApplicationContent() {
 			<HelmetProvider>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route
-						path="/billeteras"
-						element={
-							<main>
-								<Helmet>
-									<title>Mino - Billeteras</title>
-									<meta name="description" content="Nested component" />
-								</Helmet>
-								<h1>Billeteras</h1>
-							</main>
-						}
-					/>
+					<Route path="/billeteras" element={<Wallets />} />
 					<Route
 						path="/criptomonedas"
 						element={
