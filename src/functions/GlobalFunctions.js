@@ -38,7 +38,7 @@ export const badgeDictionary = [
 export const nationalBadgeDictionary = ["ARS", "USD", "EUR"];
 
 export const getPrincipalCurrency = () => {
-    return localStorage.getItem('principal-currency');
+    return localStorage.getItem("principalCurrency") || "ARS";
 }
 
 //? Get the current blue usd price in Argentina

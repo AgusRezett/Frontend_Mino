@@ -38,10 +38,10 @@
 				.alice-carousel__prev-btn-item {
 					@extend .arrow-size;
 					background: transparent;
-					color: rgb(255, 0, 0);
+					color: #000000;
 
 					&:hover {
-						background: linear-gradient(90deg, #f2f2f2 0%, #a91f1f00 100%);
+						background: linear-gradient(90deg, $white-background 0%, #a91f1f00 100%);
 					}
 				}
 			}
@@ -63,10 +63,10 @@
 				.alice-carousel__next-btn-item {
 					@extend .arrow-size;
 					background: transparent;
-					color: rgb(255, 0, 0);
+					color: #000000;
 
 					&:hover {
-						background: linear-gradient(90deg, #f2f2f2 0%, #a91f1f00 100%);
+						background: linear-gradient(90deg, #a91f1f00 0%, $white-background 100%);
 					}
 				}
 			}
@@ -125,6 +125,17 @@
 				//transform: rotate(30deg);
 			}
 
+			.wallet-carrousel-item-emoji {
+				position: absolute;
+				z-index: 1;
+				bottom: 18px;
+				left: 20px;
+
+				filter: grayscale(20%);
+				font-size: 40px;
+				line-height: 1;
+			}
+
 			.wallet-carrousel-item-name {
 				position: relative;
 				z-index: 2;
@@ -158,4 +169,12 @@
 
 .__inactive {
 	display: none !important;
+}
+
+.alice-carousel__dots-item.__active {
+	background-color: $logo-color-orange !important;
+}
+
+.alice-carousel__dots-item {
+	background-color: $logo-color-orange--25 !important;
 }

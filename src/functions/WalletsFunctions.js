@@ -61,3 +61,26 @@ export const getApplicationsAccounts = () => {
         }
     ];
 }
+
+export const getWallets = () => {
+    return [
+        {
+            id: 1,
+            name: 'Efectivo > $100',
+            logo: '👑',
+            balance: '4600.00',
+            currency: 'ARS',
+            color: '#363636',
+            bgColor: '#f5f5f5',
+        },
+        {
+            id: 2,
+            name: 'Efectivo < $100',
+            logo: '🤑',
+            balance: '240.00',
+            currency: 'ARS',
+            color: '#363636',
+            bgColor: '#f5f5f5',
+        },
+    ];
+}

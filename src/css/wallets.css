@@ -32,10 +32,10 @@
 }
 .wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper .alice-carousel__prev-btn-item {
   background: transparent;
-  color: red;
+  color: #000000;
 }
 .wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper .alice-carousel__prev-btn-item:hover {
-  background: linear-gradient(90deg, #f2f2f2 0%, #a91f1f00 100%);
+  background: linear-gradient(90deg, #faf9f9 0%, #a91f1f00 100%);
 }
 .wallets-row .alice-carousel .alice-carousel__next-btn {
   display: flex;
@@ -52,10 +52,10 @@
 }
 .wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper .alice-carousel__next-btn-item {
   background: transparent;
-  color: red;
+  color: #000000;
 }
 .wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper .alice-carousel__next-btn-item:hover {
-  background: linear-gradient(90deg, #f2f2f2 0%, #a91f1f00 100%);
+  background: linear-gradient(90deg, #a91f1f00 0%, #faf9f9 100%);
 }
 .wallets-row .alice-carousel .arrow-size, .wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper, .wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper .alice-carousel__prev-btn-item, .wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper, .wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper .alice-carousel__next-btn-item {
   display: flex;
@@ -117,6 +117,15 @@
   bottom: 20px;
   left: 20px;
 }
+.wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-emoji {
+  position: absolute;
+  z-index: 1;
+  bottom: 18px;
+  left: 20px;
+  filter: grayscale(20%);
+  font-size: 40px;
+  line-height: 1;
+}
 .wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-name {
   position: relative;
   z-index: 2;
@@ -146,6 +155,14 @@
 
 .__inactive {
   display: none !important;
+}
+
+.alice-carousel__dots-item.__active {
+  background-color: #ffc000 !important;
+}
+
+.alice-carousel__dots-item {
+  background-color: #fde6a1 !important;
 }
 
 /*# sourceMappingURL=wallets.css.map */

@@ -14,7 +14,7 @@ import Mdex from '../../assets/images/logos/mdex.png';
 import Uala from '../../assets/images/logos/uala.svg';
 
 // Functions
-import { getApplicationsAccounts, getBankAccounts } from '../../functions/WalletsFunctions';
+import { getApplicationsAccounts, getBankAccounts, getWallets } from '../../functions/WalletsFunctions';
 
 // Styles
 import 'react-alice-carousel/lib/alice-carousel.css';
@@ -33,23 +33,26 @@ const Carousel = ({ itemsArray }) => {
 	let counter = 0;
 	const items = itemsArray.map((item) => {
 		let Logo;
-		console.log(Logos);
 		Logos.forEach((img) => {
-			if (img.includes(item.logo.toLowerCase())) {
-				Logo = img;
+			// search if item.logo contains a hex code or a emoji in it with regex
+			if (
+				/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi.test(
+					item.logo
+				)
+			) {
+				Logo = <p className="wallet-carrousel-item-emoji">{item.logo}</p>;
 			} else {
-				console.log(img);
-				console.log(item.logo);
+				if (img.includes(item.logo.toLowerCase())) {
+					Logo = <img className="wallet-carrousel-item-image" src={img} alt={item.name} />;
+				}
 			}
 		});
-		console.log(Logo);
-
 		counter++;
 		return (
 			<div className="wallet-carrousel-container" data-value={counter}>
 				<div className="wallet-carrousel-item" style={{ backgroundColor: item.bgColor, color: item.color }}>
 					<div className="description">
-						<img className="wallet-carrousel-item-image" src={Logo} alt={item.name} />
+						{Logo}
 						<div className="wallet-carrousel-item-name">{item.name}</div>
 					</div>
 					<div className="balance">
@@ -67,7 +70,10 @@ const Carousel = ({ itemsArray }) => {
 			items={items}
 			responsive={responsive}
 			controlsStrategy="alternate"
-			disableDotsControls="true"
+			/* disableDotsControls="true" */
+			disableButtonsControls="true"
+			infinite={true}
+			swipeDelta="40"
 		/>
 	);
 };
@@ -75,6 +81,7 @@ const Carousel = ({ itemsArray }) => {
 export default function Wallets() {
 	const [bankAccount, setBankAccount] = useState(getBankAccounts);
 	const [appAccounts, setAppAccounts] = useState(getApplicationsAccounts);
+	const [wallets, setWallets] = useState(getWallets);
 
 	return (
 		<main>
@@ -92,7 +99,7 @@ export default function Wallets() {
 			</div>
 			<div className="wallets-row col-12">
 				<h2 className="carrousel-title">Billeteras manuales</h2>
-				{/* <Carousel /> */}
+				<Carousel itemsArray={wallets} />
 			</div>
 		</main>
 	);
