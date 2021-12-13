@@ -6,15 +6,15 @@ import WalletCard from './WalletCard'
 
 // Functions
 import { getLinkedAccounts, toggleNewWallet } from '../../../functions/HomeFunctions';
-import Axios from 'axios';
+//import Axios from 'axios';
 
 export default function Wallets() {
     // eslint-disable-next-line no-unused-vars
     const [wallets, setWallets] = useState(getLinkedAccounts());
 
-    Axios.get(`https://web.uala.com.ar/api/home/balance`).then((res) => {
+    /* Axios.get(`https://web.uala.com.ar/api/home/balance`).then((res) => {
         console.log(res);
-    })
+    }) */
 
     return (
         <>
@@ -54,20 +54,20 @@ const NewWalletContainer = () => {
     return (
         <div className='wallet-options-container'>
             <div className="wallet-option-item">
-                <svg viewBox="0 0 32 32" style={{ enableBackground: "new 0 0 32 32" }} fill="none" stroke="#000000" strokeWidth="1" strokeLinecap="round" strokelinejoin="round" strokeMiterlimit="10">
-                    <polygon class="st0" points="17,1 6,6.6 6,9 28,9 28,6.6 " />
-                    <path class="st0" d="M3,25l2.6-4.2c1.5-2.3,4-3.8,6.8-3.8H19v0c0,2.2-1.8,4-4,4h-2" />
-                    <path class="st0" d="M15,21h8l1.2-1.6c1.1-1.5,2.9-2.4,4.8-2.4h0l-2.7,4.8c-1.4,2.6-4.2,4.2-7.1,4.2h0c-4.7,0-9.3,1.4-13.2,4l0,0" />
-                    <line class="st0" x1="17" y1="9" x2="17" y2="17" />
-                    <line class="st0" x1="21" y1="9" x2="21" y2="21" />
-                    <line class="st0" x1="25" y1="9" x2="25" y2="18" />
-                    <line class="st0" x1="9" y1="9" x2="9" y2="17" />
-                    <line class="st0" x1="13" y1="9" x2="13" y2="17" />
+                <svg viewBox="0 0 32 32" style={{ enableBackground: "new 0 0 32 32" }} fill="none" stroke="#000000" strokeWidth="1" strokeLinecap="round" strokeMiterlimit="10">
+                    <polygon points="17,1 6,6.6 6,9 28,9 28,6.6 " />
+                    <path d="M3,25l2.6-4.2c1.5-2.3,4-3.8,6.8-3.8H19v0c0,2.2-1.8,4-4,4h-2" />
+                    <path d="M15,21h8l1.2-1.6c1.1-1.5,2.9-2.4,4.8-2.4h0l-2.7,4.8c-1.4,2.6-4.2,4.2-7.1,4.2h0c-4.7,0-9.3,1.4-13.2,4l0,0" />
+                    <line x1="17" y1="9" x2="17" y2="17" />
+                    <line x1="21" y1="9" x2="21" y2="21" />
+                    <line x1="25" y1="9" x2="25" y2="18" />
+                    <line x1="9" y1="9" x2="9" y2="17" />
+                    <line x1="13" y1="9" x2="13" y2="17" />
                 </svg>
                 Cuenta bancaria
             </div>
             <div className="wallet-option-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                 </svg>
