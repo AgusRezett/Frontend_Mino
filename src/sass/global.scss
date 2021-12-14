@@ -38,4 +38,10 @@ main {
 		width: calc(100% - 75px);
 		margin-left: 75px;
 	}
+
+	@media screen and (max-width: 656px) {
+		width: 100%;
+		height: calc(100% - 140px);
+		margin: 65px 0px 0px 0px;
+	}
 }

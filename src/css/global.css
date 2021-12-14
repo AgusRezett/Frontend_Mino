@@ -11176,5 +11176,12 @@ main {
     margin-left: 75px;
   }
 }
+@media screen and (max-width: 656px) {
+  main {
+    width: 100%;
+    height: calc(100% - 140px);
+    margin: 65px 0px 0px 0px;
+  }
+}
 
 /*# sourceMappingURL=global.css.map */

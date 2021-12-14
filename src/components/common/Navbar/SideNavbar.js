@@ -22,7 +22,7 @@ export default function SideNavbar() {
             <ul id="sideNavbarContainer" className="side-navbar-links">
                 <li>
                     <NavLink to="/" onClick={(e) => pressNavigateButton(e.target)}>
-                        <svg className="nav-element-icon" style={{ marginBottom: "4px" }} viewBox="0 0 24 24" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" fill="none" >
+                        <svg className="nav-element-icon" viewBox="0 0 24 24" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" fill="none" >
                             <title id="homeAltIconTitle">Home</title>
                             <path d="M3 10.182V22h18V10.182L12 2z" />
                             <rect width="6" height="8" x="9" y="14" />
@@ -57,14 +57,9 @@ export default function SideNavbar() {
                         <span>Configuración</span>
                     </NavLink>
                 </li>
-                <div id="activeNavlinkBackground" className="active-navlink-background">
-                    <div className="active-navlink-background-stick"></div>
-                </div>
-            </ul>
-            <div id="sideNavbarContainer2" className="side-navbar-links bottom-links">
-                <li>
+                <li className='log-out'>
                     <NavLink to="/cerrar-sesion" onClick={(e) => pressNavigateButton(e.target)}>
-                        <svg className="nav-element-icon-special" viewBox="0 0 384.971 384.971" >
+                        <svg className="nav-element-icon-special log-out-icon" viewBox="0 0 384.971 384.971" >
                             <path d="M180.455,360.91H24.061V24.061h156.394c6.641,0,12.03-5.39,12.03-12.03s-5.39-12.03-12.03-12.03H12.03
 				C5.39,0.001,0,5.39,0,12.031V372.94c0,6.641,5.39,12.03,12.03,12.03h168.424c6.641,0,12.03-5.39,12.03-12.03
 				C192.485,366.299,187.095,360.91,180.455,360.91z"/>
@@ -75,7 +70,10 @@ export default function SideNavbar() {
                         <span>Cerrar sesión</span>
                     </NavLink>
                 </li>
-            </div>
+                <div id="activeNavlinkBackground" className="active-navlink-background">
+                    <div className="active-navlink-background-stick"></div>
+                </div>
+            </ul>
         </aside>
     )
 }
