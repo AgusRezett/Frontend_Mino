@@ -3,7 +3,7 @@
 
 .wallets-row {
 	height: auto;
-	margin-bottom: 30px;
+	margin-bottom: -3px;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -14,6 +14,8 @@
 
 	.alice-carousel {
 		position: relative;
+		width: calc(100% + 20px);
+		margin-left: -10px;
 
 		div {
 			.alice-carousel__wrapper {
@@ -78,90 +80,105 @@
 			height: 100%;
 			transition: all 150s ease-in-out;
 		}
+
+		.alice-carousel__dots {
+			margin: 5px;
+		}
 	}
 }
 
-.wallet-carrousel-container {
-	@include displayFlex(column, center, center);
-	height: 130px;
-	margin-right: 20px;
+.alice-carousel__stage-item {
+	padding: 0 10px;
 
-	cursor: pointer;
-	user-select: none; /* supported by Chrome and Opera */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	transition: all 150ms ease-in-out;
+	.wallet-carrousel-container {
+		@include displayFlex(column, center, center);
+		height: 130px;
+		text-decoration: none;
 
-	&:hover {
-		filter: brightness(1.1);
-	}
+		-webkit-user-select: none; /* Safari 3.1+ */
+		-moz-user-select: none; /* Firefox 2+ */
+		-ms-user-select: none; /* IE 10+ */
+		user-select: none; /* Standard syntax */
+		-webkit-user-drag: none;
+		-moz-user-drag: none;
 
-	.wallet-carrousel-item {
-		@include displayFlex(column, space-around, flex-start);
-		width: 100%;
-		height: 100%;
-		position: relative;
-		border-radius: 10px;
-		padding-left: 20px;
-		background-color: #ffffff;
-		overflow: hidden;
-		//box-shadow: 0px 2px 5px #00000014;
+		cursor: pointer;
+		user-select: none; /* supported by Chrome and Opera */
+		-webkit-user-select: none; /* Safari */
+		-khtml-user-select: none; /* Konqueror HTML */
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+		transition: all 150ms ease-in-out;
 
-		.description {
-			@include displayFlex(column, center, flex-start);
-
-			.wallet-carrousel-item-image {
-				//display: none;
-				width: auto;
-				height: 50px;
-
-				position: absolute;
-				z-index: 1;
-				bottom: 20px;
-				left: 20px;
-
-				//transform: rotate(30deg);
-			}
-
-			.wallet-carrousel-item-emoji {
-				position: absolute;
-				z-index: 1;
-				bottom: 18px;
-				left: 20px;
-
-				filter: grayscale(20%);
-				font-size: 40px;
-				line-height: 1;
-			}
-
-			.wallet-carrousel-item-name {
-				position: relative;
-				z-index: 2;
-				margin-bottom: 7px;
-				font-size: 28px;
-				font-weight: 700;
-			}
+		&:hover {
+			filter: brightness(1.1);
 		}
 
-		.balance {
-			@include displayFlex(row, flex-end, flex-end);
+		.wallet-carrousel-item {
+			@include displayFlex(column, space-around, flex-start);
 			width: 100%;
+			height: 100%;
 			position: relative;
-			z-index: 2;
+			border-radius: 10px;
+			padding-left: 20px;
+			background-color: #ffffff;
+			overflow: hidden;
+			//box-shadow: 0px 2px 5px #00000014;
 
-			font-size: 18px;
-			padding-right: 20px;
-			margin-top: 7px;
+			.description {
+				@include displayFlex(column, center, flex-start);
 
-			.wallet-carrousel-item-currency {
-				font-weight: 600;
-				margin-right: 5px;
+				.wallet-carrousel-item-image {
+					//display: none;
+					width: auto;
+					height: 50px;
+
+					position: absolute;
+					z-index: 1;
+					bottom: 20px;
+					left: 20px;
+
+					//transform: rotate(30deg);
+				}
+
+				.wallet-carrousel-item-emoji {
+					position: absolute;
+					z-index: 1;
+					bottom: 18px;
+					left: 20px;
+
+					filter: grayscale(20%);
+					font-size: 40px;
+					line-height: 1;
+				}
+
+				.wallet-carrousel-item-name {
+					position: relative;
+					z-index: 2;
+					margin-bottom: 7px;
+					font-size: 28px;
+					font-weight: 700;
+				}
 			}
 
-			.wallet-carrousel-item-balance {
-				font-weight: 700;
+			.balance {
+				@include displayFlex(row, flex-end, flex-end);
+				width: 100%;
+				position: relative;
+				z-index: 2;
+
+				font-size: 18px;
+				padding-right: 20px;
+				margin-top: 7px;
+
+				.wallet-carrousel-item-currency {
+					font-weight: 600;
+					margin-right: 5px;
+				}
+
+				.wallet-carrousel-item-balance {
+					font-weight: 700;
+				}
 			}
 		}
 	}

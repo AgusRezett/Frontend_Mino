@@ -28,11 +28,28 @@ main {
 	flex-direction: column;
 	width: calc(100% - 240px);
 	height: calc(100% - 65px);
-	padding: 20px;
-	margin: 65px 0px 0px 240px;
+	padding: 20px 20px 20px 20px;
+	margin: 65px 10px 0px 240px;
 	background-color: $white-background;
 	overflow-y: scroll;
 	transition: all 170ms ease-in-out;
+
+	//webkit scroll style
+	&::-webkit-scrollbar {
+		scroll-margin: 5px 10px;
+		width: 7px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+		border-radius: 20px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 20px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
 
 	@media screen and (max-width: 991px) {
 		width: calc(100% - 75px);

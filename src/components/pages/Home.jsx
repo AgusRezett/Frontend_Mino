@@ -27,10 +27,9 @@ export default function Home() {
 	return (
 		<main>
 			<Helmet>
-				<title>Mino - Inicio</title>
+				<title>Mino</title>
 				<meta name="description" content="Nested component" />
 			</Helmet>
-			<h1>Inicio</h1>
 			<div className="row">
 				{selectedBadges &&
 					selectedBadges.map((badge) => (

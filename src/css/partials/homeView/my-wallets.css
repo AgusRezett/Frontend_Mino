@@ -31,19 +31,9 @@
   padding: 0;
   transition: all 170ms ease-in-out;
 }
-@media screen and (min-width: 767px) and (max-width: 859px) {
+@media screen and (max-width: 430px) {
   .my-wallets-space {
-    height: 370px;
-  }
-}
-@media screen and (max-width: 610px) {
-  .my-wallets-space {
-    height: 370px;
-  }
-}
-@media screen and (max-width: 413px) {
-  .my-wallets-space {
-    height: 390px;
+    height: 375px;
   }
 }
 .my-wallets-space .my-wallets-container {
@@ -151,11 +141,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: calc(100% - 25px);
+  width: calc(100% - 27.5px);
   height: 0px;
   position: absolute;
   bottom: calc(100% - 67px);
-  left: 12px;
+  left: 13px;
   z-index: 0;
   overflow: hidden;
   padding: 20px;
@@ -223,9 +213,12 @@
   margin-bottom: 0px;
 }
 .my-wallets-space .my-wallets-container .open {
-  overflow: visible;
   height: calc(100% - 87px);
-  bottom: 1px;
+  bottom: 0px;
+  /* @media screen and (max-width: 859px) {
+  	height: calc(100% - 105px);
+  	bottom: 20px;
+  } */
 }
 
 /*# sourceMappingURL=my-wallets.css.map */

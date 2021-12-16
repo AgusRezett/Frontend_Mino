@@ -17,7 +17,7 @@ import '../../css/login.css';
 export default function Login() {
 	// Verify if it's a completely new user
 	const [firstTime, setFirstTime] = useState(null);
-	document.title = 'Mino - Ingresar';
+	document.title = 'Ingresar';
 
 	useEffect(() => {
 		setFirstTime(getFirstTime());

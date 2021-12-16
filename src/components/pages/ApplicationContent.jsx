@@ -12,6 +12,7 @@ import SideNavbar from '../common/Navbar/SideNavbar';
 // Navigation
 import Home from './Home';
 import Wallets from './Wallets';
+import Configuration from './Configuration';
 
 export default function ApplicationContent() {
 	return (
@@ -29,25 +30,14 @@ export default function ApplicationContent() {
 						element={
 							<main>
 								<Helmet>
-									<title>Mino - Criptomonedas</title>
+									<title>Criptomonedas</title>
 									<meta name="description" content="Nested component" />
 								</Helmet>
 								<h1>Criptomonedas</h1>
 							</main>
 						}
 					/>
-					<Route
-						path="/configuracion"
-						element={
-							<main>
-								<Helmet>
-									<title>Mino - Configuración</title>
-									<meta name="description" content="Nested component" />
-								</Helmet>
-								<h1>Configuración</h1>
-							</main>
-						}
-					/>
+					<Route path="/configuracion" element={<Configuration />} />
 				</Routes>
 			</HelmetProvider>
 		</Router>

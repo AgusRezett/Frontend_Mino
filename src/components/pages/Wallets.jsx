@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 // Components
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
 
 // Images
@@ -27,6 +28,11 @@ const responsive = {
 	1024: { items: 4 },
 };
 
+const stagePadding = {
+	paddingLeft: 50,
+	paddingRight: 100,
+};
+
 const Logos = [Bbva, Binance, Brubank, Macro, Mdex, Uala];
 
 const Carousel = ({ itemsArray }) => {
@@ -49,7 +55,14 @@ const Carousel = ({ itemsArray }) => {
 		});
 		counter++;
 		return (
-			<div className="wallet-carrousel-container" data-value={counter}>
+			<Link
+				to={`${item.name.toLowerCase()}`}
+				className="wallet-carrousel-container"
+				data-value={counter}
+				/* onMouseDown={(e) => {
+					e.preventDefault();
+				}} */
+			>
 				<div className="wallet-carrousel-item" style={{ backgroundColor: item.bgColor, color: item.color }}>
 					<div className="description">
 						{Logo}
@@ -60,7 +73,7 @@ const Carousel = ({ itemsArray }) => {
 						<div className="wallet-carrousel-item-balance">{item.balance}</div>
 					</div>
 				</div>
-			</div>
+			</Link>
 		);
 	});
 
@@ -73,7 +86,7 @@ const Carousel = ({ itemsArray }) => {
 			/* disableDotsControls="true" */
 			disableButtonsControls="true"
 			infinite={true}
-			swipeDelta="40"
+			stagePadding={stagePadding}
 		/>
 	);
 };
@@ -86,7 +99,7 @@ export default function Wallets() {
 	return (
 		<main>
 			<Helmet>
-				<title>Mino - Billeteras</title>
+				<title>Billeteras</title>
 				<meta name="description" content="Nested component" />
 			</Helmet>
 			<div className="wallets-row col-12">

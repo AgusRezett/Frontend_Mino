@@ -24,7 +24,7 @@ export default function TotalBalanceCard({ badgeId, value }) {
                 <img src={badgeDictionary[badgeId].flag} alt="" />
             </div>
             <div className="balance-card-bottom">
-                {`Disponible: ${badgeDictionary[badgeId].badge} ${value}`}
+                {`${badgeDictionary[badgeId].badge} ${value}`}
                 <div className='secondary-curreny-value'>{`Total: ${badgeDictionary[badgeId].badge} ${parseInt(value) + 6066.45}`}</div>
                 <div className="expand-toggler" onClick={(e) => expandCardBottom(e)}>
                     <svg

@@ -1,6 +1,6 @@
 .wallets-row {
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: -3px;
   /* .carrousel-title {
   } */
 }
@@ -9,6 +9,8 @@
 }
 .wallets-row .alice-carousel {
   position: relative;
+  width: calc(100% + 20px);
+  margin-left: -10px;
 }
 .wallets-row .alice-carousel div .alice-carousel__wrapper {
   display: flex;
@@ -66,14 +68,30 @@
   height: 100%;
   transition: all 150s ease-in-out;
 }
+.wallets-row .alice-carousel .alice-carousel__dots {
+  margin: 5px;
+}
 
-.wallet-carrousel-container {
+.alice-carousel__stage-item {
+  padding: 0 10px;
+}
+.alice-carousel__stage-item .wallet-carrousel-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 130px;
-  margin-right: 20px;
+  text-decoration: none;
+  -webkit-user-select: none;
+  /* Safari 3.1+ */
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Standard syntax */
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
   cursor: pointer;
   user-select: none;
   /* supported by Chrome and Opera */
@@ -87,10 +105,10 @@
   /* Internet Explorer/Edge */
   transition: all 150ms ease-in-out;
 }
-.wallet-carrousel-container:hover {
+.alice-carousel__stage-item .wallet-carrousel-container:hover {
   filter: brightness(1.1);
 }
-.wallet-carrousel-container .wallet-carrousel-item {
+.alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -103,13 +121,13 @@
   background-color: #ffffff;
   overflow: hidden;
 }
-.wallet-carrousel-container .wallet-carrousel-item .description {
+.alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item .description {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-image {
+.alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-image {
   width: auto;
   height: 50px;
   position: absolute;
@@ -117,7 +135,7 @@
   bottom: 20px;
   left: 20px;
 }
-.wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-emoji {
+.alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-emoji {
   position: absolute;
   z-index: 1;
   bottom: 18px;
@@ -126,14 +144,14 @@
   font-size: 40px;
   line-height: 1;
 }
-.wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-name {
+.alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item .description .wallet-carrousel-item-name {
   position: relative;
   z-index: 2;
   margin-bottom: 7px;
   font-size: 28px;
   font-weight: 700;
 }
-.wallet-carrousel-container .wallet-carrousel-item .balance {
+.alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item .balance {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -145,11 +163,11 @@
   padding-right: 20px;
   margin-top: 7px;
 }
-.wallet-carrousel-container .wallet-carrousel-item .balance .wallet-carrousel-item-currency {
+.alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item .balance .wallet-carrousel-item-currency {
   font-weight: 600;
   margin-right: 5px;
 }
-.wallet-carrousel-container .wallet-carrousel-item .balance .wallet-carrousel-item-balance {
+.alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item .balance .wallet-carrousel-item-balance {
   font-weight: 700;
 }
 

@@ -43,7 +43,7 @@ export default function Wallets() {
                         <polyline points="6 10 12 16 18 10" />
                     </svg>
                 </div>
-                <p className='new-wallet-title'><b>Elegí una billetera para vincular a tu cuenta Mino</b> 💳</p>
+                <p className='new-wallet-title' onClick={() => { window.navigator.vibrate(50) }}><b>Añadí una billetera a tu cuenta Mino</b> 💳</p>
                 <NewWalletContainer />
             </div>
         </>
