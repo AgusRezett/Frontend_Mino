@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@font-face {
+  font-family: "RooneySans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("RooneySans Bold"), url("../assets/fonts/rooneysans/RooneySansBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Scorno Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno Bold"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo heavy.otf") format("woff");
+}
+@font-face {
+  font-family: "Scorno";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Scorno"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo Medium.otf") format("woff");
+}
+.configuration-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0px 12px;
+  margin-top: 10px;
+}
+.configuration-navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 12px;
+  box-shadow: 0px 2px 5px #00000014;
+  background-color: #fff;
+  transition: all 150ms ease-in-out;
+}
+@media screen and (max-width: 467px) {
+  .configuration-navbar ul {
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .configuration-navbar ul > li {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .configuration-navbar ul > li::after {
+    content: "";
+    width: 7px !important;
+    height: 100% !important;
+    border-radius: 0px 20px 20px 0px !important;
+    left: 0;
+  }
+}
+.configuration-navbar ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-right: 25px;
+  padding: 0px 20px;
+  position: relative;
+}
+.configuration-navbar ul li:hover::after {
+  background-color: #575757;
+}
+.configuration-navbar ul li:first-child {
+  margin-left: 20px;
+}
+.configuration-navbar ul li::after {
+  content: "";
+  width: 80%;
+  height: 3px;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 20px 20px 0px 0px;
+  transition: all 150ms ease-in-out;
+}
+.configuration-navbar ul li span {
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  color: #575757;
+  transition: all 150ms ease-in-out;
+}
+.configuration-navbar ul .active span {
+  color: #ff9900;
+}
+.configuration-navbar ul .active::after {
+  content: "";
+  width: 80%;
+  height: 3px;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #ff9900 !important;
+}
+
+.settings-options-content .clean-preferences {
+  background-color: #3d0052;
+  color: #fff;
+}
+.settings-options-content .clean-preferences:hover {
+  background-color: #fd4545 !important;
+}
+
+.row .settings-options-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  padding: 0px 12px;
+}
+.row .settings-options-container .settings-options-content {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5px #00000014;
+}
+.row .settings-options-container .settings-options-content .button-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  cursor: pointer;
+  position: relative;
+  padding: 0px 20px;
+  transition: all 150ms ease-in-out;
+}
+.row .settings-options-container .settings-options-content .button-option:hover {
+  background-color: #dfdfdf1e;
+}
+.row .settings-options-container .settings-options-content .button-option:last-child::after {
+  display: none;
+}
+.row .settings-options-container .settings-options-content .button-option .button-information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: calc(100% - 80px);
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .row .settings-options-container .settings-options-content .button-option .button-information-container {
+    width: 100%;
+    height: auto;
+  }
+}
+.row .settings-options-container .settings-options-content .button-option .button-information-container .button-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.row .settings-options-container .settings-options-content .button-option .button-information-container .button-header .button-header-icon {
+  width: 30px;
+}
+.row .settings-options-container .settings-options-content .button-option .button-information-container .button-header .button-header-title {
+  font-weight: 600;
+}
+.row .settings-options-container .settings-options-content .button-option .button-information-container .button-description {
+  margin-left: 30px;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+@media screen and (max-width: 768px) {
+  .row .settings-options-container .settings-options-content .button-option .button-information-container .button-description {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .row .settings-options-container .settings-options-content .button-option .button-information-container .button-description {
+    display: none;
+  }
+}
+.row .settings-options-container .settings-options-content .button-option .button-right-side {
+  margin-right: 20px;
+  white-space: nowrap;
+  transition: all 150ms ease-in-out;
+}
+@media screen and (max-width: 480px) {
+  .row .settings-options-container .settings-options-content .button-option .button-right-side {
+    margin-left: 30px;
+  }
+}
+.row .settings-options-container .settings-options-content .button-option .button-right-side .expand-toggler {
+  width: 30px;
+  height: 30px;
+  transform: rotate(270deg);
+}
+.row .settings-options-container .settings-options-content .button-option .button-right-side .expand-toggler svg {
+  width: 100%;
+  height: 100%;
+  stroke: #222222;
+}
+.row .settings-options-container .settings-options-content .button-option::after {
+  content: "";
+  width: calc(100% - 20px);
+  height: 1px;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #d5d5d5;
+}
+
+/*# sourceMappingURL=configuration.css.map */

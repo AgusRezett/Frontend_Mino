@@ -1,0 +1,10 @@
+.settings-options-content {
+	.clean-preferences {
+		background-color: $logo-color-purple;
+		color: #fff;
+
+		&:hover {
+			background-color: #fd4545 !important;
+		}
+	}
+}

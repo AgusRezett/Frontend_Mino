@@ -37,7 +37,7 @@ export default function ApplicationContent() {
 							</main>
 						}
 					/>
-					<Route path="/configuracion*" element={<Configuration />} />
+					<Route path="/configuracion" element={<Configuration />} />
 				</Routes>
 			</HelmetProvider>
 		</Router>

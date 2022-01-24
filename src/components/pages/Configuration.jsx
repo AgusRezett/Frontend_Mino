@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 // Components
 import { Helmet } from 'react-helmet-async';
 //import { Routes, Route } from 'react-router-dom';
-import Ajustes from '../common/SettingsView/Ajustes';
+import Ajustes from '../common/SettingsView/Settings';
+import Navbar from '../common/SettingsView/Navbar';
+import Preferencias from '../common/SettingsView/Preferences';
+import Cuenta from '../common/SettingsView/Account';
 
 // Styles
-import '../../css/settings.css';
-import Navbar from '../common/SettingsView/Navbar';
-import Preferencias from '../common/SettingsView/Preferencias';
-import Cuenta from '../common/SettingsView/Cuenta';
+import '../../css/configuration.css';
 
 export default function Configuration() {
 	const [configRoute, setConfigRoute] = useState('ajustes');
