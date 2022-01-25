@@ -1,8 +1,21 @@
 {
+	"page.title": "Settings",
+
+	"navbar.option.home": "Home",
+	"navbar.option.wallets": "Wallets",
+	"navbar.option.crypto": "Cryptocurrencies",
+	"navbar.option.configuration": "Configuration",
 	"navbar.option.settings": "Settings",
 	"navbar.option.preferences": "Preferences",
 	"navbar.option.account": "Account",
 
-	"config.settings.option.language": "Language and region",
-	"config.preference.option.currencies": "My currencies"
+	"config.settings.option.title.language": "Language & region",
+	"config.settings.option.description.language": "Chose a language with which to display the application",
+	"config.settings.option.title.notifications": "Notifications",
+	"config.settings.option.description.notifications": "Activate the notifications you want to receive",
+	"config.settings.option.title.devices": "Devices",
+	"config.settings.option.description.devices": "Manage the devices where your active account is located",
+
+	"config.preferences.option.title.currencies": "My currencies",
+	"config.preferences.option.description.currencies": "Choose up to 3 currencies to display the values of your wallets"
 }

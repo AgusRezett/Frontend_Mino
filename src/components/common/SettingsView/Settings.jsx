@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import OptionButton from './OptionButton';
+
 const sideArrow = (
 	<div className="expand-toggler">
 		<svg viewBox="0 0 24 24" stroke="#000" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" fill="none">
@@ -14,22 +15,28 @@ const sideArrow = (
 const optionButtons = [
 	{
 		icon: '🌏',
-		title: 'Idioma y región',
-		description: 'Elegí un idioma con el que mostrar la aplicación',
+		langMessageTitle: 'config.settings.option.title.language',
+		langMessageDescription: 'config.settings.option.description.language',
+		defaultTitle: 'Idioma y región',
+		defaultDescription: 'Elegí un idioma con el que mostrar la aplicación',
 		rightSide: 'Español (Argentina)',
 		responsive: true,
 	},
 	{
 		icon: '📨',
-		title: 'Notificaciones',
-		description: 'Activá las notificaciones que deseás recibir',
+		langMessageTitle: 'config.settings.option.title.notifications',
+		langMessageDescription: 'config.settings.option.description.notifications',
+		defaultTitle: 'Notificaciones',
+		defaultDescription: 'Activá las notificaciones que deseás recibir',
 		rightSide: sideArrow,
 		responsive: false,
 	},
 	{
 		icon: '📱',
-		title: 'Mis dispositivos',
-		description: 'Gestioná los dispositivos donde estás utilizando tú cuenta',
+		langMessageTitle: 'config.settings.option.title.devices',
+		langMessageDescription: 'config.settings.option.description.devices',
+		defaultTitle: 'Mis dispositivos',
+		defaultDescription: 'Gestioná los dispositivos donde estás utilizando tú cuenta',
 		rightSide: sideArrow,
 		responsive: false,
 	},
@@ -43,8 +50,10 @@ export default function Ajustes() {
 					<OptionButton
 						key={index}
 						icon={optionButton.icon}
-						title={optionButton.title}
-						description={optionButton.description}
+						langMessageTitle={optionButton.langMessageTitle}
+						langMessageDescription={optionButton.langMessageDescription}
+						title={optionButton.defaultTitle}
+						description={optionButton.defaultDescription}
 						rightSide={optionButton.rightSide}
 						responsive={optionButton.responsive}
 					/>
