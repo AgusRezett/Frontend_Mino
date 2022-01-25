@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-//import { NavLink } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 // Styles
 
@@ -11,15 +11,21 @@ export default function Navbar({ changeRoute }) {
         <nav className='configuration-navbar'>
             <ul id="config-navbar">
                 <li className="active">
-                    <span onClick={(e) => changeRoute(e.target)}>Ajustes</span>
+                    <span id="nav-option-0" onClick={(e) => changeRoute(e)}>
+                        <FormattedMessage id="navbar.option.settings" defaultMessage="Ajustes" />
+                    </span>
                 </li>
                 <li>
-                    <span onClick={(e) => changeRoute(e.target)}>Preferencias</span>
+                    <span id="nav-option-1" onClick={(e) => changeRoute(e)}>
+                        <FormattedMessage id="navbar.option.preferences" defaultMessage="Preferencias" />
+                    </span>
                 </li>
                 <li>
-                    <span onClick={(e) => changeRoute(e.target)}>Cuenta</span>
+                    <span id="nav-option-2" onClick={(e) => changeRoute(e)}>
+                        <FormattedMessage id="navbar.option.account" defaultMessage="Cuenta" />
+                    </span>
                 </li>
             </ul>
-        </nav>
+        </nav >
     )
 }

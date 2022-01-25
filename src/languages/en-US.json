@@ -1,0 +1,8 @@
+{
+	"navbar.option.settings": "Settings",
+	"navbar.option.preferences": "Preferences",
+	"navbar.option.account": "Account",
+
+	"config.settings.option.language": "Language and region",
+	"config.preference.option.currencies": "My currencies"
+}

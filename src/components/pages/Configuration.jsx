@@ -14,12 +14,28 @@ import '../../css/configuration.css';
 export default function Configuration() {
 	const [configRoute, setConfigRoute] = useState('ajustes');
 
-	const changeRoute = (spanButton) => {
-		setConfigRoute(spanButton.textContent.toLowerCase());
+	const changeRoute = (e) => {
 		document.getElementById('config-navbar').childNodes.forEach((element) => {
 			element.classList.remove('active');
 		});
-		spanButton.parentNode.classList.add('active');
+
+		const index = parseInt(e.target.id.split('-')[2]);
+		switch (index) {
+			case 0:
+				setConfigRoute('ajustes');
+				break;
+			case 1:
+				setConfigRoute('preferencias');
+				break;
+			case 2:
+				setConfigRoute('cuenta');
+				break;
+			default:
+				setConfigRoute('ajustes');
+				alert('Ajustes');
+				break;
+		}
+		e.target.parentNode.classList.add('active');
 	};
 
 	return (
