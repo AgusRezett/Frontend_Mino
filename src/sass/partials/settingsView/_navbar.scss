@@ -3,98 +3,98 @@
 @import '../../mixins';
 
 .configuration-navbar {
-	@include displayFlex(row, flex-start, center);
-	width: 100%;
-	height: auto;
-	padding: 0px 12px;
-	margin-top: 10px;
+    @include displayFlex(row, flex-start, center);
+    width: 100%;
+    height: auto;
+    padding: 0px 12px;
+    //margin-top: 10px;
 
-	ul {
-		@include displayFlex(row, flex-start, center);
-		width: 100%;
-		//max-width: 500px;
-		height: 50px;
-		padding: 0;
-		margin: 0;
+    ul {
+        @include displayFlex(row, flex-start, center);
+        width: 100%;
+        //max-width: 500px;
+        height: 50px;
+        padding: 0;
+        margin: 0;
 
-		list-style: none;
-		border-radius: 12px;
-		box-shadow: 0px 2px 5px #00000014;
-		background-color: $white;
-		transition: all 150ms ease-in-out;
+        list-style: none;
+        border-radius: 12px;
+        box-shadow: 0px 2px 5px #00000014;
+        background-color: $white;
+        transition: all 150ms ease-in-out;
 
-		@media screen and (max-width: 467px) {
-			flex-direction: column;
-			height: 100%;
-			padding: 0;
-			margin: 0;
-			overflow: hidden;
+        @media screen and (max-width: 467px) {
+            flex-direction: column;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
 
-			& > li {
-				width: 100%;
-				margin: 0 !important;
+            & > li {
+                width: 100%;
+                margin: 0 !important;
 
-				&::after {
-					content: '';
-					width: 7px !important;
-					height: 100% !important;
-					border-radius: 0px 20px 20px 0px !important;
+                &::after {
+                    content: '';
+                    width: 7px !important;
+                    height: 100% !important;
+                    border-radius: 0px 20px 20px 0px !important;
 
-					left: 0;
-				}
-			}
-		}
+                    left: 0;
+                }
+            }
+        }
 
-		li {
-			@include displayFlex(row, center, center);
-			height: 50px;
-			margin-right: 25px;
-			padding: 0px 20px;
-			position: relative;
+        li {
+            @include displayFlex(row, center, center);
+            height: 50px;
+            margin-right: 25px;
+            padding: 0px 20px;
+            position: relative;
 
-			&:hover {
-				&::after {
-					background-color: $text-color;
-				}
-			}
+            &:hover {
+                &::after {
+                    background-color: $text-color;
+                }
+            }
 
-			&:first-child {
-				margin-left: 20px;
-			}
+            &:first-child {
+                margin-left: 20px;
+            }
 
-			&::after {
-				content: '';
-				width: 80%;
-				height: 3px;
-				position: absolute;
-				bottom: 0px;
-				border-radius: 20px 20px 0px 0px;
-				transition: all 150ms ease-in-out;
-			}
+            &::after {
+                content: '';
+                width: 80%;
+                height: 3px;
+                position: absolute;
+                bottom: 0px;
+                border-radius: 20px 20px 0px 0px;
+                transition: all 150ms ease-in-out;
+            }
 
-			span {
-				cursor: pointer;
-				font-weight: 600;
-				text-decoration: none;
-				color: $text-color;
-				transition: all 150ms ease-in-out;
-			}
-		}
+            span {
+                cursor: pointer;
+                font-weight: 600;
+                text-decoration: none;
+                color: $text-color;
+                transition: all 150ms ease-in-out;
+            }
+        }
 
-		.active {
-			span {
-				color: #ff9900;
-			}
+        .active {
+            span {
+                color: #ff9900;
+            }
 
-			&::after {
-				content: '';
-				width: 80%;
-				height: 3px;
-				position: absolute;
-				bottom: 0px;
-				border-radius: 20px 20px 0px 0px;
-				background-color: #ff9900 !important;
-			}
-		}
-	}
+            &::after {
+                content: '';
+                width: 80%;
+                height: 3px;
+                position: absolute;
+                bottom: 0px;
+                border-radius: 20px 20px 0px 0px;
+                background-color: #ff9900 !important;
+            }
+        }
+    }
 }

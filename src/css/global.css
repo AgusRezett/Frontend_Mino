@@ -11153,6 +11153,7 @@ body,
   height: 100%;
   background-color: #faf9f9;
   overflow-y: hidden;
+  position: relative;
 }
 
 p {

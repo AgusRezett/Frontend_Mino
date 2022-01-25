@@ -13,6 +13,7 @@ import SideNavbar from '../common/Navbar/SideNavbar';
 import Home from './Home';
 import Wallets from './Wallets';
 import Configuration from './Configuration';
+import SettingsModal from '../common/SettingsView/SettingsModal';
 
 export default function ApplicationContent() {
 	return (
@@ -40,6 +41,8 @@ export default function ApplicationContent() {
 					<Route path="/configuracion" element={<Configuration />} />
 				</Routes>
 			</HelmetProvider>
+
+			<SettingsModal />
 		</Router>
 	);
 }

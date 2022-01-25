@@ -3,264 +3,293 @@
 @import '../../mixins';
 
 .side-navbar-container {
-	@include displayFlex(column, flex-start, flex-start);
-	width: 240px;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	background-color: #ffffff;
-	padding: 15px 0px;
-	box-shadow: 1px 0px 10px -2px #0000000c;
-	transition: all 170ms ease-in-out;
+    @include displayFlex(column, flex-start, flex-start);
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 15px 0px;
+    box-shadow: 1px 0px 10px -2px #0000000c;
+    transition: all 170ms ease-in-out;
 
-	resize: horizontal;
+    resize: horizontal;
 
-	@media screen and (max-width: 991px) {
-		width: 75px;
-	}
+    @media screen and (max-width: 991px) {
+        width: 75px;
+    }
 
-	@media screen and (max-width: 656px) {
-		@include displayFlex(row, center, center);
-		width: 100%;
-		top: auto;
-		bottom: 0;
-		height: 75px;
-	}
+    @media screen and (max-width: 656px) {
+        @include displayFlex(row, center, center);
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        height: 75px;
+    }
 
-	.side-navbar-links {
-		@include displayFlex(column, flex-start, center);
-		width: 100%;
-		height: 100%;
-		padding: 0;
-		margin-top: 60px;
-		list-style: none;
+    .side-navbar-links {
+        @include displayFlex(column, flex-start, center);
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin-top: 60px;
+        list-style: none;
 
-		@media screen and (max-width: 991px) {
-			margin-top: 50px;
-		}
+        @media screen and (max-width: 991px) {
+            margin-top: 50px;
+        }
 
-		@media screen and (max-width: 656px) {
-			@include displayFlex(row, space-around, center);
-			width: 80%;
-			top: 100%;
-			margin: 0;
-		}
+        @media screen and (max-width: 656px) {
+            @include displayFlex(row, space-around, center);
+            width: 80%;
+            top: 100%;
+            margin: 0;
 
-		li {
-			@include displayFlex(row, center, flex-start);
-			width: 85%;
-			height: 50px;
-			margin-top: 10px;
-			z-index: 2;
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
 
-			&:first-child a svg {
-				margin-bottom: 2px;
-			}
+        &::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            position: absolute;
+            top: 65px;
+            right: -12px;
+            border-bottom-right-radius: 100%;
+            z-index: -1;
+        }
 
-			@media screen and (max-width: 656px) {
-				width: 55px;
-				height: 50px;
-				margin-top: 0;
+        &::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: $white-background;
+            position: absolute;
+            top: 65px;
+            right: -12px;
+            border-top-left-radius: 100%;
+            z-index: -1;
+        }
 
-				&:first-child a svg {
-					margin-bottom: 0px;
-				}
-			}
+        li {
+            @include displayFlex(row, center, flex-start);
+            width: 85%;
+            height: 50px;
+            margin-top: 10px;
+            z-index: 2;
 
-			.nav-element-icon {
-				width: auto;
-				height: 23px;
-				margin-bottom: 1px;
-				margin-right: 10px;
-				stroke: #7e7e7e;
-				transition: all 100ms ease-in-out;
+            &:first-child a svg {
+                margin-bottom: 2px;
+            }
 
-				@media screen and (max-width: 991px) {
-					margin: 0px 0px 0px 10px;
-				}
-			}
+            @media screen and (max-width: 656px) {
+                width: 55px;
+                height: 50px;
+                margin-top: 0;
 
-			.nav-element-icon-special {
-				@extend .nav-element-icon;
-				stroke: none;
-				fill: #7e7e7e;
-			}
+                &:first-child a svg {
+                    margin-bottom: 0px;
+                }
+            }
 
-			a {
-				@include displayFlex(row, flex-start, center);
-				width: 100%;
-				height: 100%;
-				padding-left: 10px;
-				list-style: none;
-				color: #7e7e7e;
-				border-radius: 10px;
-				text-decoration: none;
-				font-family: 'RooneySans Bold';
-				font-weight: 600;
-				font-size: 15px;
-				line-height: 50px;
-				transition: all 150ms ease-in-out;
+            .nav-element-icon {
+                width: auto;
+                height: 23px;
+                margin-bottom: 1px;
+                margin-right: 10px;
+                stroke: #7e7e7e;
+                transition: all 100ms ease-in-out;
 
-				@media screen and (max-width: 656px) {
-					@include displayFlex(row, center, center);
-					width: 100%;
-					height: 100%;
-					padding: 0;
+                @media screen and (max-width: 991px) {
+                    margin: 0px 0px 0px 10px;
+                }
+            }
 
-					.nav-element-icon {
-						margin: 0;
-					}
+            .nav-element-icon-special {
+                @extend .nav-element-icon;
+                stroke: none;
+                fill: #7e7e7e;
+            }
 
-					.log-out-icon {
-						width: 20px;
-						height: 20px;
-					}
-				}
+            a {
+                @include displayFlex(row, flex-start, center);
+                width: 100%;
+                height: 100%;
+                padding-left: 10px;
+                list-style: none;
+                color: #7e7e7e;
+                border-radius: 10px;
+                text-decoration: none;
+                font-family: 'RooneySans Bold';
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 50px;
+                transition: all 150ms ease-in-out;
 
-				&:hover {
-					color: #000;
+                @media screen and (max-width: 656px) {
+                    @include displayFlex(row, center, center);
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
 
-					@media screen and (max-width: 991px) {
-						span {
-							display: none;
-						}
-					}
-				}
+                    .nav-element-icon {
+                        margin: 0;
+                    }
 
-				&:hover .nav-element-icon {
-					stroke: #ffb71c;
-				}
-				&:hover .nav-element-icon-special {
-					fill: #ffb71c;
-				}
+                    .log-out-icon {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
 
-				span {
-					white-space: nowrap;
-					@media screen and (max-width: 991px) {
-						display: none;
-					}
-				}
-			}
+                &:hover {
+                    color: #000;
 
-			.active {
-				color: #fff;
+                    @media screen and (max-width: 991px) {
+                        span {
+                            display: none;
+                        }
+                    }
+                }
 
-				&:hover {
-					color: #fff;
-				}
+                &:hover .nav-element-icon {
+                    stroke: #ffb71c;
+                }
+                &:hover .nav-element-icon-special {
+                    fill: #ffb71c;
+                }
 
-				.nav-element-icon {
-					stroke: #ffb71c;
-					stroke-width: 1.5;
-				}
+                span {
+                    white-space: nowrap;
+                    @media screen and (max-width: 991px) {
+                        display: none;
+                    }
+                }
+            }
 
-				.nav-element-icon-special {
-					fill: #ffb71c;
-				}
-			}
-		}
+            .active {
+                color: #fff;
 
-		.log-out {
-			position: absolute;
-			bottom: 10px;
+                &:hover {
+                    color: #fff;
+                }
 
-			@media screen and (max-width: 656px) {
-				position: relative;
-				bottom: 0;
-			}
-		}
+                .nav-element-icon {
+                    stroke: #ffb71c;
+                    stroke-width: 1.5;
+                }
 
-		.active-navlink-background {
-			width: 220px;
-			height: 50px;
-			position: absolute;
-			left: -300px;
-			z-index: 1;
-			background-color: $logo-color-purple;
-			transition: all 150ms ease-in-out;
+                .nav-element-icon-special {
+                    fill: #ffb71c;
+                }
+            }
+        }
 
-			border-top-right-radius: 25px;
-			border-bottom-right-radius: 25px;
+        .log-out {
+            position: absolute;
+            bottom: 10px;
 
-			@media screen and (max-width: 991px) {
-				width: 55px;
-				height: 50px;
-				//left: 10px !important;
-				border-radius: 10px;
+            @media screen and (max-width: 656px) {
+                position: relative;
+                bottom: 0;
+            }
+        }
 
-				.active-navlink-background-stick {
-					display: none;
-				}
+        .active-navlink-background {
+            width: 220px;
+            height: 50px;
+            position: absolute;
+            left: -300px;
+            z-index: 1;
+            background-color: $logo-color-purple;
+            transition: all 150ms ease-in-out;
 
-				&::before {
-					display: none;
-				}
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
 
-				&::after {
-					display: none;
-				}
-			}
+            @media screen and (max-width: 991px) {
+                width: 55px;
+                height: 50px;
+                //left: 10px !important;
+                border-radius: 10px;
 
-			.active-navlink-background-stick {
-				width: 30px;
-				height: 100px;
-				background-color: $logo-color-purple;
-				position: absolute;
-				z-index: 1;
-				top: -25px;
-				left: 0;
-			}
+                .active-navlink-background-stick {
+                    display: none;
+                }
 
-			&::before {
-				content: '';
-				width: 30px;
-				height: 30px;
-				position: absolute;
-				z-index: 2;
-				top: -30px;
-				left: 0;
-				background-color: #ffffff;
-				border-bottom-left-radius: 25px;
-				transition: all 150ms ease-in-out;
-			}
+                &::before {
+                    display: none;
+                }
 
-			&::after {
-				content: '';
-				width: 30px;
-				height: 30px;
-				position: absolute;
-				z-index: 2;
-				bottom: -30px;
-				left: 0;
-				background-color: #ffffff;
-				border-top-left-radius: 25px;
-				transition: all 150ms ease-in-out;
-			}
-		}
-	}
+                &::after {
+                    display: none;
+                }
+            }
 
-	.bottom-links {
-		@include displayFlex(row, center, center);
-		position: absolute;
-		height: fit-content;
-		bottom: 20px;
+            .active-navlink-background-stick {
+                width: 30px;
+                height: 100px;
+                background-color: $logo-color-purple;
+                position: absolute;
+                z-index: 1;
+                top: -25px;
+                left: 0;
+            }
 
-		@media screen and (max-width: 656px) {
-			position: initial;
-			width: 55px;
-			height: 50px;
-			margin: 0px 25px 0px 5px;
-			bottom: 0px;
+            &::before {
+                content: '';
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                z-index: 2;
+                top: -30px;
+                left: 0;
+                background-color: #ffffff;
+                border-bottom-left-radius: 25px;
+                transition: all 150ms ease-in-out;
+            }
 
-			li {
-				width: 100%;
+            &::after {
+                content: '';
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                z-index: 2;
+                bottom: -30px;
+                left: 0;
+                background-color: #ffffff;
+                border-top-left-radius: 25px;
+                transition: all 150ms ease-in-out;
+            }
+        }
+    }
 
-				a {
-					padding-left: 0px;
-				}
-			}
-		}
-	}
+    .bottom-links {
+        @include displayFlex(row, center, center);
+        position: absolute;
+        height: fit-content;
+        bottom: 20px;
+
+        @media screen and (max-width: 656px) {
+            position: initial;
+            width: 55px;
+            height: 50px;
+            margin: 0px 25px 0px 5px;
+            bottom: 0px;
+
+            li {
+                width: 100%;
+
+                a {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,164 @@
+.settings-modal-container {
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 100ms ease-in-out;
+
+    .settings-modal-content {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+
+        .settings-modal-header {
+            @include displayFlex(row, space-between, center);
+            width: 100%;
+            height: auto;
+
+            .modal--title {
+                font-size: 18px;
+                font-weight: 600;
+                color: rgb(0, 0, 0);
+            }
+
+            .modal--close {
+                @include displayFlex(row, center, center);
+                cursor: pointer;
+                width: 23px;
+                height: 23px;
+
+                svg {
+                    transition: all 150ms ease-in-out;
+                }
+
+                &:hover > svg {
+                    fill: #242424;
+                }
+            }
+        }
+
+        .settings-modal-body {
+            width: 100%;
+            height: calc(100% - 32px);
+            margin-top: 5px;
+            overflow-y: auto;
+
+            .language-option-container {
+                cursor: pointer;
+                width: 100%;
+                height: 60px;
+                border-radius: 10px;
+                margin-top: 15px;
+                background-color: #f7f7f7;
+                transition: all 100ms ease-in-out;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+
+                .language-option-content {
+                    width: 100%;
+                    height: 100%;
+                    @include displayFlex(row, space-between, center);
+                    padding: 10px 15px;
+
+                    .language-option-flag {
+                        width: 35px;
+                        height: 35px;
+                        background-color: #f7f7f7;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        filter: drop-shadow(0px 0px 10px #49494921);
+
+                        img {
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.settings-modal-container-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+$modal-width: 90%;
+$modal-height: 90%;
+$modal-width-sm: 66.66%;
+$modal-height-sm: 55%;
+$modal-width-md: 600px;
+$modal-height-md: 450px;
+$modal-width-lg: 800px;
+$modal-height-lg: 500px;
+
+@media screen and (min-width: 576px) {
+    .settings-modal-container {
+        width: $modal-width-sm;
+        height: $modal-height-sm;
+        //margin-top: $modal-height-sm / -2;
+        //margin-left: $modal-width-sm / -2;
+        top: ($modal-height-sm - 10%) / 2;
+        left: $modal-width-sm - 100% / 2;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .settings-modal-container {
+        width: $modal-width-md;
+        height: $modal-height-md;
+        margin-top: $modal-height-md / -2;
+        margin-left: $modal-width-md / -2;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .settings-modal-container {
+        width: $modal-width-lg;
+        height: $modal-height-lg;
+        margin-top: $modal-height-lg / -2;
+        margin-left: $modal-width-lg / -2;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .settings-modal-container {
+        width: $modal-width;
+        height: $modal-height;
+        //margin-top: $modal-height / -2;
+        //margin-left: $modal-width / -2;
+        top: 5%;
+        left: 5%;
+    }
+}
+
+.dark-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 99;
+    transition: all 100ms ease-in-out;
+}
+
+.dark-modal-overlay-active {
+    opacity: 1;
+    visibility: visible;
+}

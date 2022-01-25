@@ -219,6 +219,31 @@ header .top-navbar-container .top-navbar-account li span {
     top: 100%;
     margin: 0;
   }
+  .side-navbar-container .side-navbar-links::before, .side-navbar-container .side-navbar-links::after {
+    display: none;
+  }
+}
+.side-navbar-container .side-navbar-links::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  position: absolute;
+  top: 65px;
+  right: -12px;
+  border-bottom-right-radius: 100%;
+  z-index: -1;
+}
+.side-navbar-container .side-navbar-links::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #faf9f9;
+  position: absolute;
+  top: 65px;
+  right: -12px;
+  border-top-left-radius: 100%;
+  z-index: -1;
 }
 .side-navbar-container .side-navbar-links li {
   display: flex;

@@ -1,0 +1,29 @@
+{
+    "page.title": "Configuración",
+
+    "navbar.option.home": "Página inicial",
+    "navbar.option.wallets": "Carteiras",
+    "navbar.option.crypto": "Criptomonedas",
+    "navbar.option.configuration": "Configurações",
+    "navbar.option.settings": "Configuração",
+    "navbar.option.preferences": "Preferências",
+    "navbar.option.account": "Conta",
+
+    "config.settings.option.title.language": "Idioma e região",
+    "config.settings.option.description.language": "Eu escolhi um idioma para exibir o aplicativo",
+    "config.settings.option.title.notifications": "Notificações",
+    "config.settings.option.description.notifications": "Ative as notificações que deseja receber",
+    "config.settings.option.title.devices": "Dispositivos ativos",
+    "config.settings.option.description.devices": "Gerencie os dispositivos onde sua conta ativa está localizada",
+
+    "config.preferences.option.title.currencies": "Minhas moedas",
+    "config.preferences.option.description.currencies": "Escolha até 3 moedas para exibir os valores de suas carteiras",
+
+    "config.modal.title": "Escolha um idioma e região",
+    "language.option.es": "Espanhol",
+    "region.option.ar": "Argentina",
+    "language.option.en": "Inglês",
+    "region.option.us": "Estados Unidos",
+    "language.option.pt": "Português",
+    "region.option.br": "Brasil"
+}

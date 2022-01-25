@@ -1,4 +1,5 @@
 // Flags
+import Brz from '../assets/svgs/flags/br.svg';
 import Arg from '../assets/svgs/flags/ar.svg';
 import Btc from '../assets/svgs/flags/btc.svg';
 import Eur from '../assets/svgs/flags/european_union.svg';
@@ -34,6 +35,27 @@ export const badgeDictionary = [
         backgroundClass: "arg-flag"
     },
 ];
+
+export const nationalitiesFlagsLang = [
+    {
+        language: 'language.option.es',
+        region: 'region.option.ar',
+        flag: Arg,
+        code: 'es-AR'
+    },
+    {
+        language: 'language.option.en',
+        region: 'region.option.us',
+        flag: Usd,
+        code: 'en-US'
+    },
+    {
+        language: 'language.option.pt',
+        region: 'region.option.br',
+        flag: Brz,
+        code: 'pt-BR'
+    },
+]
 
 export const nationalBadgeDictionary = ["ARS", "USD", "EUR"];
 
