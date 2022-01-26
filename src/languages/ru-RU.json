@@ -1,0 +1,39 @@
+{
+    "page.title": "Настройки",
+
+    "navbar.option.home": "Начало",
+    "navbar.option.wallets": "кошельки",
+    "navbar.option.crypto": "криптовалюты",
+    "navbar.option.configuration": "Параметр",
+    "navbar.option.settings": "Настройки",
+    "navbar.option.preferences": "предпочтения",
+    "navbar.option.account": "Счет",
+
+    "config.settings.option.title.language": "Язык и регион",
+    "config.settings.option.description.language": "Я выбрал язык, на котором будет отображаться приложение",
+    "config.settings.option.title.notifications": "Уведомления",
+    "config.settings.option.description.notifications": "Активируйте уведомления, которые вы хотите получать",
+    "config.settings.option.title.devices": "активные устройства",
+    "config.settings.option.description.devices": "Управляйте устройствами, на которых находится ваша активная учетная запись",
+
+    "config.preferences.option.title.currencies": "мои валюты",
+    "config.preferences.option.description.currencies": "Выберите до 3 валют для отображения стоимости ваших кошельков",
+
+    "config.modal.title": "Выберите язык и регион",
+    "language.option.ar": "العربية",
+    "language.option.de": "Deutsch",
+    "language.option.es": "Español",
+    "region.option.ar": "Argentina",
+    "region.option.es": "España",
+    "language.option.fr": "Français",
+    "language.option.en": "English",
+    "region.option.gb": "United Kingdom",
+    "region.option.us": "United States",
+    "language.option.it": "Italiano",
+    "language.option.jp": "日本",
+    "language.option.pt": "Português",
+    "region.option.br": "Brasil",
+    "language.option.ru": "Pусский",
+    "language.option.zh": "中文",
+    "region.option.cn": "简体"
+}

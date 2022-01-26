@@ -32,3 +32,5 @@ En caso de no disponer de la bandera completa, editar el archivo con el nombre d
 > Editar con Illustrator y quitar los componentes del grupo, posteriormente guardar el archivo y añadir el objeto a la lista de banderas en GlobalFunctions.js.
 
 ### Ir al directorio **_/hooks/useContext/langContext_**
+
+Importar el directorio del nuevo lenguaje en la carpeta de lenguajes y añadir el nuevo idioma al switch de la función `changeLang()`.

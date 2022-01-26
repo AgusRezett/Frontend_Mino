@@ -1,0 +1,39 @@
+{
+    "page.title": "Paramètres",
+
+    "navbar.option.home": "Accueil",
+    "navbar.option.wallets": "Comptes liés",
+    "navbar.option.crypto": "Crypto-monnaies",
+    "navbar.option.configuration": "Réglage",
+    "navbar.option.settings": "Paramètres",
+    "navbar.option.preferences": "Préférences",
+    "navbar.option.account": "Compte",
+
+    "config.settings.option.title.language": "Langue et région",
+    "config.settings.option.description.language": "J'ai choisi une langue avec laquelle afficher l'application",
+    "config.settings.option.title.notifications": "Avis",
+    "config.settings.option.description.notifications": "Activez les notifications que vous souhaitez recevoir",
+    "config.settings.option.title.devices": "Appareils actifs",
+    "config.settings.option.description.devices": "Gérer les appareils sur lesquels se trouve votre compte actif",
+
+    "config.preferences.option.title.currencies": "Mes devises",
+    "config.preferences.option.description.currencies": "Choisissez jusqu'à 3 devises pour afficher les valeurs de vos portefeuilles",
+
+    "config.modal.title": "Choisissez une langue et une région",
+    "language.option.ar": "العربية",
+    "language.option.de": "Deutsch",
+    "language.option.es": "Español",
+    "region.option.ar": "Argentina",
+    "region.option.es": "España",
+    "language.option.fr": "Français",
+    "language.option.en": "English",
+    "region.option.gb": "United Kingdom",
+    "region.option.us": "United States",
+    "language.option.it": "Italiano",
+    "language.option.jp": "日本",
+    "language.option.pt": "Português",
+    "region.option.br": "Brasil",
+    "language.option.ru": "Pусский",
+    "language.option.zh": "中文",
+    "region.option.cn": "简体"
+}

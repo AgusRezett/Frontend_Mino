@@ -26,7 +26,7 @@ const sideArrow = (
 // Buttons
 const optionButtons = [
     {
-        icon: '🌐',
+        icon: '🌏',
         langMessageTitle: 'config.preferences.option.title.currencies',
         langMessageDescription:
             'config.preferences.option.description.currencies',

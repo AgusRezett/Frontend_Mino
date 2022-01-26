@@ -11,7 +11,7 @@ export default function LanguageOption({ flag, language, region, code }) {
         onClick={() => {
             idioma.changeLang({ code });
             localStorage.setItem("language", language);
-            localStorage.setItem("region", region);
+            region ? localStorage.setItem("region", region) : localStorage.removeItem("region");
 
             window.navigator.vibrate(50);
             window.location.reload();
@@ -20,7 +20,9 @@ export default function LanguageOption({ flag, language, region, code }) {
         <div className='language-option-content'>
             <div className='language-option-title'>
                 <b><FormattedMessage id={language} defaultMessage="Error" /> </b>
-                (<FormattedMessage id={region} defaultMessage="Error" />)
+                {region && "("}
+                {region && <FormattedMessage id={region} defaultMessage="Error" />}
+                {region && ")"}
             </div>
             <div className='language-option-flag'>
                 <img src={flag} alt={language} />

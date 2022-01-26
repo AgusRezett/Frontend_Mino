@@ -1,0 +1,39 @@
+{
+    "page.title": "常规选项",
+
+    "navbar.option.home": "开始",
+    "navbar.option.wallets": "关联账户",
+    "navbar.option.crypto": "加密货币",
+    "navbar.option.configuration": "常规选项",
+    "navbar.option.settings": "设置",
+    "navbar.option.preferences": "喜好",
+    "navbar.option.account": "账单",
+
+    "config.settings.option.title.language": "语言和地区",
+    "config.settings.option.description.language": "我选择了显示应用程序的语言",
+    "config.settings.option.title.notifications": "通知",
+    "config.settings.option.description.notifications": "激活您要接收的通知",
+    "config.settings.option.title.devices": "有源设备",
+    "config.settings.option.description.devices": "管理您的活动帐户所在的设备",
+
+    "config.preferences.option.title.currencies": "我的货币",
+    "config.preferences.option.description.currencies": "最多选择3种货币来显示你钱包的价值",
+
+    "config.modal.title": "选择语言和地区",
+    "language.option.ar": "العربية",
+    "language.option.de": "Deutsch",
+    "language.option.es": "Español",
+    "region.option.ar": "Argentina",
+    "region.option.es": "España",
+    "language.option.fr": "Français",
+    "language.option.en": "English",
+    "region.option.gb": "United Kingdom",
+    "region.option.us": "United States",
+    "language.option.it": "Italiano",
+    "language.option.jp": "日本",
+    "language.option.pt": "Português",
+    "region.option.br": "Brasil",
+    "language.option.ru": "Pусский",
+    "language.option.zh": "中文",
+    "region.option.cn": "简体"
+}

@@ -20,10 +20,20 @@
     "config.preferences.option.description.currencies": "Escolha até 3 moedas para exibir os valores de suas carteiras",
 
     "config.modal.title": "Escolha um idioma e região",
-    "language.option.es": "Espanhol",
+    "language.option.ar": "العربية",
+    "language.option.de": "Deutsch",
+    "language.option.es": "Español",
     "region.option.ar": "Argentina",
-    "language.option.en": "Inglês",
-    "region.option.us": "Estados Unidos",
+    "region.option.es": "España",
+    "language.option.fr": "Français",
+    "language.option.en": "English",
+    "region.option.gb": "United Kingdom",
+    "region.option.us": "United States",
+    "language.option.it": "Italiano",
+    "language.option.jp": "日本",
     "language.option.pt": "Português",
-    "region.option.br": "Brasil"
+    "region.option.br": "Brasil",
+    "language.option.ru": "Pусский",
+    "language.option.zh": "中文",
+    "region.option.cn": "简体"
 }

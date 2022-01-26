@@ -1,0 +1,39 @@
+{
+    "page.title": "設定",
+
+    "navbar.option.home": "始まり",
+    "navbar.option.wallets": "リンクされたアカウント",
+    "navbar.option.crypto": "暗号通貨",
+    "navbar.option.configuration": "設定",
+    "navbar.option.settings": "設定",
+    "navbar.option.preferences": "環境設定",
+    "navbar.option.account": "明細書",
+
+    "config.settings.option.title.language": "言語と地域",
+    "config.settings.option.description.language": "アプリケーションを表示するための言語を選択しました",
+    "config.settings.option.title.notifications": "通知",
+    "config.settings.option.description.notifications": "受信する通知をアクティブにします",
+    "config.settings.option.title.devices": "アクティブなデバイス",
+    "config.settings.option.description.devices": "アクティブなアカウントが配置されているデバイスを管理する",
+
+    "config.preferences.option.title.currencies": "私の通貨",
+    "config.preferences.option.description.currencies": "ウォレットの値を表示するには、最大3つの通貨を選択してください",
+
+    "config.modal.title": "言語と地域を選択してください",
+    "language.option.ar": "العربية",
+    "language.option.de": "Deutsch",
+    "language.option.es": "Español",
+    "region.option.ar": "Argentina",
+    "region.option.es": "España",
+    "language.option.fr": "Français",
+    "language.option.en": "English",
+    "region.option.gb": "United Kingdom",
+    "region.option.us": "United States",
+    "language.option.it": "Italiano",
+    "language.option.jp": "日本",
+    "language.option.pt": "Português",
+    "region.option.br": "Brasil",
+    "language.option.ru": "Pусский",
+    "language.option.zh": "中文",
+    "region.option.cn": "简体"
+}

@@ -10,16 +10,16 @@
     "navbar.option.account": "Cuenta",
 
     "config.settings.option.title.language": "Idioma y región",
-    "config.settings.option.description.language": "Elegí un idioma con el que mostrar la aplicación",
+    "config.settings.option.description.language": "Elige un idioma con el que mostrar la aplicación",
     "config.settings.option.title.notifications": "Notificaciones",
-    "config.settings.option.description.notifications": "Activá las notificaciones que deseás recibir",
+    "config.settings.option.description.notifications": "Activa las notificaciones que deseas recibir",
     "config.settings.option.title.devices": "Dispositivos activos",
-    "config.settings.option.description.devices": "Gestioná los dispositivos donde se encuentra tú cuenta activa",
+    "config.settings.option.description.devices": "Gestiona los dispositivos donde se encuentra tú cuenta activa",
 
     "config.preferences.option.title.currencies": "Mis divisas",
-    "config.preferences.option.description.currencies": "Elegí hasta 3 divisas para mostrar los valores de tus billeteras",
+    "config.preferences.option.description.currencies": "Elige hasta 3 divisas para mostrar los valores de tus billeteras",
 
-    "config.modal.title": "Elegí un idioma y región",
+    "config.modal.title": "Elige un idioma y región",
     "language.option.ar": "العربية",
     "language.option.de": "Deutsch",
     "language.option.es": "Español",

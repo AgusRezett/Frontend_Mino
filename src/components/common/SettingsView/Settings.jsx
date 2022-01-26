@@ -30,17 +30,14 @@ const sideLangReg = () => {
         lang = 'language.option.es';
     }
 
-    if (!region) {
-        localStorage.setItem('region', 'region.option.ar');
-        region = 'region.option.ar';
-    }
-
     return (
         <>
             <b style={{ marginRight: '5px' }}>
                 <FormattedMessage id={lang} defaultMessage="Error" />
             </b>
-            (<FormattedMessage id={region} defaultMessage="Error" />)
+            {region && '('}
+            {region && <FormattedMessage id={region} defaultMessage=" " />}
+            {region && ')'}
         </>
     );
 };
@@ -48,7 +45,7 @@ const sideLangReg = () => {
 // Buttons
 const optionButtons = [
     {
-        icon: '🌏',
+        icon: '🌐',
         langMessageTitle: 'config.settings.option.title.language',
         langMessageDescription: 'config.settings.option.description.language',
         defaultTitle: 'Idioma y región',

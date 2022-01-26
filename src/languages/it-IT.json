@@ -1,0 +1,39 @@
+{
+    "page.title": "Collocamento",
+
+    "navbar.option.home": "Inizio",
+    "navbar.option.wallets": "Conti collegati",
+    "navbar.option.crypto": "Criptovalute",
+    "navbar.option.configuration": "Collocamento",
+    "navbar.option.settings": "Impostazioni",
+    "navbar.option.preferences": "Preferenze",
+    "navbar.option.account": "Conto",
+
+    "config.settings.option.title.language": "Lingua e regione",
+    "config.settings.option.description.language": "Ho scelto una lingua con cui visualizzare l'applicazione",
+    "config.settings.option.title.notifications": "Notifiche",
+    "config.settings.option.description.notifications": "Attiva le notifiche che vuoi ricevere",
+    "config.settings.option.title.devices": "Dispositivi attivi",
+    "config.settings.option.description.devices": "Gestisci i dispositivi in ​​cui si trova il tuo account attivo",
+
+    "config.preferences.option.title.currencies": "Le mie valute",
+    "config.preferences.option.description.currencies": "Scegli fino a 3 valute per visualizzare i valori dei tuoi portafogli",
+
+    "config.modal.title": "Scegli una lingua e una regione",
+    "language.option.ar": "العربية",
+    "language.option.de": "Deutsch",
+    "language.option.es": "Español",
+    "region.option.ar": "Argentina",
+    "region.option.es": "España",
+    "language.option.fr": "Français",
+    "language.option.en": "English",
+    "region.option.gb": "United Kingdom",
+    "region.option.us": "United States",
+    "language.option.it": "Italiano",
+    "language.option.jp": "日本",
+    "language.option.pt": "Português",
+    "region.option.br": "Brasil",
+    "language.option.ru": "Pусский",
+    "language.option.zh": "中文",
+    "region.option.cn": "简体"
+}
