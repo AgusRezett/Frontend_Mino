@@ -5,12 +5,13 @@
 @import './partials/settingsView/settingsModal';
 
 .row {
+    //padding: 0px 12px !important;
+
     .settings-options-container {
         width: 100%;
         height: auto;
 
         margin-top: 20px;
-        padding: 0px 12px;
 
         .settings-options-content {
             width: 100%;

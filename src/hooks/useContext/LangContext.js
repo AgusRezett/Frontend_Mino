@@ -31,7 +31,6 @@ export const LangProvider = ({ children }) => {
             newLang = newLang.code;
         }
         localStorage.setItem('lang-code', newLang);
-        console.log(newLang);
         switch (newLang) {
             case 'ar-AR':
                 setLanguage(ArabianLang);

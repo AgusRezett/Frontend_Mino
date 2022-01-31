@@ -27,7 +27,6 @@
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 0px 12px;
 }
 .configuration-navbar ul {
   display: flex;
@@ -281,7 +280,6 @@
   width: 100%;
   height: auto;
   margin-top: 20px;
-  padding: 0px 12px;
 }
 .row .settings-options-container .settings-options-content {
   width: 100%;
