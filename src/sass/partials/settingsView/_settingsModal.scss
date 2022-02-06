@@ -128,8 +128,8 @@ $modal-height-lg: 500px;
         height: $modal-height-sm;
         //margin-top: $modal-height-sm / -2;
         //margin-left: $modal-width-sm / -2;
-        top: ($modal-height-sm - 10%) / 2;
-        left: $modal-width-sm - 100% / 2;
+        top: calc(($modal-height-sm - 10%) / 2);
+        left: calc($modal-width-sm - 100% / 2);
     }
 }
 
@@ -137,8 +137,8 @@ $modal-height-lg: 500px;
     .settings-modal-container {
         width: $modal-width-md;
         height: $modal-height-md;
-        margin-top: $modal-height-md / -2;
-        margin-left: $modal-width-md / -2;
+        margin-top: calc($modal-height-md / -2);
+        margin-left: calc($modal-width-md / -2);
         top: 50%;
         left: 50%;
     }
@@ -148,8 +148,8 @@ $modal-height-lg: 500px;
     .settings-modal-container {
         width: $modal-width-lg;
         height: $modal-height-lg;
-        margin-top: $modal-height-lg / -2;
-        margin-left: $modal-width-lg / -2;
+        margin-top: calc($modal-height-lg / -2);
+        margin-left: calc($modal-width-lg / -2);
         top: 50%;
         left: 50%;
     }

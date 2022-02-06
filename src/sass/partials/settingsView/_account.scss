@@ -1,0 +1,91 @@
+.info-account-container {
+    margin-top: 20px;
+    height: 180px;
+
+    .info-account-content {
+        @include displayFlex(column, space-between, center);
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        padding: 25px 25px 23px 25px;
+        box-shadow: 0px 2px 5px #00000014;
+        background-color: #fff;
+
+        .verified-info-header {
+            @include displayFlex(row, flex-start, center);
+            width: 100%;
+            height: 70px;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: -15px;
+                border-radius: 50px;
+                background-color: #5a626f2f;
+            }
+
+            .info-illustration {
+                width: 64px;
+                height: 64px;
+            }
+
+            .header-info {
+                @include displayFlex(column, center, flex-start);
+                width: calc(100% - 64px);
+                height: 100%;
+                padding-left: 20px;
+
+                .header-title {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: $text-color-white;
+
+                    @media screen and (max-width: 1013px) {
+                        font-size: 20px;
+                    }
+
+                    @media screen and (max-width: 376px) {
+                        font-size: 18px;
+                    }
+                }
+
+                .header-description {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #99a1ae;
+
+                    @media screen and (max-width: 1141px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .section-value {
+            @include displayFlex(row, space-between, center);
+            width: 100%;
+
+            color: #666d77;
+            font-weight: 600;
+
+            .change-value-btn {
+                @include displayFlex(null, center, center);
+                width: 80px;
+                height: 30px;
+                font-size: 15px;
+                cursor: pointer;
+                border-radius: 5px;
+                background-color: #ebebeb;
+                transition: all 150ms ease-in-out;
+
+                &:hover {
+                    color: $logo-color-orange-text;
+                    background-color: #e8decc;
+                }
+            }
+        }
+    }
+}

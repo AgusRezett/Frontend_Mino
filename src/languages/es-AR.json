@@ -19,6 +19,13 @@
     "config.preferences.option.title.currencies": "Mis divisas",
     "config.preferences.option.description.currencies": "Elegí hasta 3 divisas para mostrar los valores de tus billeteras",
 
+    "config.account.email.title": "Correo electrónico",
+    "config.account.email.description": "Dirección de correo asociada a tú cuenta",
+    "config.account.phone.title": "Número telefónico",
+    "config.account.phone.description": "Teléfono asociado a tú cuenta",
+    "config.account.section.button.modify": "Cambiar",
+    "config.account.section.button.add": "Añadir",
+
     "config.modal.title": "Elegí un idioma y región",
     "language.option.ar": "العربية",
     "language.option.de": "Deutsch",

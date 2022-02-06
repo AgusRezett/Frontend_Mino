@@ -19,6 +19,13 @@
     "config.preferences.option.title.currencies": "My currencies",
     "config.preferences.option.description.currencies": "Choose up to 3 currencies to display the values of your wallets",
 
+    "config.account.email.title": "Email address",
+    "config.account.email.description": "Email associated with your account",
+    "config.account.phone.title": "Phone number",
+    "config.account.phone.description": "Phone number associated with your account",
+    "config.account.section.button.modify": "Change",
+    "config.account.section.button.add": "Add",
+
     "config.modal.title": "Choose a language and region",
     "language.option.ar": "العربية",
     "language.option.de": "Deutsch",
