@@ -237,7 +237,7 @@
 
 .wallets-row {
   height: auto;
-  margin-bottom: -3px;
+  margin-top: 15px;
   padding: 0px 12px;
   /* .carrousel-title {
   } */
@@ -425,13 +425,13 @@
 .st0 {
   fill-rule: evenodd;
   clip-rule: evenodd;
-  fill: #ff8985;
+  fill: #ff859d;
 }
 
 .st1 {
   fill-rule: evenodd;
   clip-rule: evenodd;
-  fill: #bc5050;
+  fill: #bc5062;
 }
 
 .st2 {

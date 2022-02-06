@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // Components
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+//import { Formik, Field, Form, ErrorMessage } from 'formik';
 import WalletCard from './WalletCard'
 
 // Functions
@@ -43,7 +43,7 @@ export default function Wallets() {
                         <polyline points="6 10 12 16 18 10" />
                     </svg>
                 </div>
-                <p className='new-wallet-title' onClick={() => { window.navigator.vibrate(50) }}><b>Añadí una billetera a tu cuenta Mino</b> 💳</p>
+                <p className='new-wallet-title' onClick={() => { window.navigator.vibrate(50) }}><b>Añadí una billetera a tu cuenta Mino</b><span role="img" aria-label="wallet">💳</span></p>
                 <NewWalletContainer />
             </div>
         </>
@@ -84,7 +84,8 @@ const NewWalletContainer = () => {
     )
 }
 
-<Formik
+// eslint-disable-next-line
+{/* <Formik
     initialValues={{ email: '', password: '' }}
     validate={(values) => {
         const errors = {};
@@ -111,9 +112,9 @@ const NewWalletContainer = () => {
     onSubmit={(values, { setSubmitting }) => {
         setSubmitting(false);
         alert(JSON.stringify(values, null, 2));
-        /* Axios.post(`http://${config.host}:${config.port}/login`, values).then((res) => {
+        Axios.post(`http://${config.host}:${config.port}/login`, values).then((res) => {
             console.log();
-        }); */
+        });
     }}
 >
     <Form className="login-form-content">
@@ -141,3 +142,4 @@ const NewWalletContainer = () => {
         </button>
     </Form>
 </Formik>
+ */}

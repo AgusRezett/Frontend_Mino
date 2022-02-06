@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
 
