@@ -111,6 +111,8 @@
 .info-account-container {
   margin-top: 20px;
   height: 180px;
+  position: relative;
+  z-index: 1;
 }
 .info-account-container .info-account-content {
   display: flex;
@@ -123,6 +125,62 @@
   padding: 25px 25px 23px 25px;
   box-shadow: 0px 2px 5px #00000014;
   background-color: #fff;
+}
+.info-account-container .info-account-content .verify-user-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 700;
+}
+.info-account-container .info-account-content .verify-user-status .verify-process-btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 100ms ease-in-out;
+  font-size: 15px;
+  position: absolute;
+  top: 20px;
+  right: 33px;
+  background-color: #f6f8fd;
+  opacity: 0.75;
+}
+.info-account-container .info-account-content .verify-user-status .verify-process-btn:hover {
+  opacity: 1;
+  background-color: #e6ebf5;
+}
+.info-account-container .info-account-content .section-blur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 24px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  border-radius: 12px;
+  background-color: #ffffffb9;
+}
+.info-account-container .info-account-content .section-blur .locked-content-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 60%;
+  border-radius: 12px;
+  font-weight: 700;
+}
+.info-account-container .info-account-content .section-blur .locked-content-desc svg {
+  width: 62px;
+  height: 62px;
+  stroke: #374349;
 }
 .info-account-container .info-account-content .verified-info-header {
   display: flex;

@@ -23,13 +23,12 @@ const sideArrow = (
 // Buttons
 const optionButtons = [
     {
-        icon: '💰',
-        langMessageTitle: 'config.preferences.option.title.currencies',
-        langMessageDescription:
-            'config.preferences.option.description.currencies',
-        defaultTitle: 'Mis divisas',
+        icon: '📋',
+        langMessageTitle: 'config.account.option.title.change',
+        langMessageDescription: 'config.account.option.description.change',
+        defaultTitle: 'Solicitar cambios',
         defaultDescription:
-            'Elegí hasta 3 divisas para mostrar los valores de tus billeteras',
+            'Presentá una solicitud con los cambios de tus datos personales',
         rightSide: sideArrow,
         responsive: false
     }
@@ -40,13 +39,12 @@ export default function Cuenta() {
         <>
             <div className="row" style={{ padding: '0px' }}>
                 <AccountInfoSection
-                    sectionType={'emails'}
+                    sectionType="email"
                     value="agustin.rezett@gmail.com"
                 />
-                <AccountInfoSection
-                    sectionType={'phones'}
-                    value="+54 9 11 3833-0659"
-                />
+                <AccountInfoSection sectionType="phone" value="" />
+                <AccountInfoSection sectionType={'general'} value="0" />
+                <AccountInfoSection sectionType={'verified'} value={false} />
             </div>
             <section className="settings-options-container">
                 <div className="settings-options-content">
@@ -54,8 +52,6 @@ export default function Cuenta() {
                     <div className="button-option">
                         Verificación de identidad
                     </div>
-                    <div className="button-option">Correo electrónico</div>
-                    <div className="button-option">Número de teléfono</div>
                     <div className="button-option">Solicitar cambios</div>
                     {optionButtons.map((optionButton, index) => (
                         <OptionButton

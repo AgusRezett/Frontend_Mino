@@ -23,8 +23,11 @@
     "config.account.email.description": "Dirección de correo asociada a tú cuenta",
     "config.account.phone.title": "Número telefónico",
     "config.account.phone.description": "Teléfono asociado a tú cuenta",
+    "config.account.section.undefinedValue": "Sin definir",
     "config.account.section.button.modify": "Cambiar",
     "config.account.section.button.add": "Añadir",
+    "config.account.verified.checked": "Identidad verificada 👏",
+    "config.account.verified.notChecked": "Verificación requerida",
 
     "config.modal.title": "Elegí un idioma y región",
     "language.option.ar": "العربية",
@@ -42,5 +45,7 @@
     "region.option.br": "Brasil",
     "language.option.ru": "Pусский",
     "language.option.zh": "中文",
-    "region.option.cn": "简体"
+    "region.option.cn": "简体",
+
+    "common.message.notVerified": "Para acceder verificá tu cuenta"
 }
