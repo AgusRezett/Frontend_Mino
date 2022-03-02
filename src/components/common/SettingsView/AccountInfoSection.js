@@ -62,7 +62,7 @@ export default function AccountInfoSection({ sectionType, value }) {
     }
 
     const topSections = <section className={`info-account-container ${selectedSection.cardWidth}`}>
-        <div className="info-account-content">
+        <div className="info-account-content info-account-content--dark">
             {!value && <div className='section-blur'>
                 <div className='locked-content-desc'>
                     <svg role="img" viewBox="0 0 58 58" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" fill="none">

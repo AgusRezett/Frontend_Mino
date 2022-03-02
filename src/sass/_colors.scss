@@ -1,36 +1,39 @@
-// General
-$primary-color: #ffc000;
-$primary-color-light--hover: #44abff;
-$primary-color--hover: #0b87ed;
-$white: #fff;
+// Standard colors
+@import './partials/colors/standard';
+// Login colors
+@import './partials/colors/login-light-theme';
+// Sidebar colors
+@import './partials/colors/side-navbar-light-theme';
+// General colors
+@import './partials/colors/general-light-theme';
+// Wallets colors
+@import './partials/colors/wallets-light-theme';
+// Settings colors
+@import './partials/colors/configuration-light-theme';
 
-// Tarjetas
-$card-bg: #fff;
+// Cards
+$card-bg: $white;
 $card-bg-hover: #edf2f5;
-$card-pending-color: #ebc11b;
-$card-pending-color-hover: #fcd125;
-$card-pending-border-color: #d1a000;
-$card-seen-color: #00b191;
-$card-seen-color-hover: #05c29f;
-$card-seen-border-color: #009e81;
+$container-shadow: #00000014;
 
-// Textos
-$text-color-white: #323232;
-$text-color-backgrey: #888888;
-$text-color: #575757;
-$text-color--hover: #686868;
-$text-advise-color: #d07a0b;
-$text-advise-color--hover: #ee992a;
-$text-confirm-color: #009d47;
-$text-confirm-color--hover: #0bb155;
+// Text
+$text-color-1: #323232;
+$text-color-2: #575757;
+$text-color-2--hover: #686868;
+$text-color-3: #888888;
+$text-color-4: #666d77;
+$text-color-grey-blue: #99a1ae;
 
-// Fondos
-$white-background-content-sections: #ffffff90;
+// Status colors
+$field-error: #e81f37;
+
+// Backgrounds
+$white-background-content-sections: #ffffffb9;
 $white-background: #faf9f9;
-
 $disabled-color: #e2e2e2;
 
 // Logo
+$logo-color-orange--strong: #ff9900;
 $logo-color-orange--hover: #ffae00;
 $logo-color-orange-text: #dd9700;
 $logo-color-orange: #ffc000;

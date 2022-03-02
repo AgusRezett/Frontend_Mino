@@ -15,7 +15,7 @@
 }
 .row .wallet-inform-container .wallets-table-container {
   height: 366px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 5px #00000014;
 }
@@ -43,7 +43,7 @@
   border-radius: 20px;
 }
 .row .wallet-inform-container .wallets-table-container .wallets-table-content::-webkit-scrollbar-thumb {
-  background: rgba(136, 136, 136, 0.39);
+  background: #88888863;
   border-radius: 20px;
 }
 .row .wallet-inform-container .wallets-table-container .wallets-table-content::-webkit-scrollbar-thumb:hover {
@@ -123,7 +123,7 @@
   align-items: center;
   width: 100%;
   height: 49px;
-  border-bottom: 1px gainsboro solid;
+  border-bottom: 1px #dcdcdc solid;
 }
 @media screen and (max-width: 1270px) {
   .row .wallet-inform-container .wallets-table-container .wallets-table-content .wallets-table-body .wallets-table-body--row {
@@ -139,7 +139,7 @@
   font-size: 14px;
 }
 .row .wallet-inform-container .wallets-table-container .wallets-table-content .wallets-table-body .wallets-table-body--row div a {
-  color: #000000;
+  color: #000;
   text-decoration: none;
   transition: all 100ms ease-in-out;
 }
@@ -166,7 +166,7 @@
   border-radius: 10px;
   padding: 10px 15px;
   background-color: #fff;
-  color: #555;
+  color: #575757;
   box-shadow: 0px 2px 5px #00000014;
 }
 @media screen and (max-width: 767px) {
@@ -272,7 +272,7 @@
 }
 .wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper .alice-carousel__prev-btn-item {
   background: transparent;
-  color: #000000;
+  color: #000;
 }
 .wallets-row .alice-carousel .alice-carousel__prev-btn .alice-carousel__prev-btn-wrapper .alice-carousel__prev-btn-item:hover {
   background: linear-gradient(90deg, #faf9f9 0%, #a91f1f00 100%);
@@ -292,7 +292,7 @@
 }
 .wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper .alice-carousel__next-btn-item {
   background: transparent;
-  color: #000000;
+  color: #000;
 }
 .wallets-row .alice-carousel .alice-carousel__next-btn .alice-carousel__next-btn-wrapper .alice-carousel__next-btn-item:hover {
   background: linear-gradient(90deg, #a91f1f00 0%, #faf9f9 100%);
@@ -357,7 +357,7 @@
   border-radius: 10px;
   margin: 0px 10px;
   padding-left: 20px;
-  background-color: #ffffff;
+  background-color: #fff;
   overflow: hidden;
 }
 .alice-carousel__stage-item .wallet-carrousel-container .wallet-carrousel-item .description {

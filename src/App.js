@@ -15,6 +15,9 @@ export default function App() {
 	const [userSessionFounded, setUserSessionFounded] = useState(null);
 	useEffect(() => {
 		setUserSessionFounded(getSession());
+		if (!userSessionFounded && window.location.href !== "http://localhost:3000/") {
+			window.location.assign("http://localhost:3000/");
+		}
 	}, [userSessionFounded]);
 
 	/* const [activeSidebar, setActiveSidebar] = useState(false);

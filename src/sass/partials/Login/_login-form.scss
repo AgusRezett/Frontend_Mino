@@ -1,0 +1,235 @@
+@import '../../colors';
+@import '../../fonts';
+@import '../../mixins';
+
+.login-form-brand-text {
+    font-family: 'RooneySans Bold';
+    font-weight: normal;
+    font-size: 20px;
+    color: $logo-color-orange;
+}
+
+.login-form-content {
+    @include displayFlex(column, space-between, flex-start);
+    width: 400px;
+    height: 500px;
+    //border: 1px solid rgb(19, 18, 79);
+    font-size: 46px;
+    transition: all 150ms ease-in-out;
+
+    @media screen and (max-width: 490px) {
+        width: 75%;
+    }
+
+    @media screen and (max-height: 645px) {
+        justify-content: center;
+    }
+
+    .login-form-title {
+        margin-top: 10px;
+        height: auto;
+
+        h1 {
+            white-space: nowrap;
+            //font-family: 'Scorno', sans-serif;
+            font-weight: 800;
+        }
+    }
+
+    .recoverpassword-form-instructions {
+        margin-top: 10px;
+        height: auto;
+        font-size: 14px;
+        color: $text-color-4;
+    }
+
+    .login-form-fields {
+        @include displayFlex(column, space-between, flex-start);
+        width: 100%;
+        height: auto;
+
+        .login-form-field {
+            @include displayFlex(column, center, flex-start);
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .eye-icon {
+                width: 24px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                z-index: 1;
+                cursor: pointer;
+                stroke: $password-eye-color;
+            }
+
+            label {
+                position: absolute;
+                font-weight: 600;
+                font-size: 16px;
+                //padding: 10px 20px;
+                color: $password-eye-color;
+                top: 10px;
+
+                transition: all 100ms ease-in-out;
+                z-index: 0;
+            }
+
+            .login-form-input {
+                width: 100%;
+                height: 40px;
+                border: 0;
+                border-bottom: 1px solid $password-eye-color;
+                font-size: 16px;
+                font-weight: 600;
+                background-color: transparent;
+
+                transition: all 150ms ease-in-out;
+                z-index: 1;
+
+                &:focus {
+                    outline: none;
+                    border-color: $logo-color-orange;
+                }
+
+                &:focus + label {
+                    top: -14px;
+                    color: $logo-color-orange;
+                }
+
+                &:-webkit-autofill {
+                    transition: background-color 50000s ease-in-out 0s !important;
+                }
+            }
+
+            .login-form-input-active {
+                font-size: 13px;
+                top: -14px;
+            }
+
+            .login-form-field--error {
+                color: $field-error;
+            }
+        }
+
+        .validation-bubbles-container {
+            @include displayFlex(row, space-between, center);
+            margin-top: 15px;
+            width: 100%;
+            height: 40px;
+            transition: all 150ms ease-in-out;
+            flex-wrap: wrap;
+
+            @media screen and (max-width: 490px) {
+                height: 80px;
+                justify-content: flex-start;
+            }
+
+            @media screen and (max-width: 266px) {
+                height: 160px;
+                justify-content: flex-start;
+            }
+
+            .validation-bubble {
+                @include displayFlex(column, center, center);
+                width: 90px;
+                height: 30px;
+                border-radius: 10px;
+                background-color: $bubble-validation-error-bg;
+                color: $bubble-validation-error;
+                font-weight: 700;
+                font-size: 12px;
+                margin-right: 5px;
+                transition: all 150ms ease-in-out;
+
+                @media screen and (max-width: 490px) {
+                    margin-right: 10px;
+                }
+
+                @media screen and (max-width: 266px) {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+
+            .password-validation-bubble--active {
+                background-color: $bubble-validation-success-bg;
+                color: $bubble-validation-success;
+            }
+        }
+
+        .input-error {
+            color: $field-error;
+            margin-top: 6px;
+            font-size: 12px;
+            top: 45px;
+            //position: absolute;
+        }
+
+        .login-forgot-password {
+            @include displayFlex(column, center, flex-start);
+            width: 100%;
+            height: auto;
+            margin-top: 15px;
+            font-size: 14px;
+            color: $logo-color-orange;
+            font-weight: 600;
+            text-shadow: 0px 0px 1px #55370012;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+
+            &:hover {
+                color: $logo-color-orange--hover;
+            }
+        }
+    }
+
+    div {
+        width: 100%;
+        .login-submit-btn {
+            width: 100%;
+            color: $submit-btn-color;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 10px;
+            border: 0;
+            border-radius: 5px;
+            background-color: $logo-color-orange--15;
+            transition: all 150ms ease-in-out;
+
+            &:hover {
+                background-color: $logo-color-orange;
+            }
+        }
+
+        .login-submit-btn--disabled {
+            cursor: default;
+            background-color: $disabled-color;
+
+            &:hover {
+                background-color: $disabled-color;
+            }
+        }
+
+        .login-register-btn {
+            width: 100%;
+            margin-top: 15px;
+            font-size: 15px;
+            color: $text-color-3;
+            font-weight: 600;
+            text-align: center;
+
+            span {
+                color: $logo-color-orange;
+                text-shadow: 0px 0px 1px #55370012;
+                cursor: pointer;
+                transition: all 150ms ease-in-out;
+
+                &:hover {
+                    color: $logo-color-orange--hover;
+                }
+            }
+        }
+    }
+}

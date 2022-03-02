@@ -10,9 +10,9 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: #ffffff;
+    background-color: $white;
     padding: 15px 0px;
-    box-shadow: 1px 0px 10px -2px #0000000c;
+    box-shadow: 1px 0px 10px -2px $container-shadow;
     transition: all 170ms ease-in-out;
 
     resize: horizontal;
@@ -57,7 +57,7 @@
             content: '';
             width: 12px;
             height: 12px;
-            background-color: #fff;
+            background-color: $rounded-corner;
             position: absolute;
             top: 65px;
             right: -12px;
@@ -103,7 +103,7 @@
                 height: 23px;
                 margin-bottom: 1px;
                 margin-right: 10px;
-                stroke: #7e7e7e;
+                stroke: $text-color-3;
                 transition: all 100ms ease-in-out;
 
                 @media screen and (max-width: 991px) {
@@ -114,7 +114,7 @@
             .nav-element-icon-special {
                 @extend .nav-element-icon;
                 stroke: none;
-                fill: #7e7e7e;
+                fill: $text-color-3;
             }
 
             a {
@@ -123,7 +123,7 @@
                 height: 100%;
                 padding-left: 10px;
                 list-style: none;
-                color: #7e7e7e;
+                color: $text-color-3;
                 border-radius: 10px;
                 text-decoration: none;
                 font-family: 'RooneySans Bold';
@@ -149,7 +149,7 @@
                 }
 
                 &:hover {
-                    color: #000;
+                    color: $nav-element--hover;
 
                     @media screen and (max-width: 991px) {
                         span {
@@ -159,10 +159,10 @@
                 }
 
                 &:hover .nav-element-icon {
-                    stroke: #ffb71c;
+                    stroke: $logo-color-orange--hover;
                 }
                 &:hover .nav-element-icon-special {
-                    fill: #ffb71c;
+                    fill: $logo-color-orange--hover;
                 }
 
                 span {
@@ -174,19 +174,19 @@
             }
 
             .active {
-                color: #fff;
+                color: $active-color;
 
                 &:hover {
-                    color: #fff;
+                    color: $active-color;
                 }
 
                 .nav-element-icon {
-                    stroke: #ffb71c;
+                    stroke: $logo-color-orange--hover;
                     stroke-width: 1.5;
                 }
 
                 .nav-element-icon-special {
-                    fill: #ffb71c;
+                    fill: $logo-color-orange--hover;
                 }
             }
         }
@@ -250,7 +250,7 @@
                 z-index: 2;
                 top: -30px;
                 left: 0;
-                background-color: #ffffff;
+                background-color: $stick-rounders-bg;
                 border-bottom-left-radius: 25px;
                 transition: all 150ms ease-in-out;
             }
@@ -263,7 +263,7 @@
                 z-index: 2;
                 bottom: -30px;
                 left: 0;
-                background-color: #ffffff;
+                background-color: $stick-rounders-bg;
                 border-top-left-radius: 25px;
                 transition: all 150ms ease-in-out;
             }

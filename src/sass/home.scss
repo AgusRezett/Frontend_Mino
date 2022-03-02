@@ -1,8 +1,8 @@
 .row {
-	margin: 0 -10px 0 -10px;
+    margin: 0 -10px 0 -10px;
 
-	@import './partials/homeView/balances.scss';
-	@import './partials/homeView/charts.scss';
-	@import './partials/homeView/my-wallets.scss';
-	@import './partials/homeView/application-promo.scss';
+    @import './partials/Home/balances.scss';
+    @import './partials/Home/charts.scss';
+    @import './partials/Home/my-wallets.scss';
+    @import './partials/Home/application-promo.scss';
 }

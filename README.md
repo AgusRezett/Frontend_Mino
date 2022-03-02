@@ -1,3 +1,10 @@
+# Sistema de colores y vatiables
+
+### Estructura
+
+Las variables de colores se encuentran en los archivos _partials_ de la carpeta colors, cada uno correspondiente a una sección/página de la aplicación.
+Para utilizar dicho partial deberá ser importado en el partial _colors_, cuyo directorio es **_/src/sass/\_colors.scss_**.
+
 # Añadir un idioma
 
 ### Añadir un objeto

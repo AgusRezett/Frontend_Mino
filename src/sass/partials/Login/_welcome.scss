@@ -1,0 +1,156 @@
+@import '../../colors';
+@import '../../fonts';
+@import '../../mixins';
+
+.welcome-default-container {
+    @include displayFlex(row, flex-start, center);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $login-bg;
+
+    .circle-open-key {
+        @include displayFlex(column, center, center);
+        width: 100%;
+        height: 100%;
+        background: $logo-color-yellow;
+        background: linear-gradient(
+            180deg,
+            $logo-color-yellow 0%,
+            $logo-color-orange--hover 100%
+        );
+        transition: all 0.7s ease;
+
+        -webkit-animation: growUp 1s;
+        -moz-animation: growUp 1s;
+        -ms-animation: growUp 1s;
+        -o-animation: growUp 1s;
+        animation: growUp 500ms ease-in-out;
+
+        .welcome-logo {
+            width: 300px;
+            height: auto;
+            padding: 30px 40px;
+            background-color: $welcome-logo-bg;
+            border-radius: 20px;
+
+            visibility: visible;
+            opacity: 1;
+
+            animation: fadeInFromLeft 1000ms;
+            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.063));
+            transition: all 250ms ease-in-out;
+        }
+
+        .welcome-logo-hide {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .welcome-brand {
+            width: 200px;
+            height: auto;
+            text-align: center;
+
+            visibility: visible;
+            opacity: 1;
+
+            font-family: 'RooneySans Bold';
+            font-weight: normal;
+            font-size: 64px;
+            //color: $logo-color-orange;
+            color: $welcome-brand-font-color;
+
+            animation: fadeInFromRight 1000ms;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.063);
+            transition: all 250ms ease-in-out;
+        }
+
+        .welcome-brand-hide {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    .first-screen-transform {
+        width: 40%;
+    }
+
+    .form-container {
+        width: 0%;
+        overflow: hidden;
+        transition: all 0.7s ease;
+        @include displayFlex(null, center, center);
+    }
+
+    .open-form-container {
+        width: 60%;
+        height: 100%;
+        overflow: auto;
+        box-shadow: -5px 0px 20px 0px #0000000a;
+    }
+
+    @media screen and (max-width: 960px) {
+        .first-screen-transform {
+            width: 0%;
+        }
+
+        .open-form-container {
+            width: 100%;
+        }
+    }
+}
+
+@-webkit-keyframes growUp {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes growUp {
+    0% {
+        /* transform: scale(0);
+		border-radius: 50%; */
+        clip-path: circle(
+            0% at calc(100% - 0px - var(--page-component-margin, 10px))
+                calc(0px + var(--page-component-margin, 10px))
+        );
+    }
+    100% {
+        /* transform: scale(1);
+		border-radius: 0%; */
+        clip-path: circle(
+            150% at calc(100% - 0px - var(--page-component-margin, 10px))
+                calc(0px + var(--page-component-margin, 10px))
+        );
+    }
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}

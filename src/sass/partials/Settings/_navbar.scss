@@ -18,7 +18,7 @@
 
         list-style: none;
         border-radius: 12px;
-        box-shadow: 0px 2px 5px #00000014;
+        box-shadow: 0px 2px 5px $container-shadow;
         background-color: $white;
         transition: all 150ms ease-in-out;
 
@@ -53,7 +53,7 @@
 
             &:hover {
                 &::after {
-                    background-color: $text-color;
+                    background-color: $text-color-2;
                 }
             }
 
@@ -75,14 +75,14 @@
                 cursor: pointer;
                 font-weight: 600;
                 text-decoration: none;
-                color: $text-color;
+                color: $text-color-2;
                 transition: all 150ms ease-in-out;
             }
         }
 
         .active {
             span {
-                color: #ff9900;
+                color: $logo-color-orange--strong;
             }
 
             &::after {
@@ -92,7 +92,7 @@
                 position: absolute;
                 bottom: 0px;
                 border-radius: 20px 20px 0px 0px;
-                background-color: #ff9900 !important;
+                background-color: $logo-color-orange--strong !important;
             }
         }
     }

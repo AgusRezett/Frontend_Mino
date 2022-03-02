@@ -51,7 +51,7 @@ header .top-navbar-container {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  box-shadow: 10px 1px 10px -2px #0000000c;
+  box-shadow: 10px 1px 10px -2px #00000014;
 }
 header .top-navbar-container .top-navbar-logo {
   width: fit-content;
@@ -170,9 +170,9 @@ header .top-navbar-container .top-navbar-account li span {
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 15px 0px;
-  box-shadow: 1px 0px 10px -2px #0000000c;
+  box-shadow: 1px 0px 10px -2px #00000014;
   transition: all 170ms ease-in-out;
   resize: horizontal;
 }
@@ -273,7 +273,7 @@ header .top-navbar-container .top-navbar-account li span {
   height: 23px;
   margin-bottom: 1px;
   margin-right: 10px;
-  stroke: #7e7e7e;
+  stroke: #888888;
   transition: all 100ms ease-in-out;
 }
 @media screen and (max-width: 991px) {
@@ -283,7 +283,7 @@ header .top-navbar-container .top-navbar-account li span {
 }
 .side-navbar-container .side-navbar-links li .nav-element-icon-special {
   stroke: none;
-  fill: #7e7e7e;
+  fill: #888888;
 }
 .side-navbar-container .side-navbar-links li a {
   display: flex;
@@ -294,7 +294,7 @@ header .top-navbar-container .top-navbar-account li span {
   height: 100%;
   padding-left: 10px;
   list-style: none;
-  color: #7e7e7e;
+  color: #888888;
   border-radius: 10px;
   text-decoration: none;
   font-family: "RooneySans Bold";
@@ -330,10 +330,10 @@ header .top-navbar-container .top-navbar-account li span {
   }
 }
 .side-navbar-container .side-navbar-links li a:hover .nav-element-icon, .side-navbar-container .side-navbar-links li a:hover .nav-element-icon-special {
-  stroke: #ffb71c;
+  stroke: #ffae00;
 }
 .side-navbar-container .side-navbar-links li a:hover .nav-element-icon-special {
-  fill: #ffb71c;
+  fill: #ffae00;
 }
 .side-navbar-container .side-navbar-links li a span {
   white-space: nowrap;
@@ -350,11 +350,11 @@ header .top-navbar-container .top-navbar-account li span {
   color: #fff;
 }
 .side-navbar-container .side-navbar-links li .active .nav-element-icon, .side-navbar-container .side-navbar-links li .active .nav-element-icon-special {
-  stroke: #ffb71c;
+  stroke: #ffae00;
   stroke-width: 1.5;
 }
 .side-navbar-container .side-navbar-links li .active .nav-element-icon-special {
-  fill: #ffb71c;
+  fill: #ffae00;
 }
 .side-navbar-container .side-navbar-links .log-out {
   position: absolute;
@@ -410,7 +410,7 @@ header .top-navbar-container .top-navbar-account li span {
   z-index: 2;
   top: -30px;
   left: 0;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom-left-radius: 25px;
   transition: all 150ms ease-in-out;
 }
@@ -422,7 +422,7 @@ header .top-navbar-container .top-navbar-account li span {
   z-index: 2;
   bottom: -30px;
   left: 0;
-  background-color: #ffffff;
+  background-color: #fff;
   border-top-left-radius: 25px;
   transition: all 150ms ease-in-out;
 }
