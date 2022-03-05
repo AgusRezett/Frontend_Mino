@@ -16,6 +16,8 @@
     "config.settings.option.title.devices": "Dispositivos activos",
     "config.settings.option.description.devices": "Gestioná los dispositivos donde se encuentra tú cuenta activa",
 
+    "config.preferences.option.title.theme": "Temas",
+    "config.preferences.option.description.theme": "Buscá los colores que más se adapten a vos",
     "config.preferences.option.title.currencies": "Mis divisas",
     "config.preferences.option.description.currencies": "Elegí hasta 3 divisas para mostrar los valores de tus billeteras",
 
@@ -29,7 +31,7 @@
     "config.account.verified.checked": "Identidad verificada 👏",
     "config.account.verified.notChecked": "Verificación requerida",
 
-    "config.modal.title": "Elegí un idioma y región",
+    "config.modal.title.language": "Elegí un idioma y región",
     "language.option.ar": "العربية",
     "language.option.de": "Deutsch",
     "language.option.es": "Español",
@@ -46,6 +48,12 @@
     "language.option.ru": "Pусский",
     "language.option.zh": "中文",
     "region.option.cn": "简体",
+
+    "config.modal.title.theme": "Elegí un tema",
+    "theme.option.system": "Sincronizar con ordenador",
+    "theme.option.light": "Claro",
+    "theme.option.dark": "Oscuro",
+    "theme.option.dark-high": "Oscuro de alto contraste",
 
     "common.message.notVerified": "Para acceder verificá tu cuenta"
 }

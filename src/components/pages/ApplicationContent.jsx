@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 // Components
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -8,6 +8,7 @@ import SideNavbar from '../common/Navbar/SideNavbar';
 
 // Hooks
 //import { NavbarContext } from '../../hooks/useContext/NavbarContext';
+import { modalContext } from '../../hooks/useContext/ModalContext';
 
 // Navigation
 import Home from './Home';
@@ -16,33 +17,38 @@ import Configuration from './Configuration';
 import SettingsModal from '../common/SettingsView/SettingsModal';
 
 export default function ApplicationContent() {
-	return (
-		<Router basename="/">
-			{/* <NavbarContext.Provider value={}>
-			</NavbarContext.Provider> */}
-			<TopNavbar />
-			<SideNavbar />
-			<HelmetProvider>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/billeteras" element={<Wallets />} />
-					<Route
-						path="/criptomonedas"
-						element={
-							<main>
-								<Helmet>
-									<title>Criptomonedas</title>
-									<meta name="description" content="Nested component" />
-								</Helmet>
-								<h1>Criptomonedas</h1>
-							</main>
-						}
-					/>
-					<Route path="/configuracion" element={<Configuration />} />
-				</Routes>
-			</HelmetProvider>
+    const modal = useContext(modalContext);
 
-			<SettingsModal />
-		</Router>
-	);
+    return (
+        <Router basename="/">
+            {/* <NavbarContext.Provider value={}>
+			</NavbarContext.Provider> */}
+            <TopNavbar />
+            <SideNavbar />
+            <HelmetProvider>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/billeteras" element={<Wallets />} />
+                    <Route
+                        path="/criptomonedas"
+                        element={
+                            <main>
+                                <Helmet>
+                                    <title>Criptomonedas</title>
+                                    <meta
+                                        name="description"
+                                        content="Nested component"
+                                    />
+                                </Helmet>
+                                <h1>Criptomonedas</h1>
+                            </main>
+                        }
+                    />
+                    <Route path="/configuracion" element={<Configuration />} />
+                </Routes>
+            </HelmetProvider>
+
+            <SettingsModal modalType={modal.modalType} />
+        </Router>
+    );
 }

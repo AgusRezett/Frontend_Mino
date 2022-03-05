@@ -4,11 +4,14 @@ import App from './App';
 //import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 //import reportWebVitals from './reportWebVitals';
 import { LangProvider } from './hooks/useContext/LangContext';
+import { ModalProvider } from './hooks/useContext/ModalContext';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<LangProvider>
-			<App />
+			<ModalProvider>
+				<App />
+			</ModalProvider>
 		</LangProvider>
 	</React.StrictMode>,
 	document.getElementById('root')

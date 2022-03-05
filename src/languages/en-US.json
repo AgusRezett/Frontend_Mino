@@ -19,7 +19,7 @@
     "config.preferences.option.title.currencies": "My currencies",
     "config.preferences.option.description.currencies": "Choose up to 3 currencies to display the values of your wallets",
 
-    "config.modal.title": "Choose a language and region",
+    "config.modal.title.language": "Choose a language and region",
     "language.option.ar": "العربية",
     "language.option.de": "Deutsch",
     "language.option.es": "Español",

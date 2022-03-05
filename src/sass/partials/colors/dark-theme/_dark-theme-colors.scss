@@ -1,0 +1,77 @@
+// Standard colors
+@import '../standard';
+// Login colors
+@import './login-dark-theme';
+// Sidebar colors
+@import './side-navbar-dark-theme';
+// General colors
+@import './general-dark-theme';
+// Wallets colors
+@import './wallets-dark-theme';
+// Settings colors
+@import './configuration-dark-theme';
+
+// Cards
+$card-bg-dark: #62707c;
+$card-bg-dark-hover: #697987;
+$card-element-bg-dark: #8d9aa7;
+$card-element-bg-dark--hover: #98a5b3;
+$container-shadow: #00000014;
+
+// Text
+$text-color-dark-1: #ffffff;
+$text-color-dark-2: #dcdcdc;
+$text-color-dark-2--hover: #9e9e9e;
+$text-color-dark-3: #c4c4c4;
+$text-color-dark-4: #8893a2;
+$text-color-dark-grey-blue: #3c3e43;
+
+// Status colors
+$field-error: #e81f37;
+
+// Backgrounds
+$white-background-content-sections: #ffffffb9;
+$dark-background: #47525b;
+$dark-background-hover: #414b54;
+$disabled-dark-color: #535f6a;
+
+// Logo
+$logo-color-orange--strong: #ff9900;
+$logo-color-orange--hover: #ffae00;
+$logo-color-orange-text: #dd9700;
+$logo-color-orange: #ffc000;
+$logo-color-orange--15: #ffd34d;
+$logo-color-orange--20: #ffd966;
+$logo-color-orange--25: #fde6a1;
+$logo-color-yellow: #ffec36;
+$logo-color-yellow--10: #ffeb3617;
+$logo-color-purple: #3d0052;
+$logo-color-black: #121212;
+
+:root[data-theme='theme-dark'] {
+    --bg-color: #{$dark-background};
+    --card-bg-color: #{$card-bg-dark};
+    --card-bg-color-hover: #{$card-bg-dark-hover};
+    --card-element-bg-color: #{$card-element-bg-dark};
+    --card-element-bg-color-hover: #{$card-element-bg-dark--hover};
+
+    --language-bg-color: #{$card-bg-dark};
+    --language-bg-color-hover: #{$card-bg-dark-hover};
+    --container-shadow: #{$container-shadow};
+    --option-btn--hover: #{$option-btn--hover};
+
+    --text-color-1: #{$text-color-dark-1};
+    --text-color-2: #{$text-color-dark-2};
+    --text-color-3: #{$text-color-dark-3};
+    --text-color-dark-grey-blue: #{$text-color-dark-grey-blue};
+    --disabled-color: #{$disabled-dark-color};
+
+    --scrollbar-track: #{$scrollbar-track-dark};
+    --scrollbar-thumb: #{$scrollbar-thumb-dark};
+    --scrollbar-thumb--hover: #{$scrollbar-thumb-dark--hover};
+
+    --rounded-corner: #{$rounded-corner-dark};
+
+    --border-table: #{$disabled-dark-color};
+    --border-arrow: #{$border-arrow-dark};
+}

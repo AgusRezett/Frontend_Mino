@@ -26,6 +26,16 @@ const sideArrow = (
 // Buttons
 const optionButtons = [
     {
+        icon: '☀️',
+        langMessageTitle: 'config.preferences.option.title.theme',
+        langMessageDescription: 'config.preferences.option.description.theme',
+        defaultTitle: 'Temas',
+        defaultDescription: 'Buscá los colores que más se adapten a vos',
+        rightSide: sideArrow,
+        responsive: false,
+        action: 'theme'
+    },
+    {
         icon: '💰',
         langMessageTitle: 'config.preferences.option.title.currencies',
         langMessageDescription:
@@ -45,6 +55,7 @@ export default function Preferencias() {
                 {optionButtons.map((optionButton, index) => (
                     <OptionButton
                         key={index}
+                        action={optionButton.action}
                         icon={optionButton.icon}
                         langMessageTitle={optionButton.langMessageTitle}
                         langMessageDescription={

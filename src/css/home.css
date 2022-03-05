@@ -13,6 +13,49 @@
   @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 }
+.row :root[data-theme=theme-light] {
+  --bg-color: #faf9f9;
+  --card-bg-color: #fff;
+  --card-bg-color-hover: #f0f0f0;
+  --card-element-bg-color: #f3f3f3;
+  --card-element-bg-color-hover: #f7f7f7;
+  --language-bg-color: #fff;
+  --language-bg-color-hover: #f0f0f0;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #323232;
+  --text-color-2: #575757;
+  --text-color-3: #888888;
+  --disabled-color: #e2e2e2;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb--hover: #555;
+  --rounded-corner: #fff;
+  --border-table: #e2e2e2;
+  --border-arrow: #a9a9a9;
+}
+.row :root[data-theme=theme-dark] {
+  --bg-color: #47525b;
+  --card-bg-color: #62707c;
+  --card-bg-color-hover: #697987;
+  --card-element-bg-color: #8d9aa7;
+  --card-element-bg-color-hover: #98a5b3;
+  --language-bg-color: #62707c;
+  --language-bg-color-hover: #697987;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #ffffff;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #3c3e43;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #62707c;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
 @font-face {
   .row {
     font-family: "RooneySans Bold";
@@ -98,11 +141,11 @@
   padding-top: 12.5px;
   font-size: 18px;
   font-weight: bold;
-  color: #2e2e2e;
+  color: var(--text-color-2);
   overflow: hidden;
   border-radius: 0 0 12px 12px;
   box-shadow: 0px 2px 5px #00000014;
-  background-color: #ffffff;
+  background-color: var(--card-bg-color);
   transition: all 170ms ease-in-out;
 }
 .row .balance-card-space .balance-card-bottom .secondary-curreny-value {
@@ -127,6 +170,7 @@
 .row .balance-card-space .balance-card-bottom .expand-toggler svg {
   position: relative;
   z-index: 1;
+  stroke: var(--text-color-1);
   transition: all 300ms ease-in-out;
 }
 .row .balance-card-space .balance-card-bottom .expand-toggler .rotate {
@@ -165,7 +209,7 @@
   width: 100%;
   height: 100%;
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   border-radius: 12px;
   box-shadow: 0px 2px 5px #00000014;
 }
@@ -175,7 +219,7 @@
   margin: 5px 0 0 10px;
   font-size: 18px;
   font-weight: bold;
-  color: #000000;
+  color: var(--text-color-1);
 }
 .row .money-line-chart .chart-space {
   display: flex;
@@ -203,6 +247,54 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+.row .money-line-chart .chart-space .donut-chart .apexcharts-canvas svg g g g g g path {
+  stroke-width: 3;
+  stroke: var(--card-bg-color);
+  stroke-opacity: 100%;
+}
+.row :root[data-theme=theme-light] {
+  --bg-color: #faf9f9;
+  --card-bg-color: #fff;
+  --card-bg-color-hover: #f0f0f0;
+  --card-element-bg-color: #f3f3f3;
+  --card-element-bg-color-hover: #f7f7f7;
+  --language-bg-color: #fff;
+  --language-bg-color-hover: #f0f0f0;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #323232;
+  --text-color-2: #575757;
+  --text-color-3: #888888;
+  --disabled-color: #e2e2e2;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb--hover: #555;
+  --rounded-corner: #fff;
+  --border-table: #e2e2e2;
+  --border-arrow: #a9a9a9;
+}
+.row :root[data-theme=theme-dark] {
+  --bg-color: #47525b;
+  --card-bg-color: #62707c;
+  --card-bg-color-hover: #697987;
+  --card-element-bg-color: #8d9aa7;
+  --card-element-bg-color-hover: #98a5b3;
+  --language-bg-color: #62707c;
+  --language-bg-color-hover: #697987;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #ffffff;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #3c3e43;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #62707c;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
 }
 @font-face {
   .row {
@@ -266,9 +358,9 @@
   border-radius: 12px;
   font-size: 18px;
   font-weight: bold;
-  color: #000000;
+  color: var(--text-color-1);
   box-shadow: 0px 2px 5px #00000014;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container {
   position: relative;
@@ -282,21 +374,20 @@
   opacity: 1;
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container::-webkit-scrollbar {
   width: 5px;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--scrollbar-track);
   border-radius: 20px;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--scrollbar-thumb);
   border-radius: 20px;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--scrollbar-thumb--hover);
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container .wallet-card-container {
   border-radius: 10px;
@@ -315,7 +406,6 @@
   box-shadow: 0px 2px 5px #00000014;
   color: #fff;
   text-decoration: none;
-  background-color: #fff;
   transition: all 150ms ease-in-out;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container .wallet-card-container .wallet-card-content:hover {
@@ -329,16 +419,16 @@
   background-size: cover;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container .new-wallet-item-container .new-wallet-item-content {
-  background-color: #fafafa;
+  background-color: var(--card-bg-color);
   font-weight: 600;
-  color: #b8b8b8;
+  color: var(--text-color-2);
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23B8B8B8FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
   border-radius: 10px;
   transition: all 150ms ease-in-out;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container .new-wallet-item-container .new-wallet-item-content:hover {
-  color: #5f5f5f;
-  background-color: #fff;
+  color: var(--text-color-1);
+  background-color: var(--card-bg-color-hover);
 }
 .row .my-wallets-space .my-wallets-container .fade {
   opacity: 0;
@@ -349,16 +439,16 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: calc(100% - 27.5px);
+  width: calc(100% - 25px);
   height: 0px;
   position: absolute;
-  bottom: calc(100% - 67px);
+  bottom: calc(100% - 64px);
   left: 13px;
   z-index: 0;
   overflow: hidden;
   padding: 20px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   box-shadow: 0px 2px 5px #00000014;
   transition: all 150ms ease-in-out;
 }
@@ -373,17 +463,15 @@
 .row .my-wallets-space .my-wallets-container .new-wallet-container .close-btn svg {
   transform: rotateX(0deg);
   transition: all 150ms ease-in-out;
+  stroke: var(--text-color-1);
 }
 .row .my-wallets-space .my-wallets-container .new-wallet-container .close-btn:hover svg {
   transform: rotateX(180deg);
 }
-.row .my-wallets-space .my-wallets-container .new-wallet-container .close-btn:active {
-  background-color: rgba(194, 194, 194, 0.09);
-}
 .row .my-wallets-space .my-wallets-container .new-wallet-container .new-wallet-title {
   max-width: 90%;
   font-size: 16px;
-  color: #000000;
+  color: var(--text-color-1);
 }
 .row .my-wallets-space .my-wallets-container .new-wallet-container .wallet-options-container {
   display: flex;
@@ -406,7 +494,7 @@
   margin-bottom: 15px;
   padding: 0px 20px;
   border-radius: 10px;
-  background-color: #f3f3f3;
+  background-color: var(--card-element-bg-color);
   transition: all 150ms ease-in-out;
 }
 .row .my-wallets-space .my-wallets-container .new-wallet-container .wallet-options-container .wallet-option-item svg {
@@ -415,7 +503,7 @@
   margin-right: 10px;
 }
 .row .my-wallets-space .my-wallets-container .new-wallet-container .wallet-options-container .wallet-option-item:hover {
-  background-color: #f7f7f7;
+  background-color: var(--card-element-bg-color-hover);
 }
 .row .my-wallets-space .my-wallets-container .new-wallet-container .wallet-options-container .wallet-option-item:last-child {
   margin-bottom: 0px;
@@ -427,6 +515,49 @@
   	height: calc(100% - 105px);
   	bottom: 20px;
   } */
+}
+.row :root[data-theme=theme-light] {
+  --bg-color: #faf9f9;
+  --card-bg-color: #fff;
+  --card-bg-color-hover: #f0f0f0;
+  --card-element-bg-color: #f3f3f3;
+  --card-element-bg-color-hover: #f7f7f7;
+  --language-bg-color: #fff;
+  --language-bg-color-hover: #f0f0f0;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #323232;
+  --text-color-2: #575757;
+  --text-color-3: #888888;
+  --disabled-color: #e2e2e2;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb--hover: #555;
+  --rounded-corner: #fff;
+  --border-table: #e2e2e2;
+  --border-arrow: #a9a9a9;
+}
+.row :root[data-theme=theme-dark] {
+  --bg-color: #47525b;
+  --card-bg-color: #62707c;
+  --card-bg-color-hover: #697987;
+  --card-element-bg-color: #8d9aa7;
+  --card-element-bg-color-hover: #98a5b3;
+  --language-bg-color: #62707c;
+  --language-bg-color-hover: #697987;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #ffffff;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #3c3e43;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #62707c;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
 }
 @font-face {
   .row {
@@ -471,7 +602,7 @@
   height: 100%;
   position: relative;
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   border-radius: 12px;
   box-shadow: 0px 2px 5px #00000014;
   background-color: #ffc000;
@@ -491,8 +622,13 @@
   border-top-right-radius: 11px;
   font-size: 18px;
   font-weight: bold;
-  color: #000000;
-  background-color: #fff;
+  color: var(--text-color-1);
+  background-color: var(--card-bg-color);
+}
+@media screen and (max-width: 418px) {
+  .row .application-promo-container .application-promo .application-promo-title {
+    font-size: 16px;
+  }
 }
 .row .application-promo-container .application-promo .application-promo-download-container {
   display: flex;

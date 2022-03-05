@@ -13,10 +13,18 @@ import Login from './components/pages/Login';
 export default function App() {
 	// Verify if there is a session
 	const [userSessionFounded, setUserSessionFounded] = useState(null);
+	const defaultTheme = localStorage.getItem("theme")
+	const html = document.querySelector('html');
+	if (defaultTheme) {
+		html.dataset.theme = `theme-${defaultTheme}`;
+	} else {
+		html.dataset.theme = `theme-light`;
+	}
+
 	useEffect(() => {
 		setUserSessionFounded(getSession());
 		if (!userSessionFounded && window.location.href !== "http://localhost:3000/") {
-			window.location.assign("http://localhost:3000/");
+			//window.location.assign("http://localhost:3000/");
 		}
 	}, [userSessionFounded]);
 

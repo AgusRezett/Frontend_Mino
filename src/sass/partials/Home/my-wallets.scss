@@ -1,224 +1,219 @@
-@import '../../colors';
+@import '../colors/colors';
 @import '../../fonts';
 @import '../../mixins';
 
 .my-wallets-space {
-	@include displayFlex(column, center, center);
-	position: relative;
-	margin-top: 20px;
-	height: 350px;
-	padding: 0;
-	transition: all 170ms ease-in-out;
+    @include displayFlex(column, center, center);
+    position: relative;
+    margin-top: 20px;
+    height: 350px;
+    padding: 0;
+    transition: all 170ms ease-in-out;
 
-	@media screen and (max-width: 430px) {
-		height: 375px;
-	}
+    @media screen and (max-width: 430px) {
+        height: 375px;
+    }
 
-	.my-wallets-container {
-		@include displayFlex(column, flex-start, center);
-		width: 100%;
-		height: 100%;
-		//padding: 10px;
-		border-radius: 12px;
+    .my-wallets-container {
+        @include displayFlex(column, flex-start, center);
+        width: 100%;
+        height: 100%;
+        //padding: 10px;
+        border-radius: 12px;
 
-		.section-title-container {
-			position: relative;
-			z-index: 1;
-			width: 100%;
-			height: auto;
-			padding: 0px 12.5px 5px 12.5px;
+        .section-title-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: auto;
+            padding: 0px 12.5px 5px 12.5px;
 
-			.section-title {
-				width: 100%;
-				padding: 20px;
-				border-radius: 12px;
-				//margin: 5px 0 0 10px;
-				font-size: 18px;
-				font-weight: bold;
-				color: #000000;
-				box-shadow: 0px 2px 5px #00000014;
-				background-color: #fff;
-			}
-		}
+            .section-title {
+                width: 100%;
+                padding: 20px;
+                border-radius: 12px;
+                //margin: 5px 0 0 10px;
+                font-size: 18px;
+                font-weight: bold;
+                color: var(--text-color-1);
+                box-shadow: 0px 2px 5px #00000014;
+                background-color: var(--card-bg-color);
+            }
+        }
 
-		.wallets-items-container {
-			position: relative;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-items: flex-start;
+        .wallets-items-container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
 
-			width: 100%;
-			max-height: calc(100% - 75px);
-			overflow: auto;
+            width: 100%;
+            max-height: calc(100% - 75px);
+            overflow: auto;
 
-			opacity: 1;
-			font-size: 18px;
-			font-weight: bold;
-			color: #fff;
+            opacity: 1;
+            font-size: 18px;
+            font-weight: bold;
 
-			//webkit scroll style
-			&::-webkit-scrollbar {
-				width: 5px;
-			}
-			&::-webkit-scrollbar-track {
-				background: #f1f1f1;
-				border-radius: 20px;
-			}
-			&::-webkit-scrollbar-thumb {
-				background: #888;
-				border-radius: 20px;
-			}
-			&::-webkit-scrollbar-thumb:hover {
-				background: #555;
-			}
+            //webkit scroll style
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background: var(--scrollbar-track);
+                border-radius: 20px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: var(--scrollbar-thumb);
+                border-radius: 20px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: var(--scrollbar-thumb--hover);
+            }
 
-			.wallet-card-container {
-				border-radius: 10px;
-				padding: 15px 13px 0 13px;
+            .wallet-card-container {
+                border-radius: 10px;
+                padding: 15px 13px 0 13px;
 
-				.wallet-card-content {
-					@include displayFlex(row, center, center);
-					width: 100%;
-					height: 60px;
-					padding: 20px;
-					cursor: pointer;
-					border-radius: 10px;
-					box-shadow: 0px 2px 5px #00000014;
-					color: #fff;
-					text-decoration: none;
-					background-color: #fff;
-					transition: all 150ms ease-in-out;
+                .wallet-card-content {
+                    @include displayFlex(row, center, center);
+                    width: 100%;
+                    height: 60px;
+                    padding: 20px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    box-shadow: 0px 2px 5px #00000014;
+                    color: #fff;
+                    text-decoration: none;
+                    transition: all 150ms ease-in-out;
 
-					&:hover {
-						background-color: #fafafa;
-					}
+                    &:hover {
+                        background-color: #fafafa;
+                    }
 
-					.wallet-icon {
-						width: 40px;
-						height: 40px;
-						background-position: center;
-						background-repeat: no-repeat;
-						background-size: cover;
-					}
-				}
-			}
+                    .wallet-icon {
+                        width: 40px;
+                        height: 40px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
 
-			.new-wallet-item-container {
-				.new-wallet-item-content {
-					background-color: #fafafa;
-					font-weight: 600;
-					color: #b8b8b8;
-					background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23B8B8B8FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
-					border-radius: 10px;
-					transition: all 150ms ease-in-out;
+            .new-wallet-item-container {
+                .new-wallet-item-content {
+                    background-color: var(--card-bg-color);
+                    font-weight: 600;
+                    color: var(--text-color-2);
+                    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23B8B8B8FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+                    border-radius: 10px;
+                    transition: all 150ms ease-in-out;
 
-					&:hover {
-						color: #5f5f5f;
-						background-color: #fff;
-					}
-				}
-			}
-		}
+                    &:hover {
+                        color: var(--text-color-1);
+                        background-color: var(--card-bg-color-hover);
+                    }
+                }
+            }
+        }
 
-		.fade {
-			opacity: 0;
-			transition: all 150ms ease-in-out;
-		}
+        .fade {
+            opacity: 0;
+            transition: all 150ms ease-in-out;
+        }
 
-		.new-wallet-container {
-			@include displayFlex(column, flex-start, flex-start);
-			width: calc(100% - 27.5px);
-			height: 0px;
+        .new-wallet-container {
+            @include displayFlex(column, flex-start, flex-start);
+            width: calc(100% - 25px);
+            height: 0px;
 
-			position: absolute;
-			bottom: calc(100% - 67px);
-			left: 13px;
-			z-index: 0;
+            position: absolute;
+            bottom: calc(100% - 64px);
+            left: 13px;
+            z-index: 0;
 
-			overflow: hidden;
-			padding: 20px;
+            overflow: hidden;
+            padding: 20px;
 
-			border-radius: 10px;
-			background-color: #fff;
-			box-shadow: 0px 2px 5px #00000014;
-			transition: all 150ms ease-in-out;
+            border-radius: 10px;
+            background-color: var(--card-bg-color);
+            box-shadow: 0px 2px 5px #00000014;
+            transition: all 150ms ease-in-out;
 
-			.close-btn {
-				position: absolute;
-				top: 15px;
-				right: 18px;
-				cursor: pointer;
-				border-radius: 50%;
-				transition: all 100ms ease-in-out;
+            .close-btn {
+                position: absolute;
+                top: 15px;
+                right: 18px;
+                cursor: pointer;
+                border-radius: 50%;
+                transition: all 100ms ease-in-out;
 
-				svg {
-					transform: rotateX(0deg);
-					transition: all 150ms ease-in-out;
-				}
+                svg {
+                    transform: rotateX(0deg);
+                    transition: all 150ms ease-in-out;
+                    stroke: var(--text-color-1);
+                }
 
-				&:hover {
-					svg {
-						transform: rotateX(180deg);
-					}
-				}
+                &:hover {
+                    svg {
+                        transform: rotateX(180deg);
+                    }
+                }
+            }
 
-				&:active {
-					background-color: rgba(194, 194, 194, 0.09);
-				}
-			}
+            .new-wallet-title {
+                max-width: 90%;
+                font-size: 16px;
+                color: var(--text-color-1);
+            }
 
-			.new-wallet-title {
-				max-width: 90%;
-				font-size: 16px;
-				color: #000000;
-			}
+            .wallet-options-container {
+                @include displayFlex(column, flex-start, flex-start);
+                width: 100%;
+                height: calc(100% - 10px);
+                margin-top: 15px;
 
-			.wallet-options-container {
-				@include displayFlex(column, flex-start, flex-start);
-				width: 100%;
-				height: calc(100% - 10px);
-				margin-top: 15px;
+                .wallet-option-item {
+                    @include displayFlex(row, flex-start, center);
+                    max-width: 300px;
+                    width: 100%;
+                    height: 50px;
 
-				.wallet-option-item {
-					@include displayFlex(row, flex-start, center);
-					max-width: 300px;
-					width: 100%;
-					height: 50px;
+                    cursor: pointer;
+                    margin-bottom: 15px;
+                    padding: 0px 20px;
+                    border-radius: 10px;
+                    background-color: var(--card-element-bg-color);
+                    transition: all 150ms ease-in-out;
 
-					cursor: pointer;
-					margin-bottom: 15px;
-					padding: 0px 20px;
-					border-radius: 10px;
-					background-color: #f3f3f3;
-					transition: all 150ms ease-in-out;
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
 
-					svg {
-						width: 20px;
-						height: 20px;
-						margin-right: 10px;
-					}
+                    &:hover {
+                        background-color: var(--card-element-bg-color-hover);
+                    }
 
-					&:hover {
-						background-color: #f7f7f7;
-					}
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
 
-					&:last-child {
-						margin-bottom: 0px;
-					}
-				}
-			}
-		}
+        .open {
+            //overflow: visible;
+            height: calc(100% - 87px);
+            bottom: 0px;
 
-		.open {
-			//overflow: visible;
-			height: calc(100% - 87px);
-			bottom: 0px;
-
-			/* @media screen and (max-width: 859px) {
+            /* @media screen and (max-width: 859px) {
 				height: calc(100% - 105px);
 				bottom: 20px;
 			} */
-		}
-	}
+        }
+    }
 }

@@ -1,6 +1,6 @@
 .settings-modal-container {
     border-radius: 12px;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
 
     position: absolute;
     z-index: 100;
@@ -25,7 +25,7 @@
             .modal--title {
                 font-size: 18px;
                 font-weight: 600;
-                color: #000000;
+                color: var(--text-color-1);
             }
 
             .modal--close {
@@ -33,13 +33,14 @@
                 cursor: pointer;
                 width: 23px;
                 height: 23px;
+                fill: var(--text-color-2);
 
                 svg {
                     transition: all 150ms ease-in-out;
                 }
 
                 &:hover > svg {
-                    fill: #242424;
+                    fill: var(--text-color-1);
                 }
             }
         }
@@ -47,7 +48,7 @@
         .settings-modal-body {
             width: 100%;
             height: calc(100% - 32px);
-            margin-top: 5px;
+            margin-top: 20px;
             padding-right: 12px;
             overflow-y: auto;
 
@@ -57,15 +58,15 @@
                 width: 7px;
             }
             &::-webkit-scrollbar-track {
-                background: $scrollbar-track;
+                background: var(--scrollbar-track);
                 border-radius: 20px;
             }
             &::-webkit-scrollbar-thumb {
-                background: $scrollbar-thumb;
+                background: var(--scrollbar-thumb);
                 border-radius: 20px;
             }
             &::-webkit-scrollbar-thumb:hover {
-                background: $scrollbar-thumb--hover;
+                background: var(--scrollbar-thumb--hover);
             }
 
             .language-option-container {
@@ -74,11 +75,11 @@
                 height: 60px;
                 border-radius: 10px;
                 margin-top: 15px;
-                background-color: #f7f7f7;
+                background-color: var(--language-bg-color);
                 transition: all 100ms ease-in-out;
 
                 &:hover {
-                    background-color: #f0f0f0;
+                    background-color: var(--language-bg-color-hover);
                 }
 
                 &:first-child {
@@ -91,15 +92,40 @@
                     height: 100%;
                     padding: 10px 15px;
 
+                    .language-option-color {
+                        color: var(--text-color-1);
+                    }
+
                     .language-option-flag {
                         width: 35px;
                         height: 35px;
-                        background-color: #f7f7f7;
+                        background-color: var(--language-bg-color-hover);
                         border-radius: 50%;
                         filter: drop-shadow(0px 0px 10px #49494921);
 
                         img {
                             border-radius: 50%;
+                        }
+                    }
+
+                    .radio-external {
+                        @include displayFlex(null, center, center);
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 2px solid;
+
+                        .radio-internal {
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all 100ms ease-in-out;
+                        }
+                        .radio-internal-active {
+                            visibility: visible;
+                            opacity: 1;
                         }
                     }
                 }
@@ -174,7 +200,7 @@ $modal-height-lg: 500px;
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.296);
     z-index: 99;
     transition: all 100ms ease-in-out;
 }

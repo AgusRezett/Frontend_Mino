@@ -1,123 +1,124 @@
-@import '../../colors';
+@import '../colors/colors';
 @import '../../fonts';
 @import '../../mixins';
 
 .balance-card-space {
-	@include displayFlex(column, center, center);
-	position: relative;
-	height: fit-content;
-	transition: all 170ms ease-in-out;
+    @include displayFlex(column, center, center);
+    position: relative;
+    height: fit-content;
+    transition: all 170ms ease-in-out;
 
-	@media screen and (max-width: 767px) {
-		margin-top: 20px;
+    @media screen and (max-width: 767px) {
+        margin-top: 20px;
 
-		&:first-child {
-			margin-top: 10px;
-		}
-	}
+        &:first-child {
+            margin-top: 10px;
+        }
+    }
 
-	/* &:hover .balance-card-bottom .expand-toggler {
+    /* &:hover .balance-card-bottom .expand-toggler {
 		opacity: 1 !important;
 		visibility: visible !important;
 	} */
 
-	.balance-card-coin {
-		position: absolute;
-		top: 10px;
-		left: 28px;
-		z-index: 2;
-		font-size: 20px;
-		font-weight: bold;
-		color: #fff;
-	}
+    .balance-card-coin {
+        position: absolute;
+        top: 10px;
+        left: 28px;
+        z-index: 2;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+    }
 
-	.balance-card-container {
-		@include displayFlex(null, flex-end, flex-end);
-		width: 100%;
-		height: 100%;
-		padding: 5px;
-		overflow: hidden;
-		//filter: brightness(90%);
+    .balance-card-container {
+        @include displayFlex(null, flex-end, flex-end);
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        overflow: hidden;
+        //filter: brightness(90%);
 
-		border-radius: 12px 12px 0 0;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+        border-radius: 12px 12px 0 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-		img {
-			width: 60px;
-			height: 60px;
-			margin: 50px 10px 10px 0;
-			filter: drop-shadow(0px 0px 5px #0000001f);
-		}
-	}
+        img {
+            width: 60px;
+            height: 60px;
+            margin: 50px 10px 10px 0;
+            filter: drop-shadow(0px 0px 5px #0000001f);
+        }
+    }
 
-	.balance-card-bottom {
-		@include displayFlex(column, space-between, flex-start);
-		width: calc(100%);
-		height: 50px;
-		position: relative;
-		padding-left: 15px;
-		padding-top: 12.5px;
+    .balance-card-bottom {
+        @include displayFlex(column, space-between, flex-start);
+        width: calc(100%);
+        height: 50px;
+        position: relative;
+        padding-left: 15px;
+        padding-top: 12.5px;
 
-		font-size: 18px;
-		font-weight: bold;
-		color: rgb(46, 46, 46);
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--text-color-2);
 
-		overflow: hidden;
-		border-radius: 0 0 12px 12px;
-		box-shadow: 0px 2px 5px #00000014;
-		background-color: #ffffff;
-		transition: all 170ms ease-in-out;
+        overflow: hidden;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0px 2px 5px #00000014;
+        background-color: var(--card-bg-color);
+        transition: all 170ms ease-in-out;
 
-		.secondary-curreny-value {
-			padding: 12.5px 0;
-		}
+        .secondary-curreny-value {
+            padding: 12.5px 0;
+        }
 
-		.expand-toggler {
-			@include displayFlex(row, center, center);
-			width: 30px;
-			height: 30px;
-			position: absolute;
-			top: 10px;
-			z-index: 2;
-			right: 15px;
+        .expand-toggler {
+            @include displayFlex(row, center, center);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 10px;
+            z-index: 2;
+            right: 15px;
 
-			border-radius: 50%;
-			cursor: pointer;
+            border-radius: 50%;
+            cursor: pointer;
 
-			/* opacity: 0;
+            /* opacity: 0;
 			visibility: hidden; */
 
-			svg {
-				position: relative;
-				z-index: 1;
-				transition: all 300ms ease-in-out;
-			}
+            svg {
+                position: relative;
+                z-index: 1;
+                stroke: var(--text-color-1);
+                transition: all 300ms ease-in-out;
+            }
 
-			.rotate {
-				transform: rotateX(180deg);
-			}
-		}
-	}
+            .rotate {
+                transform: rotateX(180deg);
+            }
+        }
+    }
 
-	.expanded {
-		height: 90px;
-	}
+    .expanded {
+        height: 90px;
+    }
 }
 
 .arg-flag {
-	background: linear-gradient(90deg, #338af3 0%, #094af7 100%);
+    background: linear-gradient(90deg, #338af3 0%, #094af7 100%);
 }
 
 .eur-flag {
-	background: linear-gradient(90deg, #004aa2 0%, #001f45 100%);
+    background: linear-gradient(90deg, #004aa2 0%, #001f45 100%);
 }
 
 .usd-flag {
-	background: linear-gradient(90deg, #2da06e 0%, #147a4d 100%);
+    background: linear-gradient(90deg, #2da06e 0%, #147a4d 100%);
 }
 
 .btc-flag {
-	background: linear-gradient(90deg, #ffae00 0%, #f57f00 100%);
+    background: linear-gradient(90deg, #ffae00 0%, #f57f00 100%);
 }

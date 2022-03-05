@@ -18,7 +18,7 @@ export default function LanguageOption({ flag, language, region, code }) {
         }}
     >
         <div className='language-option-content'>
-            <div className='language-option-title'>
+            <div className='language-option-title language-option-color'>
                 <b><FormattedMessage id={language} defaultMessage="Error" /> </b>
                 {region && "("}
                 {region && <FormattedMessage id={region} defaultMessage="Error" />}

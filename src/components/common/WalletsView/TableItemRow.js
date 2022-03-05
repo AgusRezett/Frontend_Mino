@@ -13,6 +13,6 @@ export default function TableItemRow({ id, name, percentage, entry, performance 
         </div>
         <div>{percentage} %</div>
         <div>{entry}</div>
-        <div style={performance.includes("+") ? { color: "#02c076" } : { color: "#f84960" }}>{performance}</div>
+        <div className="value-performance" style={performance.includes("+") ? { color: "#02c076" } : { color: "#f84960" }}>{performance}</div>
     </div >;
 }

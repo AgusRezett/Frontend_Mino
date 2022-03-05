@@ -1,46 +1,52 @@
 .money-line-chart {
-	@include displayFlex(column, center, center);
-	position: relative;
-	height: 350px;
-	margin-top: 20px;
-	transition: all 170ms ease-in-out;
+    @include displayFlex(column, center, center);
+    position: relative;
+    height: 350px;
+    margin-top: 20px;
+    transition: all 170ms ease-in-out;
 
-	.money-line-chart-container {
-		@include displayFlex(column, flex-start, flex-start);
-		width: 100%;
-		height: 100%;
-		padding: 10px;
-		background-color: #fff;
-		border-radius: 12px;
-		box-shadow: 0px 2px 5px #00000014;
-	}
+    .money-line-chart-container {
+        @include displayFlex(column, flex-start, flex-start);
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background-color: var(--card-bg-color);
+        border-radius: 12px;
+        box-shadow: 0px 2px 5px #00000014;
+    }
 
-	.section-title {
-		width: 100%;
-		height: 50px;
-		margin: 5px 0 0 10px;
-		font-size: 18px;
-		font-weight: bold;
-		color: #000000;
-	}
+    .section-title {
+        width: 100%;
+        height: 50px;
+        margin: 5px 0 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--text-color-1);
+    }
 
-	.chart-space {
-		@include displayFlex(column, center, center);
-		width: 100%;
-		height: 100%;
+    .chart-space {
+        @include displayFlex(column, center, center);
+        width: 100%;
+        height: 100%;
 
-		.donut-chart {
-			@include displayFlex(row, center, center);
-			//padding: 10px;
+        .donut-chart {
+            @include displayFlex(row, center, center);
+            //padding: 10px;
 
-			.apexcharts-canvas {
-				@include displayFlex(row, center, center);
+            .apexcharts-canvas {
+                @include displayFlex(row, center, center);
 
-				svg {
-					@include displayFlex(row, center, center);
-					width: 100%;
-				}
-			}
-		}
-	}
+                svg {
+                    @include displayFlex(row, center, center);
+                    width: 100%;
+
+                    g g g g g path {
+                        stroke-width: 3;
+                        stroke: var(--card-bg-color);
+                        stroke-opacity: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

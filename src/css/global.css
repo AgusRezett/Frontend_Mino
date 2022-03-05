@@ -11122,6 +11122,51 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+:root[data-theme=theme-light] {
+  --bg-color: #faf9f9;
+  --card-bg-color: #fff;
+  --card-bg-color-hover: #f0f0f0;
+  --card-element-bg-color: #f3f3f3;
+  --card-element-bg-color-hover: #f7f7f7;
+  --language-bg-color: #fff;
+  --language-bg-color-hover: #f0f0f0;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #323232;
+  --text-color-2: #575757;
+  --text-color-3: #888888;
+  --disabled-color: #e2e2e2;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb--hover: #555;
+  --rounded-corner: #fff;
+  --border-table: #e2e2e2;
+  --border-arrow: #a9a9a9;
+}
+
+:root[data-theme=theme-dark] {
+  --bg-color: #47525b;
+  --card-bg-color: #62707c;
+  --card-bg-color-hover: #697987;
+  --card-element-bg-color: #8d9aa7;
+  --card-element-bg-color-hover: #98a5b3;
+  --language-bg-color: #62707c;
+  --language-bg-color-hover: #697987;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #ffffff;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #3c3e43;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #62707c;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+
 @font-face {
   font-family: "RooneySans Bold";
   font-style: normal;
@@ -11140,6 +11185,14 @@ textarea.form-control-lg {
   font-weight: normal;
   src: local("Scorno"), url("../assets/fonts/scorno/Rosario Nocera - Scorno demo Medium.otf") format("woff");
 }
+:root[data-theme=theme-light] {
+  --bg-body: #faf9f9;
+}
+
+:root[data-theme=theme-dark] {
+  --bg-body: #47525b;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -11151,8 +11204,8 @@ html,
 body,
 #root {
   height: 100%;
-  background-color: #faf9f9;
-  overflow-y: hidden;
+  background-color: var(--bg-body);
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -11167,7 +11220,7 @@ main {
   height: calc(100% - 65px);
   padding: 20px 20px 20px 20px;
   margin: 65px 10px 0px 240px;
-  background-color: #faf9f9;
+  background-color: var(--bg-body);
   overflow-y: scroll;
   transition: all 170ms ease-in-out;
 }
@@ -11176,15 +11229,15 @@ main::-webkit-scrollbar {
   width: 7px;
 }
 main::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--scrollbar-track);
   border-radius: 20px;
 }
 main::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--scrollbar-thumb);
   border-radius: 20px;
 }
 main::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--scrollbar-thumb--hover);
 }
 @media screen and (max-width: 991px) {
   main {

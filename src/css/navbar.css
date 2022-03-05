@@ -6,6 +6,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+:root[data-theme=theme-light] {
+  --bg-color: #faf9f9;
+  --card-bg-color: #fff;
+  --card-bg-color-hover: #f0f0f0;
+  --card-element-bg-color: #f3f3f3;
+  --card-element-bg-color-hover: #f7f7f7;
+  --language-bg-color: #fff;
+  --language-bg-color-hover: #f0f0f0;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #323232;
+  --text-color-2: #575757;
+  --text-color-3: #888888;
+  --disabled-color: #e2e2e2;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb--hover: #555;
+  --rounded-corner: #fff;
+  --border-table: #e2e2e2;
+  --border-arrow: #a9a9a9;
+}
+
+:root[data-theme=theme-dark] {
+  --bg-color: #47525b;
+  --card-bg-color: #62707c;
+  --card-bg-color-hover: #697987;
+  --card-element-bg-color: #8d9aa7;
+  --card-element-bg-color-hover: #98a5b3;
+  --language-bg-color: #62707c;
+  --language-bg-color-hover: #697987;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #ffffff;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #3c3e43;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #62707c;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+
 @font-face {
   font-family: "RooneySans Bold";
   font-style: normal;
@@ -27,7 +72,7 @@
 header {
   width: calc(100% - 240px);
   height: 65px;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   position: absolute;
   top: 0;
   right: 0;
@@ -51,7 +96,7 @@ header .top-navbar-container {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  box-shadow: 10px 1px 10px -2px #00000014;
+  box-shadow: 10px 1px 10px -2px var(--container-shadow);
 }
 header .top-navbar-container .top-navbar-logo {
   width: fit-content;
@@ -138,7 +183,52 @@ header .top-navbar-container .top-navbar-account li span {
   font-family: "Nunito";
   font-weight: 700;
   font-size: 16px;
-  color: #575757;
+  color: var(--text-color-1);
+}
+
+:root[data-theme=theme-light] {
+  --bg-color: #faf9f9;
+  --card-bg-color: #fff;
+  --card-bg-color-hover: #f0f0f0;
+  --card-element-bg-color: #f3f3f3;
+  --card-element-bg-color-hover: #f7f7f7;
+  --language-bg-color: #fff;
+  --language-bg-color-hover: #f0f0f0;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #323232;
+  --text-color-2: #575757;
+  --text-color-3: #888888;
+  --disabled-color: #e2e2e2;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb--hover: #555;
+  --rounded-corner: #fff;
+  --border-table: #e2e2e2;
+  --border-arrow: #a9a9a9;
+}
+
+:root[data-theme=theme-dark] {
+  --bg-color: #47525b;
+  --card-bg-color: #62707c;
+  --card-bg-color-hover: #697987;
+  --card-element-bg-color: #8d9aa7;
+  --card-element-bg-color-hover: #98a5b3;
+  --language-bg-color: #62707c;
+  --language-bg-color-hover: #697987;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #ffffff;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #3c3e43;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #62707c;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
 }
 
 @font-face {
@@ -170,9 +260,9 @@ header .top-navbar-container .top-navbar-account li span {
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   padding: 15px 0px;
-  box-shadow: 1px 0px 10px -2px #00000014;
+  box-shadow: 1px 0px 10px -2px var(--container-shadow);
   transition: all 170ms ease-in-out;
   resize: horizontal;
 }
@@ -227,7 +317,7 @@ header .top-navbar-container .top-navbar-account li span {
   content: "";
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: var(--rounded-corner);
   position: absolute;
   top: 65px;
   right: -12px;
@@ -238,7 +328,7 @@ header .top-navbar-container .top-navbar-account li span {
   content: "";
   width: 12px;
   height: 12px;
-  background-color: #faf9f9;
+  background-color: var(--bg-color);
   position: absolute;
   top: 65px;
   right: -12px;
@@ -273,7 +363,7 @@ header .top-navbar-container .top-navbar-account li span {
   height: 23px;
   margin-bottom: 1px;
   margin-right: 10px;
-  stroke: #888888;
+  stroke: var(--text-color-1);
   transition: all 100ms ease-in-out;
 }
 @media screen and (max-width: 991px) {
@@ -283,7 +373,7 @@ header .top-navbar-container .top-navbar-account li span {
 }
 .side-navbar-container .side-navbar-links li .nav-element-icon-special {
   stroke: none;
-  fill: #888888;
+  fill: var(--text-color-1);
 }
 .side-navbar-container .side-navbar-links li a {
   display: flex;
@@ -294,7 +384,7 @@ header .top-navbar-container .top-navbar-account li span {
   height: 100%;
   padding-left: 10px;
   list-style: none;
-  color: #888888;
+  color: var(--text-color-1);
   border-radius: 10px;
   text-decoration: none;
   font-family: "RooneySans Bold";
@@ -320,9 +410,6 @@ header .top-navbar-container .top-navbar-account li span {
     width: 20px;
     height: 20px;
   }
-}
-.side-navbar-container .side-navbar-links li a:hover {
-  color: #000;
 }
 @media screen and (max-width: 991px) {
   .side-navbar-container .side-navbar-links li a:hover span {
@@ -410,7 +497,7 @@ header .top-navbar-container .top-navbar-account li span {
   z-index: 2;
   top: -30px;
   left: 0;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   border-bottom-left-radius: 25px;
   transition: all 150ms ease-in-out;
 }
@@ -422,7 +509,7 @@ header .top-navbar-container .top-navbar-account li span {
   z-index: 2;
   bottom: -30px;
   left: 0;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   border-top-left-radius: 25px;
   transition: all 150ms ease-in-out;
 }

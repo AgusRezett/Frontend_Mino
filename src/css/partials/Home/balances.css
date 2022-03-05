@@ -2,6 +2,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+:root[data-theme=theme-light] {
+  --bg-color: #faf9f9;
+  --card-bg-color: #fff;
+  --card-bg-color-hover: #f0f0f0;
+  --card-element-bg-color: #f3f3f3;
+  --card-element-bg-color-hover: #f7f7f7;
+  --language-bg-color: #fff;
+  --language-bg-color-hover: #f0f0f0;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #323232;
+  --text-color-2: #575757;
+  --text-color-3: #888888;
+  --disabled-color: #e2e2e2;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb--hover: #555;
+  --rounded-corner: #fff;
+  --border-table: #e2e2e2;
+  --border-arrow: #a9a9a9;
+}
+
+:root[data-theme=theme-dark] {
+  --bg-color: #47525b;
+  --card-bg-color: #62707c;
+  --card-bg-color-hover: #697987;
+  --card-element-bg-color: #8d9aa7;
+  --card-element-bg-color-hover: #98a5b3;
+  --language-bg-color: #62707c;
+  --language-bg-color-hover: #697987;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #ffffff;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #3c3e43;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #62707c;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+
 @font-face {
   font-family: "RooneySans Bold";
   font-style: normal;
@@ -81,11 +126,11 @@
   padding-top: 12.5px;
   font-size: 18px;
   font-weight: bold;
-  color: #2e2e2e;
+  color: var(--text-color-2);
   overflow: hidden;
   border-radius: 0 0 12px 12px;
   box-shadow: 0px 2px 5px #00000014;
-  background-color: #ffffff;
+  background-color: var(--card-bg-color);
   transition: all 170ms ease-in-out;
 }
 .balance-card-space .balance-card-bottom .secondary-curreny-value {
@@ -110,6 +155,7 @@
 .balance-card-space .balance-card-bottom .expand-toggler svg {
   position: relative;
   z-index: 1;
+  stroke: var(--text-color-1);
   transition: all 300ms ease-in-out;
 }
 .balance-card-space .balance-card-bottom .expand-toggler .rotate {

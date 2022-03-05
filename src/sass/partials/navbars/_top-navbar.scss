@@ -1,11 +1,11 @@
-@import '../../colors';
+@import '../colors/colors';
 @import '../../fonts';
 @import '../../mixins';
 
 header {
     width: calc(100% - 240px);
     height: 65px;
-    background-color: #fff;
+    background-color: var(--card-bg-color);
     position: absolute;
     top: 0;
     right: 0;
@@ -28,7 +28,7 @@ header {
         align-items: center;
         padding: 0 10px;
 
-        box-shadow: 10px 1px 10px -2px $container-shadow;
+        box-shadow: 10px 1px 10px -2px var(--container-shadow);
 
         .top-navbar-logo {
             width: fit-content;
@@ -117,7 +117,7 @@ header {
                     font-family: 'Nunito';
                     font-weight: 700;
                     font-size: 16px;
-                    color: $text-color-2;
+                    color: var(--text-color-1);
                 }
             }
         }

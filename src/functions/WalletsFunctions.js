@@ -121,8 +121,8 @@ export const getWallets = () => {
             logo: '👑',
             balance: '4600.00',
             currency: 'ARS',
-            color: '#363636',
-            bgColor: '#f5f5f5',
+            color: 'var(--text-color-2)',
+            bgColor: 'var(--card-bg-color)',
         },
         {
             id: 2,
@@ -130,8 +130,8 @@ export const getWallets = () => {
             logo: '🤑',
             balance: '240.00',
             currency: 'ARS',
-            color: '#363636',
-            bgColor: '#f5f5f5',
+            color: 'var(--text-color-2)',
+            bgColor: 'var(--card-bg-color)',
         },
     ];
 }

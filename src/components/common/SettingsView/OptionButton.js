@@ -1,9 +1,11 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 // Functions
-import { languageAction } from '../../../functions/SettingsFunctions';
+import { modalAction } from '../../../functions/SettingsFunctions';
+
+// Hooks
+import { modalContext } from '../../../hooks/useContext/ModalContext';
 
 // Styles
 const responsiveStyles = {
@@ -13,12 +15,19 @@ const responsiveStyles = {
 }
 
 export default function OptionButton({ icon, action, langMessageTitle, title, langMessageDescription, description, rightSide, responsive }) {
+    // eslint-disable-next-line
     const [displayWidth, setDisplayWidth] = useState(window.innerWidth);
+    const modalContextBuild = useContext(modalContext);
 
     const clickAction = () => {
         switch (action) {
             case "language":
-                languageAction();
+                modalAction(0);
+                modalContextBuild.setModalType(action)
+                break;
+            case "theme":
+                modalAction(0);
+                modalContextBuild.setModalType(action)
                 break;
 
             default:

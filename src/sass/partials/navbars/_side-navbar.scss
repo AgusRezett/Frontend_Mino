@@ -1,4 +1,4 @@
-@import '../../colors';
+@import '../colors/colors';
 @import '../../fonts';
 @import '../../mixins';
 
@@ -10,9 +10,9 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: $white;
+    background-color: var(--card-bg-color);
     padding: 15px 0px;
-    box-shadow: 1px 0px 10px -2px $container-shadow;
+    box-shadow: 1px 0px 10px -2px var(--container-shadow);
     transition: all 170ms ease-in-out;
 
     resize: horizontal;
@@ -57,7 +57,7 @@
             content: '';
             width: 12px;
             height: 12px;
-            background-color: $rounded-corner;
+            background-color: var(--rounded-corner);
             position: absolute;
             top: 65px;
             right: -12px;
@@ -69,7 +69,7 @@
             content: '';
             width: 12px;
             height: 12px;
-            background-color: $white-background;
+            background-color: var(--bg-color);
             position: absolute;
             top: 65px;
             right: -12px;
@@ -103,7 +103,7 @@
                 height: 23px;
                 margin-bottom: 1px;
                 margin-right: 10px;
-                stroke: $text-color-3;
+                stroke: var(--text-color-1);
                 transition: all 100ms ease-in-out;
 
                 @media screen and (max-width: 991px) {
@@ -114,7 +114,7 @@
             .nav-element-icon-special {
                 @extend .nav-element-icon;
                 stroke: none;
-                fill: $text-color-3;
+                fill: var(--text-color-1);
             }
 
             a {
@@ -123,7 +123,7 @@
                 height: 100%;
                 padding-left: 10px;
                 list-style: none;
-                color: $text-color-3;
+                color: var(--text-color-1);
                 border-radius: 10px;
                 text-decoration: none;
                 font-family: 'RooneySans Bold';
@@ -149,8 +149,6 @@
                 }
 
                 &:hover {
-                    color: $nav-element--hover;
-
                     @media screen and (max-width: 991px) {
                         span {
                             display: none;
@@ -250,7 +248,7 @@
                 z-index: 2;
                 top: -30px;
                 left: 0;
-                background-color: $stick-rounders-bg;
+                background-color: var(--card-bg-color);
                 border-bottom-left-radius: 25px;
                 transition: all 150ms ease-in-out;
             }
@@ -263,7 +261,7 @@
                 z-index: 2;
                 bottom: -30px;
                 left: 0;
-                background-color: $stick-rounders-bg;
+                background-color: var(--card-bg-color);
                 border-top-left-radius: 25px;
                 transition: all 150ms ease-in-out;
             }

@@ -1,0 +1,76 @@
+// Standard colors
+@import '../standard';
+// Login colors
+@import './login-light-theme';
+// Sidebar colors
+@import './side-navbar-light-theme';
+// General colors
+@import './general-light-theme';
+// Wallets colors
+@import './wallets-light-theme';
+// Settings colors
+@import './configuration-light-theme';
+
+// Cards
+$card-bg: $white;
+$card-bg-hover: #edf2f5;
+$card-element-bg: #f3f3f3;
+$card-element-bg--hover: #f7f7f7;
+$container-shadow: #00000014;
+
+// Text
+$text-color-1: #323232;
+$text-color-2: #575757;
+$text-color-2--hover: #686868;
+$text-color-3: #888888;
+$text-color-4: #666d77;
+$text-color-grey-blue: #99a1ae;
+
+// Status colors
+$field-error: #e81f37;
+
+// Backgrounds
+$white-background-content-sections: #ffffffb9;
+$white-background: #faf9f9;
+$white-background-hover: #f0f0f0;
+$disabled-color: #e2e2e2;
+
+// Logo
+$logo-color-orange--strong: #ff9900;
+$logo-color-orange--hover: #ffae00;
+$logo-color-orange-text: #dd9700;
+$logo-color-orange: #ffc000;
+$logo-color-orange--15: #ffd34d;
+$logo-color-orange--20: #ffd966;
+$logo-color-orange--25: #fde6a1;
+$logo-color-yellow: #ffec36;
+$logo-color-yellow--10: #ffeb3617;
+$logo-color-purple: #3d0052;
+$logo-color-black: #121212;
+
+:root[data-theme='theme-light'] {
+    --bg-color: #{$white-background};
+    --card-bg-color: #{$card-bg};
+    --card-bg-color-hover: #{$white-background-hover};
+    --card-element-bg-color: #{$card-element-bg};
+    --card-element-bg-color-hover: #{$card-element-bg--hover};
+
+    --language-bg-color: #{$card-bg};
+    --language-bg-color-hover: #{$white-background-hover};
+    --container-shadow: #{$container-shadow};
+    --option-btn--hover: #{$option-btn--hover};
+
+    --text-color-1: #{$text-color-1};
+    --text-color-2: #{$text-color-2};
+    --text-color-3: #{$text-color-3};
+    --disabled-color: #{$disabled-color};
+
+    --scrollbar-track: #{$scrollbar-track};
+    --scrollbar-thumb: #{$scrollbar-thumb};
+    --scrollbar-thumb--hover: #{$scrollbar-thumb--hover};
+
+    --rounded-corner: #{$rounded-corner};
+
+    --border-table: #{$disabled-color};
+    --border-arrow: #{$border-arrow};
+}

@@ -1,70 +1,74 @@
-@import '../../colors';
+@import '../colors/colors';
 @import '../../fonts';
 @import '../../mixins';
 
 .application-promo-container {
-	@include displayFlex(column, center, center);
-	position: relative;
-	height: 180px;
-	margin-top: 20px;
-	transition: all 170ms ease-in-out;
+    @include displayFlex(column, center, center);
+    position: relative;
+    height: 180px;
+    margin-top: 20px;
+    transition: all 170ms ease-in-out;
 
-	.application-promo {
-		@include displayFlex(column, flex-start, flex-start);
-		width: 100%;
-		height: 100%;
+    .application-promo {
+        @include displayFlex(column, flex-start, flex-start);
+        width: 100%;
+        height: 100%;
 
-		position: relative;
-		padding: 10px;
-		background-color: #fff;
-		border-radius: 12px;
-		box-shadow: 0px 2px 5px #00000014;
+        position: relative;
+        padding: 10px;
+        background-color: var(--card-bg-color);
+        border-radius: 12px;
+        box-shadow: 0px 2px 5px #00000014;
 
-		background-color: $logo-color-orange;
-		background-image: url('../assets/images/app-promo.jpg');
-		background-size: contain;
-		background-position: center bottom;
-		background-repeat: no-repeat;
+        background-color: $logo-color-orange;
+        background-image: url('../assets/images/app-promo.jpg');
+        background-size: contain;
+        background-position: center bottom;
+        background-repeat: no-repeat;
 
-		.application-promo-title {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 50px;
-			padding: 13px 20px;
-			border-top-left-radius: 11px;
-			border-top-right-radius: 11px;
+        .application-promo-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            padding: 13px 20px;
+            border-top-left-radius: 11px;
+            border-top-right-radius: 11px;
 
-			font-size: 18px;
-			font-weight: bold;
-			color: #000000;
-			background-color: #fff;
-		}
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-color-1);
+            background-color: var(--card-bg-color);
 
-		.application-promo-download-container {
-			@include displayFlex(row, space-between, center);
-			width: 310px;
-			height: 47.4px;
+            @media screen and (max-width: 418px) {
+                font-size: 16px;
+            }
+        }
 
-			position: absolute;
-			left: 20px;
-			bottom: 20px;
+        .application-promo-download-container {
+            @include displayFlex(row, space-between, center);
+            width: 310px;
+            height: 47.4px;
 
-			img {
-				cursor: pointer;
-			}
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
 
-			.app-store-button {
-				width: 137.1px;
-				height: 47.4px;
-				margin-right: 15px;
-			}
+            img {
+                cursor: pointer;
+            }
 
-			.google-play-button {
-				width: 160px;
-				height: 45.5px;
-			}
-		}
-	}
+            .app-store-button {
+                width: 137.1px;
+                height: 47.4px;
+                margin-right: 15px;
+            }
+
+            .google-play-button {
+                width: 160px;
+                height: 45.5px;
+            }
+        }
+    }
 }
