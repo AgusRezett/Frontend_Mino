@@ -1,37 +1,37 @@
 // Standard colors
 @import '../standard';
 // Login colors
-@import './login-dark-theme';
+@import './login-dark-high-theme';
 // Sidebar colors
-@import './side-navbar-dark-theme';
+@import './side-navbar-dark-high-theme';
 // General colors
-@import './general-dark-theme';
+@import './general-dark-high-theme';
 // Wallets colors
-@import './wallets-dark-theme';
+@import './wallets-dark-high-theme';
 // Settings colors
-@import './configuration-dark-theme';
+@import './configuration-dark-high-theme';
 
 // Cards
-$card-bg-dark: #62707c;
-$card-bg-dark-hover: #697987;
-$card-element-bg-dark: #8d9aa7;
-$card-element-bg-dark--hover: #98a5b3;
+$card-bg-dark-high: #27282d;
+$card-bg-dark-high-hover: #32333a;
+$card-element-bg-dark-high: #3a3b43;
+$card-element-bg-dark-high--hover: #43444d;
 $container-shadow: #00000014;
 
 // Text
-$text-color-dark-1: #ffffff;
+$text-color-dark-1: #f8f8f8;
 $text-color-dark-2: #dcdcdc;
 $text-color-dark-2--hover: #9e9e9e;
 $text-color-dark-3: #c4c4c4;
 $text-color-dark-4: #8893a2;
-$text-color-dark-grey-blue: #3c3e43;
+$text-color-dark-high-grey-blue: #838996;
 
 // Status colors
 $field-error: #e81f37;
 
 // Backgrounds
 $white-background-content-sections: #ffffffb9;
-$dark-background: #47525b;
+$dark-high-background: #1f2023;
 $dark-background-hover: #414b54;
 $disabled-dark-color: #535f6a;
 
@@ -48,30 +48,30 @@ $logo-color-yellow--10: #ffeb3617;
 $logo-color-purple: #3d0052;
 $logo-color-black: #121212;
 
-:root[data-theme='theme-dark'] {
-    --bg-color: #{$dark-background};
-    --card-bg-color: #{$card-bg-dark};
-    --card-bg-color-hover: #{$card-bg-dark-hover};
-    --card-element-bg-color: #{$card-element-bg-dark};
-    --card-element-bg-color-hover: #{$card-element-bg-dark--hover};
+:root[data-theme='theme-dark-high'] {
+    --bg-color: #{$dark-high-background};
+    --card-bg-color: #{$card-bg-dark-high};
+    --card-bg-color-hover: #{$card-bg-dark-high-hover};
+    --card-element-bg-color: #{$card-element-bg-dark-high};
+    --card-element-bg-color-hover: #{$card-element-bg-dark-high--hover};
 
-    --language-bg-color: #{$card-bg-dark};
-    --language-bg-color-hover: #{$card-bg-dark-hover};
+    --language-bg-color: #{$card-bg-dark-high};
+    --language-bg-color-hover: #{$card-bg-dark-high-hover};
     --container-shadow: #{$container-shadow};
     --option-btn--hover: #{$option-btn--hover};
 
     --text-color-1: #{$text-color-dark-1};
     --text-color-2: #{$text-color-dark-2};
     --text-color-3: #{$text-color-dark-3};
-    --text-color-dark-grey-blue: #{$text-color-dark-grey-blue};
+    --text-color-dark-grey-blue: #{$text-color-dark-high-grey-blue};
     --disabled-color: #{$disabled-dark-color};
 
     --scrollbar-track: #{$scrollbar-track-dark};
     --scrollbar-thumb: #{$scrollbar-thumb-dark};
     --scrollbar-thumb--hover: #{$scrollbar-thumb-dark--hover};
 
-    --rounded-corner: #{$card-bg-dark};
-    --actual-nav-color: #{$dark-background};
+    --rounded-corner: #{$card-bg-dark-high};
+    --actual-nav-color: #{$dark-high-background};
 
     --border-table: #{$disabled-dark-color};
     --border-arrow: #{$border-arrow-dark};

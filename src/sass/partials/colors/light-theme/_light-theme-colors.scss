@@ -69,7 +69,8 @@ $logo-color-black: #121212;
     --scrollbar-thumb: #{$scrollbar-thumb};
     --scrollbar-thumb--hover: #{$scrollbar-thumb--hover};
 
-    --rounded-corner: #{$rounded-corner};
+    --rounded-corner: #{$card-bg};
+    --actual-nav-color: #{$logo-color-purple};
 
     --border-table: #{$disabled-color};
     --border-arrow: #{$border-arrow};

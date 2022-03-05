@@ -169,3 +169,18 @@ export const getTokenPrice = async (token) => {
             console.log(err);
         });
 };
+
+const matchMediaPrefDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+export function startListeningToOSTheme() {
+    matchMediaPrefDark.addEventListener('change', onSystemThemeChange);
+}
+export function stopListeningToOSTheme() {
+    matchMediaPrefDark.removeEventListener('change', onSystemThemeChange);
+}
+
+function onSystemThemeChange(e) {
+    const isDark = e.matches;
+    document.querySelector('html').dataset.theme =
+        `theme-${isDark ? 'dark-high' : 'light'}`;
+}

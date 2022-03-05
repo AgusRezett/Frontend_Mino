@@ -24,6 +24,7 @@
   --scrollbar-thumb: #88888863;
   --scrollbar-thumb--hover: #555;
   --rounded-corner: #fff;
+  --actual-nav-color: #3d0052;
   --border-table: #e2e2e2;
   --border-arrow: #a9a9a9;
 }
@@ -47,6 +48,31 @@
   --scrollbar-thumb: #373f46;
   --scrollbar-thumb--hover: #333a41;
   --rounded-corner: #62707c;
+  --actual-nav-color: #47525b;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+
+:root[data-theme=theme-dark-high] {
+  --bg-color: #1f2023;
+  --card-bg-color: #27282d;
+  --card-bg-color-hover: #32333a;
+  --card-element-bg-color: #3a3b43;
+  --card-element-bg-color-hover: #43444d;
+  --language-bg-color: #27282d;
+  --language-bg-color-hover: #32333a;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #f8f8f8;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #838996;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #27282d;
+  --actual-nav-color: #1f2023;
   --border-table: #535f6a;
   --border-arrow: #e8e8e8;
 }
@@ -217,6 +243,7 @@
   --scrollbar-thumb: #88888863;
   --scrollbar-thumb--hover: #555;
   --rounded-corner: #fff;
+  --actual-nav-color: #3d0052;
   --border-table: #e2e2e2;
   --border-arrow: #a9a9a9;
 }
@@ -240,6 +267,31 @@
   --scrollbar-thumb: #373f46;
   --scrollbar-thumb--hover: #333a41;
   --rounded-corner: #62707c;
+  --actual-nav-color: #47525b;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+
+:root[data-theme=theme-dark-high] {
+  --bg-color: #1f2023;
+  --card-bg-color: #27282d;
+  --card-bg-color-hover: #32333a;
+  --card-element-bg-color: #3a3b43;
+  --card-element-bg-color-hover: #43444d;
+  --language-bg-color: #27282d;
+  --language-bg-color-hover: #32333a;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #f8f8f8;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-dark-grey-blue: #838996;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #27282d;
+  --actual-nav-color: #1f2023;
   --border-table: #535f6a;
   --border-arrow: #e8e8e8;
 }

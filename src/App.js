@@ -16,7 +16,13 @@ export default function App() {
 	const defaultTheme = localStorage.getItem("theme")
 	const html = document.querySelector('html');
 	if (defaultTheme) {
-		html.dataset.theme = `theme-${defaultTheme}`;
+		if (defaultTheme === "system") {
+			const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			document.querySelector('html').dataset.theme =
+				`theme-${isDark ? 'dark-high' : 'light'}`;
+		} else {
+			html.dataset.theme = `theme-${defaultTheme}`;
+		}
 	} else {
 		html.dataset.theme = `theme-light`;
 	}

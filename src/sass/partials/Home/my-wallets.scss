@@ -186,12 +186,14 @@
                     padding: 0px 20px;
                     border-radius: 10px;
                     background-color: var(--card-element-bg-color);
+                    color: var(--text-color-1);
                     transition: all 150ms ease-in-out;
 
                     svg {
                         width: 20px;
                         height: 20px;
                         margin-right: 10px;
+                        stroke: var(--text-color-1);
                     }
 
                     &:hover {

@@ -205,7 +205,7 @@
             position: absolute;
             left: -300px;
             z-index: 1;
-            background-color: $logo-color-purple;
+            background-color: var(--actual-nav-color);
             transition: all 150ms ease-in-out;
 
             border-top-right-radius: 25px;
@@ -233,7 +233,7 @@
             .active-navlink-background-stick {
                 width: 30px;
                 height: 100px;
-                background-color: $logo-color-purple;
+                background-color: var(--actual-nav-color);
                 position: absolute;
                 z-index: 1;
                 top: -25px;

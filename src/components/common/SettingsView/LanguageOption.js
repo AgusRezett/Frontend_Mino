@@ -17,7 +17,7 @@ export default function LanguageOption({ flag, language, region, code }) {
             window.location.reload();
         }}
     >
-        <div className='language-option-content'>
+        <div className='language-option-content' style={{ cursor: "pointer" }}>
             <div className='language-option-title language-option-color'>
                 <b><FormattedMessage id={language} defaultMessage="Error" /> </b>
                 {region && "("}
