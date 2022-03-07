@@ -4,7 +4,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 // Functions
-import { startListeningToOSTheme, stopListeningToOSTheme } from '../../../functions/GlobalFunctions';
+//import { startListeningToOSTheme, stopListeningToOSTheme } from '../../../functions/GlobalFunctions';
 
 
 export default function ThemeOption({ image, name, theme, colors }) {

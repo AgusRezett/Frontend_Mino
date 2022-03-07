@@ -67,7 +67,7 @@ export default function SideNavbar() {
                     </NavLink>
                 </li>
                 <li className='log-out'>
-                    <NavLink to="/cerrar-sesion" onClick={(e) => pressNavigateButton(e.target)}>
+                    <a href='.'>
                         <svg className="nav-element-icon-special log-out-icon" viewBox="0 0 384.971 384.971" >
                             <path d="M180.455,360.91H24.061V24.061h156.394c6.641,0,12.03-5.39,12.03-12.03s-5.39-12.03-12.03-12.03H12.03
 				C5.39,0.001,0,5.39,0,12.031V372.94c0,6.641,5.39,12.03,12.03,12.03h168.424c6.641,0,12.03-5.39,12.03-12.03
@@ -77,7 +77,7 @@ export default function SideNavbar() {
 				c4.704,4.752,12.319,4.752,17.011,0l82.997-84.2C386.113,196.588,386.161,188.756,381.481,184.088z"/>
                         </svg>
                         <span>Cerrar sesión</span>
-                    </NavLink>
+                    </a>
                 </li>
                 <div id="activeNavlinkBackground" className="active-navlink-background">
                     <div className="active-navlink-background-stick"></div>

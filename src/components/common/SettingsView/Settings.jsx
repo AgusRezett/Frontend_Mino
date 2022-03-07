@@ -73,6 +73,27 @@ const optionButtons = [
             'Gestioná los dispositivos donde estás utilizando tú cuenta',
         rightSide: sideArrow,
         responsive: false
+    },
+    {
+        icon: '✅',
+        langMessageTitle: 'config.settings.option.title.tfa',
+        langMessageDescription: 'config.settings.option.description.tfa',
+        defaultTitle: 'Verificación de dos pasos',
+        defaultDescription:
+            'Aumentá la seguridad de tu cuenta validando tu sesión desde más de un dispositivo',
+        rightSide: sideArrow,
+        responsive: false
+    },
+    {
+        icon: '🔑',
+        langMessageTitle: 'config.settings.option.title.anti-phishing',
+        langMessageDescription:
+            'config.settings.option.description.anti-phishing',
+        defaultTitle: 'Código anti-phising',
+        defaultDescription:
+            'Mediante este código secreto podés diferenciar nuestros mensajes de las imitaciones',
+        rightSide: sideArrow,
+        responsive: false
     }
 ];
 
@@ -96,11 +117,6 @@ export default function Ajustes() {
                             responsive={optionButton.responsive}
                         />
                     ))}
-
-                    <div className="button-option">
-                        Verificación de dos pasos
-                    </div>
-                    <div className="button-option">Código anti-phising</div>
                 </div>
             </section>
         </>

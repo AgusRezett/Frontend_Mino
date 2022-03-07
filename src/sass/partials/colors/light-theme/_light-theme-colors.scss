@@ -50,8 +50,9 @@ $logo-color-black: #121212;
 
 :root[data-theme='theme-light'] {
     --bg-color: #{$white-background};
+    --bg-color-hover: #{$white-background-hover};
     --card-bg-color: #{$card-bg};
-    --card-bg-color-hover: #{$white-background-hover};
+    --card-bg-color-hover: #{$card-bg-hover};
     --card-element-bg-color: #{$card-element-bg};
     --card-element-bg-color-hover: #{$card-element-bg--hover};
 
@@ -63,6 +64,8 @@ $logo-color-black: #121212;
     --text-color-1: #{$text-color-1};
     --text-color-2: #{$text-color-2};
     --text-color-3: #{$text-color-3};
+    --text-color-4: #{$text-color-4};
+    --text-color-candy-grey-blue: #{$text-color-grey-blue};
     --disabled-color: #{$disabled-color};
 
     --scrollbar-track: #{$scrollbar-track};

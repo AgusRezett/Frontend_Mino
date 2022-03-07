@@ -1,0 +1,80 @@
+// Standard colors
+@import '../standard';
+// Login colors
+@import './login-candy-theme';
+// Sidebar colors
+@import './side-navbar-candy-theme';
+// General colors
+@import './general-candy-theme';
+// Wallets colors
+@import './wallets-candy-theme';
+// Settings colors
+@import './configuration-candy-theme';
+
+// Cards
+$card-bg-candy: #ffeeed;
+$card-bg-candy-hover: #faefee;
+$card-element-bg-candy: #ffd1cd;
+$card-element-bg-candy--hover: #ffd9d5;
+$container-shadow: #00000014;
+
+// Text
+$text-color-candy-1: #4a154b;
+$text-color-candy-2: #601e61;
+$text-color-candy-2--hover: #722374;
+$text-color-candy-3: #852e87;
+$text-color-candy-4: #e46864;
+$text-color-candy-grey-blue: #3c3e43;
+
+// Status colors
+$field-error: #e81f37;
+
+// Backgrounds
+$white-background-content-sections: #ffffffb9;
+$candy-background: #ffc2c0;
+$candy-background-hover: #fdd1d0;
+$disabled-candy-color: #e2b6b4;
+
+// Logo
+$logo-color-orange--strong: #ff9900;
+$logo-color-orange--hover: #ffae00;
+$logo-color-orange-text: #dd9700;
+$logo-color-orange: #ffc000;
+$logo-color-orange--15: #ffd34d;
+$logo-color-orange--20: #ffd966;
+$logo-color-orange--25: #fde6a1;
+$logo-color-yellow: #ffec36;
+$logo-color-yellow--10: #ffeb3617;
+$logo-color-purple: #3d0052;
+$logo-color-black: #121212;
+
+:root[data-theme='theme-candy'] {
+    --bg-color: #{$candy-background};
+    --bg-color-hover: #{$candy-background-hover};
+    --card-bg-color: #{$card-bg-candy};
+    --card-bg-color-hover: #{$card-bg-candy-hover};
+    --card-element-bg-color: #{$card-element-bg-candy};
+    --card-element-bg-color-hover: #{$card-element-bg-candy--hover};
+
+    --language-bg-color: #{$card-bg-candy};
+    --language-bg-color-hover: #{$card-bg-candy-hover};
+    --container-shadow: #{$container-shadow};
+    --option-btn--hover: #{$option-btn--hover};
+
+    --text-color-1: #{$text-color-candy-1};
+    --text-color-2: #{$text-color-candy-2};
+    --text-color-3: #{$text-color-candy-3};
+    --text-color-4: #{$text-color-candy-4};
+    --text-color-candy-grey-blue: #{$text-color-candy-grey-blue};
+    --disabled-color: #{$disabled-candy-color};
+
+    --scrollbar-track: #{$scrollbar-track-candy};
+    --scrollbar-thumb: #{$scrollbar-thumb-candy};
+    --scrollbar-thumb--hover: #{$scrollbar-thumb-candy--hover};
+
+    --rounded-corner: #{$card-bg-candy};
+    --actual-nav-color: #{$candy-background};
+
+    --border-table: #{$disabled-candy-color};
+    --border-arrow: #{$border-arrow-candy};
+}

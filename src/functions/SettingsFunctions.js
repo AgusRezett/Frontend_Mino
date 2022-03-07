@@ -56,4 +56,28 @@ export const themesImages = [
             font: "#F8F8F8"
         }
     },
+    {
+        name: 'theme.option.candy',
+        theme: "candy",
+        colors: {
+            primary: "#FFEEED",
+            background: "#FFC2C0",
+            font: "#4A154B"
+        }
+    },
 ]
+
+export const getAccountInfo = () => {
+    return {
+        email: "nazareno.agustin45@gmail.com",
+        phone: "+54 9 11 2170-7490",
+        /* email: "",
+        phone: "", */
+        person: {
+            name: "Agustin",
+            secondname: "Nazareno",
+            surname: "Rezett",
+        },
+        verified: true
+    }
+}

@@ -4,8 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 :root[data-theme=theme-light] {
   --bg-color: #faf9f9;
+  --bg-color-hover: #f0f0f0;
   --card-bg-color: #fff;
-  --card-bg-color-hover: #f0f0f0;
+  --card-bg-color-hover: #edf2f5;
   --card-element-bg-color: #f3f3f3;
   --card-element-bg-color-hover: #f7f7f7;
   --language-bg-color: #fff;
@@ -15,6 +16,8 @@
   --text-color-1: #323232;
   --text-color-2: #575757;
   --text-color-3: #888888;
+  --text-color-4: #666d77;
+  --text-color-candy-grey-blue: #99a1ae;
   --disabled-color: #e2e2e2;
   --scrollbar-track: #f1f1f1;
   --scrollbar-thumb: #88888863;
@@ -27,6 +30,7 @@
 
 :root[data-theme=theme-dark] {
   --bg-color: #47525b;
+  --bg-color-hover: #414b54;
   --card-bg-color: #62707c;
   --card-bg-color-hover: #697987;
   --card-element-bg-color: #8d9aa7;
@@ -38,7 +42,8 @@
   --text-color-1: #ffffff;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #3c3e43;
+  --text-color-4: #b6cee2;
+  --text-color-grey-blue: #bcd5eb;
   --disabled-color: #535f6a;
   --scrollbar-track: #404a52;
   --scrollbar-thumb: #373f46;
@@ -51,6 +56,7 @@
 
 :root[data-theme=theme-dark-high] {
   --bg-color: #1f2023;
+  --bg-color-hover: #2e2f31;
   --card-bg-color: #27282d;
   --card-bg-color-hover: #32333a;
   --card-element-bg-color: #3a3b43;
@@ -62,21 +68,49 @@
   --text-color-1: #f8f8f8;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #838996;
+  --text-color-4: #b1bfd3;
+  --text-color-grey-blue: #bdc6d8;
   --disabled-color: #535f6a;
-  --scrollbar-track: #404a52;
-  --scrollbar-thumb: #373f46;
-  --scrollbar-thumb--hover: #333a41;
+  --scrollbar-track: #27282c;
+  --scrollbar-thumb: #303237;
+  --scrollbar-thumb--hover: #3d3f46;
   --rounded-corner: #27282d;
   --actual-nav-color: #1f2023;
   --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+
+:root[data-theme=theme-candy] {
+  --bg-color: #ffc2c0;
+  --bg-color-hover: #fdd1d0;
+  --card-bg-color: #ffeeed;
+  --card-bg-color-hover: #faefee;
+  --card-element-bg-color: #ffd1cd;
+  --card-element-bg-color-hover: #ffd9d5;
+  --language-bg-color: #ffeeed;
+  --language-bg-color-hover: #faefee;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #4a154b;
+  --text-color-2: #601e61;
+  --text-color-3: #852e87;
+  --text-color-4: #e46864;
+  --text-color-candy-grey-blue: #3c3e43;
+  --disabled-color: #e2b6b4;
+  --scrollbar-track: #eb9f9c;
+  --scrollbar-thumb: #d8716d;
+  --scrollbar-thumb--hover: #eb7470;
+  --rounded-corner: #ffeeed;
+  --actual-nav-color: #ffc2c0;
+  --border-table: #e2b6b4;
   --border-arrow: #e8e8e8;
 }
 
 :root[data-theme=theme-light] {
   --bg-color: #faf9f9;
+  --bg-color-hover: #f0f0f0;
   --card-bg-color: #fff;
-  --card-bg-color-hover: #f0f0f0;
+  --card-bg-color-hover: #edf2f5;
   --card-element-bg-color: #f3f3f3;
   --card-element-bg-color-hover: #f7f7f7;
   --language-bg-color: #fff;
@@ -86,6 +120,8 @@
   --text-color-1: #323232;
   --text-color-2: #575757;
   --text-color-3: #888888;
+  --text-color-4: #666d77;
+  --text-color-candy-grey-blue: #99a1ae;
   --disabled-color: #e2e2e2;
   --scrollbar-track: #f1f1f1;
   --scrollbar-thumb: #88888863;
@@ -98,6 +134,7 @@
 
 :root[data-theme=theme-dark] {
   --bg-color: #47525b;
+  --bg-color-hover: #414b54;
   --card-bg-color: #62707c;
   --card-bg-color-hover: #697987;
   --card-element-bg-color: #8d9aa7;
@@ -109,7 +146,8 @@
   --text-color-1: #ffffff;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #3c3e43;
+  --text-color-4: #b6cee2;
+  --text-color-grey-blue: #bcd5eb;
   --disabled-color: #535f6a;
   --scrollbar-track: #404a52;
   --scrollbar-thumb: #373f46;
@@ -122,6 +160,7 @@
 
 :root[data-theme=theme-dark-high] {
   --bg-color: #1f2023;
+  --bg-color-hover: #2e2f31;
   --card-bg-color: #27282d;
   --card-bg-color-hover: #32333a;
   --card-element-bg-color: #3a3b43;
@@ -133,14 +172,41 @@
   --text-color-1: #f8f8f8;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #838996;
+  --text-color-4: #b1bfd3;
+  --text-color-grey-blue: #bdc6d8;
   --disabled-color: #535f6a;
-  --scrollbar-track: #404a52;
-  --scrollbar-thumb: #373f46;
-  --scrollbar-thumb--hover: #333a41;
+  --scrollbar-track: #27282c;
+  --scrollbar-thumb: #303237;
+  --scrollbar-thumb--hover: #3d3f46;
   --rounded-corner: #27282d;
   --actual-nav-color: #1f2023;
   --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+
+:root[data-theme=theme-candy] {
+  --bg-color: #ffc2c0;
+  --bg-color-hover: #fdd1d0;
+  --card-bg-color: #ffeeed;
+  --card-bg-color-hover: #faefee;
+  --card-element-bg-color: #ffd1cd;
+  --card-element-bg-color-hover: #ffd9d5;
+  --language-bg-color: #ffeeed;
+  --language-bg-color-hover: #faefee;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #4a154b;
+  --text-color-2: #601e61;
+  --text-color-3: #852e87;
+  --text-color-4: #e46864;
+  --text-color-candy-grey-blue: #3c3e43;
+  --disabled-color: #e2b6b4;
+  --scrollbar-track: #eb9f9c;
+  --scrollbar-thumb: #d8716d;
+  --scrollbar-thumb--hover: #eb7470;
+  --rounded-corner: #ffeeed;
+  --actual-nav-color: #ffc2c0;
+  --border-table: #e2b6b4;
   --border-arrow: #e8e8e8;
 }
 
@@ -256,7 +322,7 @@
 
 .info-account-container {
   margin-top: 20px;
-  height: 180px;
+  height: auto;
   position: relative;
   z-index: 1;
 }
@@ -270,7 +336,7 @@
   border-radius: 12px;
   padding: 25px 25px 23px 25px;
   box-shadow: 0px 2px 5px #00000014;
-  background-color: #fff;
+  background-color: var(--card-bg-color);
 }
 .info-account-container .info-account-content .verify-user-status {
   display: flex;
@@ -279,8 +345,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  font-size: 15px;
-  font-weight: 700;
 }
 .info-account-container .info-account-content .verify-user-status .verify-process-btn {
   cursor: pointer;
@@ -291,12 +355,18 @@
   position: absolute;
   top: 20px;
   right: 33px;
-  background-color: #f6f8fd;
+  background-color: var(--bg-color);
   opacity: 0.75;
 }
 .info-account-container .info-account-content .verify-user-status .verify-process-btn:hover {
   opacity: 1;
-  background-color: #e6ebf5;
+  background-color: var(--bg-color-hover);
+}
+.info-account-container .info-account-content .verify-user-status .user-status-text {
+  margin-top: 20px;
+  color: var(--text-color-1);
+  font-size: 15px;
+  font-weight: 700;
 }
 .info-account-container .info-account-content .section-blur {
   display: flex;
@@ -362,7 +432,7 @@
 .info-account-container .info-account-content .verified-info-header .header-info .header-title {
   font-size: 24px;
   font-weight: 700;
-  color: #323232;
+  color: var(--text-color-1);
 }
 @media screen and (max-width: 1013px) {
   .info-account-container .info-account-content .verified-info-header .header-info .header-title {
@@ -377,7 +447,7 @@
 .info-account-container .info-account-content .verified-info-header .header-info .header-description {
   font-size: 15px;
   font-weight: 500;
-  color: #99a1ae;
+  color: var(--text-color-grey-blue);
 }
 @media screen and (max-width: 1141px) {
   .info-account-container .info-account-content .verified-info-header .header-info .header-description {
@@ -390,8 +460,17 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  color: #666d77;
+  margin-top: 30px;
+  color: var(--text-color-4);
   font-weight: 600;
+}
+@media screen and (max-width: 1150px) {
+  .info-account-container .info-account-content .section-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 .info-account-container .info-account-content .section-value .change-value-btn {
   display: flex;
@@ -402,12 +481,17 @@
   font-size: 15px;
   cursor: pointer;
   border-radius: 5px;
-  background-color: #ebebeb;
+  background-color: var(--bg-color);
   transition: all 150ms ease-in-out;
 }
 .info-account-container .info-account-content .section-value .change-value-btn:hover {
   color: #dd9700;
-  background-color: #e8decc;
+  background-color: var(--bg-color-hover);
+}
+@media screen and (max-width: 1150px) {
+  .info-account-container .info-account-content .section-value .change-value-btn {
+    margin-top: 10px;
+  }
 }
 
 .settings-options-content .clean-preferences {
@@ -465,7 +549,7 @@
 }
 .settings-modal-container .settings-modal-content .settings-modal-body {
   width: 100%;
-  height: calc(100% - 32px);
+  height: calc(100% - 52px);
   margin-top: 20px;
   padding-right: 12px;
   overflow-y: auto;
@@ -481,6 +565,7 @@
 .settings-modal-container .settings-modal-content .settings-modal-body::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 20px;
+  transition: all 150ms ease-in-out;
 }
 .settings-modal-container .settings-modal-content .settings-modal-body::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb--hover);

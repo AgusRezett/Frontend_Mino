@@ -47,7 +47,7 @@
 
         .settings-modal-body {
             width: 100%;
-            height: calc(100% - 32px);
+            height: calc(100% - 52px);
             margin-top: 20px;
             padding-right: 12px;
             overflow-y: auto;
@@ -64,6 +64,7 @@
             &::-webkit-scrollbar-thumb {
                 background: var(--scrollbar-thumb);
                 border-radius: 20px;
+                transition: all 150ms ease-in-out;
             }
             &::-webkit-scrollbar-thumb:hover {
                 background: var(--scrollbar-thumb--hover);

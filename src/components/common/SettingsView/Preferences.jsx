@@ -50,27 +50,33 @@ const optionButtons = [
 
 export default function Preferencias() {
     return (
-        <section className="settings-options-container">
-            <div className="settings-options-content">
-                {optionButtons.map((optionButton, index) => (
-                    <OptionButton
-                        key={index}
-                        action={optionButton.action}
-                        icon={optionButton.icon}
-                        langMessageTitle={optionButton.langMessageTitle}
-                        langMessageDescription={
-                            optionButton.langMessageDescription
-                        }
-                        title={optionButton.defaultTitle}
-                        description={optionButton.defaultDescription}
-                        rightSide={optionButton.rightSide}
-                        responsive={optionButton.responsive}
-                    />
-                ))}
-                <div className="button-option clean-preferences">
-                    Limpiar mis preferencias
+        <>
+            <section className="settings-options-container">
+                <div className="settings-options-content">
+                    {optionButtons.map((optionButton, index) => (
+                        <OptionButton
+                            key={index}
+                            action={optionButton.action}
+                            icon={optionButton.icon}
+                            langMessageTitle={optionButton.langMessageTitle}
+                            langMessageDescription={
+                                optionButton.langMessageDescription
+                            }
+                            title={optionButton.defaultTitle}
+                            description={optionButton.defaultDescription}
+                            rightSide={optionButton.rightSide}
+                            responsive={optionButton.responsive}
+                        />
+                    ))}
                 </div>
-            </div>
-        </section>
+            </section>
+            <section className="settings-options-container">
+                <div className="settings-options-content">
+                    <div className="button-option clean-preferences">
+                        Limpiar mis preferencias
+                    </div>
+                </div>
+            </section>
+        </>
     );
 }

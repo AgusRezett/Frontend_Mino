@@ -18,7 +18,7 @@ export default function AccountInfoSection({ sectionType, value }) {
         defaultTitle: "Correo electrónico",
         langMessageDescription: "config.account.email.description",
         defaultDescription: "Dirección de correo asociada a tú cuenta",
-        value: value,
+        value: value ? value : <FormattedMessage id="config.account.section.undefinedValue" defaultMessage="Sin definir" />,
         cardWidth: "col-12 col-lg-6"
     }
 
@@ -113,14 +113,17 @@ export default function AccountInfoSection({ sectionType, value }) {
         <div className="info-account-content">
             <div className='verify-user-status'>
                 <img src={selectedSection.image} alt="user-status" />
-                {value ?
-                    <FormattedMessage id="config.account.verified.checked" defaultMessage="Identidad verificada" />
-                    :
-                    <>
-                        <FormattedMessage id="config.account.verified.notChecked" defaultMessage="Verificación requerida" />
-                        <div className='verify-process-btn'>Comenzar</div>
-                    </>
-                }</div>
+                <div className='user-status-text'>
+                    {value ?
+                        <FormattedMessage id="config.account.verified.checked" defaultMessage="Identidad verificada" />
+                        :
+                        <>
+                            <FormattedMessage id="config.account.verified.notChecked" defaultMessage="Verificación requerida" />
+                            <div className='verify-process-btn'>Comenzar</div>
+                        </>
+                    }
+                </div>
+            </div>
         </div>
     </section>
 

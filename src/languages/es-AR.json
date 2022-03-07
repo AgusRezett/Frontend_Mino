@@ -15,6 +15,8 @@
     "config.settings.option.description.notifications": "Activá las notificaciones que deseás recibir",
     "config.settings.option.title.devices": "Dispositivos activos",
     "config.settings.option.description.devices": "Gestioná los dispositivos donde se encuentra tú cuenta activa",
+    "config.settings.option.title.tfa": "Verificación de dos pasos",
+    "config.settings.option.description.tfa": "Aumentá la seguridad de tu cuenta validando tu sesión desde más de un dispositivo",
 
     "config.preferences.option.title.theme": "Temas",
     "config.preferences.option.description.theme": "Buscá los colores que más se adapten a vos",
@@ -50,10 +52,11 @@
     "region.option.cn": "简体",
 
     "config.modal.title.theme": "Elegí un tema",
-    "theme.option.system": "Sincronizar con ordenador",
+    "theme.option.system": "Sincronizar con el dispositivo",
     "theme.option.light": "Claro",
     "theme.option.dark": "Oscuro",
     "theme.option.dark-high": "Oscuro de alto contraste",
+    "theme.option.candy": "Dulce",
 
     "common.message.notVerified": "Para acceder verificá tu cuenta"
 }

@@ -23,8 +23,8 @@ $text-color-dark-1: #ffffff;
 $text-color-dark-2: #dcdcdc;
 $text-color-dark-2--hover: #9e9e9e;
 $text-color-dark-3: #c4c4c4;
-$text-color-dark-4: #8893a2;
-$text-color-dark-grey-blue: #3c3e43;
+$text-color-dark-4: #b6cee2;
+$text-color-dark-grey-blue: #bcd5eb;
 
 // Status colors
 $field-error: #e81f37;
@@ -50,6 +50,7 @@ $logo-color-black: #121212;
 
 :root[data-theme='theme-dark'] {
     --bg-color: #{$dark-background};
+    --bg-color-hover: #{$dark-background-hover};
     --card-bg-color: #{$card-bg-dark};
     --card-bg-color-hover: #{$card-bg-dark-hover};
     --card-element-bg-color: #{$card-element-bg-dark};
@@ -63,7 +64,8 @@ $logo-color-black: #121212;
     --text-color-1: #{$text-color-dark-1};
     --text-color-2: #{$text-color-dark-2};
     --text-color-3: #{$text-color-dark-3};
-    --text-color-dark-grey-blue: #{$text-color-dark-grey-blue};
+    --text-color-4: #{$text-color-dark-4};
+    --text-color-grey-blue: #{$text-color-dark-grey-blue};
     --disabled-color: #{$disabled-dark-color};
 
     --scrollbar-track: #{$scrollbar-track-dark};

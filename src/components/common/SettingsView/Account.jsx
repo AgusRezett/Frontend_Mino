@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Components
 import OptionButton from './OptionButton';
 import AccountInfoSection from './AccountInfoSection';
 //import { FormattedMessage } from 'react-intl';
+
+// Functions
+import { getAccountInfo } from '../../../functions/SettingsFunctions';
 
 const sideArrow = (
     <div className="expand-toggler">
@@ -35,24 +38,31 @@ const optionButtons = [
 ];
 
 export default function Cuenta() {
+    const [accountInfo, setAccountInfo] = useState(getAccountInfo());
+
     return (
         <>
             <div className="row" style={{ padding: '0px' }}>
                 <AccountInfoSection
                     sectionType="email"
-                    value="agustin.rezett@gmail.com"
+                    value={accountInfo.email}
                 />
-                <AccountInfoSection sectionType="phone" value="" />
-                <AccountInfoSection sectionType={'general'} value="0" />
-                <AccountInfoSection sectionType={'verified'} value={false} />
+                <AccountInfoSection
+                    sectionType="phone"
+                    value={accountInfo.phone}
+                />
+                <AccountInfoSection
+                    sectionType={'general'}
+                    value={accountInfo.person}
+                />
+                <AccountInfoSection
+                    sectionType={'verified'}
+                    value={accountInfo.verified}
+                />
             </div>
             <section className="settings-options-container">
                 <div className="settings-options-content">
                     <div className="button-option">Datos personales</div>
-                    <div className="button-option">
-                        Verificación de identidad
-                    </div>
-                    <div className="button-option">Solicitar cambios</div>
                     {optionButtons.map((optionButton, index) => (
                         <OptionButton
                             key={index}

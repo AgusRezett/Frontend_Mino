@@ -15,8 +15,9 @@
 }
 .row :root[data-theme=theme-light] {
   --bg-color: #faf9f9;
+  --bg-color-hover: #f0f0f0;
   --card-bg-color: #fff;
-  --card-bg-color-hover: #f0f0f0;
+  --card-bg-color-hover: #edf2f5;
   --card-element-bg-color: #f3f3f3;
   --card-element-bg-color-hover: #f7f7f7;
   --language-bg-color: #fff;
@@ -26,6 +27,8 @@
   --text-color-1: #323232;
   --text-color-2: #575757;
   --text-color-3: #888888;
+  --text-color-4: #666d77;
+  --text-color-candy-grey-blue: #99a1ae;
   --disabled-color: #e2e2e2;
   --scrollbar-track: #f1f1f1;
   --scrollbar-thumb: #88888863;
@@ -37,6 +40,7 @@
 }
 .row :root[data-theme=theme-dark] {
   --bg-color: #47525b;
+  --bg-color-hover: #414b54;
   --card-bg-color: #62707c;
   --card-bg-color-hover: #697987;
   --card-element-bg-color: #8d9aa7;
@@ -48,7 +52,8 @@
   --text-color-1: #ffffff;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #3c3e43;
+  --text-color-4: #b6cee2;
+  --text-color-grey-blue: #bcd5eb;
   --disabled-color: #535f6a;
   --scrollbar-track: #404a52;
   --scrollbar-thumb: #373f46;
@@ -60,6 +65,7 @@
 }
 .row :root[data-theme=theme-dark-high] {
   --bg-color: #1f2023;
+  --bg-color-hover: #2e2f31;
   --card-bg-color: #27282d;
   --card-bg-color-hover: #32333a;
   --card-element-bg-color: #3a3b43;
@@ -71,14 +77,40 @@
   --text-color-1: #f8f8f8;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #838996;
+  --text-color-4: #b1bfd3;
+  --text-color-grey-blue: #bdc6d8;
   --disabled-color: #535f6a;
-  --scrollbar-track: #404a52;
-  --scrollbar-thumb: #373f46;
-  --scrollbar-thumb--hover: #333a41;
+  --scrollbar-track: #27282c;
+  --scrollbar-thumb: #303237;
+  --scrollbar-thumb--hover: #3d3f46;
   --rounded-corner: #27282d;
   --actual-nav-color: #1f2023;
   --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+.row :root[data-theme=theme-candy] {
+  --bg-color: #ffc2c0;
+  --bg-color-hover: #fdd1d0;
+  --card-bg-color: #ffeeed;
+  --card-bg-color-hover: #faefee;
+  --card-element-bg-color: #ffd1cd;
+  --card-element-bg-color-hover: #ffd9d5;
+  --language-bg-color: #ffeeed;
+  --language-bg-color-hover: #faefee;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #4a154b;
+  --text-color-2: #601e61;
+  --text-color-3: #852e87;
+  --text-color-4: #e46864;
+  --text-color-candy-grey-blue: #3c3e43;
+  --disabled-color: #e2b6b4;
+  --scrollbar-track: #eb9f9c;
+  --scrollbar-thumb: #d8716d;
+  --scrollbar-thumb--hover: #eb7470;
+  --rounded-corner: #ffeeed;
+  --actual-nav-color: #ffc2c0;
+  --border-table: #e2b6b4;
   --border-arrow: #e8e8e8;
 }
 @font-face {
@@ -281,8 +313,9 @@
 }
 .row :root[data-theme=theme-light] {
   --bg-color: #faf9f9;
+  --bg-color-hover: #f0f0f0;
   --card-bg-color: #fff;
-  --card-bg-color-hover: #f0f0f0;
+  --card-bg-color-hover: #edf2f5;
   --card-element-bg-color: #f3f3f3;
   --card-element-bg-color-hover: #f7f7f7;
   --language-bg-color: #fff;
@@ -292,6 +325,8 @@
   --text-color-1: #323232;
   --text-color-2: #575757;
   --text-color-3: #888888;
+  --text-color-4: #666d77;
+  --text-color-candy-grey-blue: #99a1ae;
   --disabled-color: #e2e2e2;
   --scrollbar-track: #f1f1f1;
   --scrollbar-thumb: #88888863;
@@ -303,6 +338,7 @@
 }
 .row :root[data-theme=theme-dark] {
   --bg-color: #47525b;
+  --bg-color-hover: #414b54;
   --card-bg-color: #62707c;
   --card-bg-color-hover: #697987;
   --card-element-bg-color: #8d9aa7;
@@ -314,7 +350,8 @@
   --text-color-1: #ffffff;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #3c3e43;
+  --text-color-4: #b6cee2;
+  --text-color-grey-blue: #bcd5eb;
   --disabled-color: #535f6a;
   --scrollbar-track: #404a52;
   --scrollbar-thumb: #373f46;
@@ -326,6 +363,7 @@
 }
 .row :root[data-theme=theme-dark-high] {
   --bg-color: #1f2023;
+  --bg-color-hover: #2e2f31;
   --card-bg-color: #27282d;
   --card-bg-color-hover: #32333a;
   --card-element-bg-color: #3a3b43;
@@ -337,14 +375,40 @@
   --text-color-1: #f8f8f8;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #838996;
+  --text-color-4: #b1bfd3;
+  --text-color-grey-blue: #bdc6d8;
   --disabled-color: #535f6a;
-  --scrollbar-track: #404a52;
-  --scrollbar-thumb: #373f46;
-  --scrollbar-thumb--hover: #333a41;
+  --scrollbar-track: #27282c;
+  --scrollbar-thumb: #303237;
+  --scrollbar-thumb--hover: #3d3f46;
   --rounded-corner: #27282d;
   --actual-nav-color: #1f2023;
   --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+.row :root[data-theme=theme-candy] {
+  --bg-color: #ffc2c0;
+  --bg-color-hover: #fdd1d0;
+  --card-bg-color: #ffeeed;
+  --card-bg-color-hover: #faefee;
+  --card-element-bg-color: #ffd1cd;
+  --card-element-bg-color-hover: #ffd9d5;
+  --language-bg-color: #ffeeed;
+  --language-bg-color-hover: #faefee;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #4a154b;
+  --text-color-2: #601e61;
+  --text-color-3: #852e87;
+  --text-color-4: #e46864;
+  --text-color-candy-grey-blue: #3c3e43;
+  --disabled-color: #e2b6b4;
+  --scrollbar-track: #eb9f9c;
+  --scrollbar-thumb: #d8716d;
+  --scrollbar-thumb--hover: #eb7470;
+  --rounded-corner: #ffeeed;
+  --actual-nav-color: #ffc2c0;
+  --border-table: #e2b6b4;
   --border-arrow: #e8e8e8;
 }
 @font-face {
@@ -473,7 +537,6 @@
   background-color: var(--card-bg-color);
   font-weight: 600;
   color: var(--text-color-2);
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23B8B8B8FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
   border-radius: 10px;
   transition: all 150ms ease-in-out;
 }
@@ -571,8 +634,9 @@
 }
 .row :root[data-theme=theme-light] {
   --bg-color: #faf9f9;
+  --bg-color-hover: #f0f0f0;
   --card-bg-color: #fff;
-  --card-bg-color-hover: #f0f0f0;
+  --card-bg-color-hover: #edf2f5;
   --card-element-bg-color: #f3f3f3;
   --card-element-bg-color-hover: #f7f7f7;
   --language-bg-color: #fff;
@@ -582,6 +646,8 @@
   --text-color-1: #323232;
   --text-color-2: #575757;
   --text-color-3: #888888;
+  --text-color-4: #666d77;
+  --text-color-candy-grey-blue: #99a1ae;
   --disabled-color: #e2e2e2;
   --scrollbar-track: #f1f1f1;
   --scrollbar-thumb: #88888863;
@@ -593,6 +659,7 @@
 }
 .row :root[data-theme=theme-dark] {
   --bg-color: #47525b;
+  --bg-color-hover: #414b54;
   --card-bg-color: #62707c;
   --card-bg-color-hover: #697987;
   --card-element-bg-color: #8d9aa7;
@@ -604,7 +671,8 @@
   --text-color-1: #ffffff;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #3c3e43;
+  --text-color-4: #b6cee2;
+  --text-color-grey-blue: #bcd5eb;
   --disabled-color: #535f6a;
   --scrollbar-track: #404a52;
   --scrollbar-thumb: #373f46;
@@ -616,6 +684,7 @@
 }
 .row :root[data-theme=theme-dark-high] {
   --bg-color: #1f2023;
+  --bg-color-hover: #2e2f31;
   --card-bg-color: #27282d;
   --card-bg-color-hover: #32333a;
   --card-element-bg-color: #3a3b43;
@@ -627,14 +696,40 @@
   --text-color-1: #f8f8f8;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
-  --text-color-dark-grey-blue: #838996;
+  --text-color-4: #b1bfd3;
+  --text-color-grey-blue: #bdc6d8;
   --disabled-color: #535f6a;
-  --scrollbar-track: #404a52;
-  --scrollbar-thumb: #373f46;
-  --scrollbar-thumb--hover: #333a41;
+  --scrollbar-track: #27282c;
+  --scrollbar-thumb: #303237;
+  --scrollbar-thumb--hover: #3d3f46;
   --rounded-corner: #27282d;
   --actual-nav-color: #1f2023;
   --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+.row :root[data-theme=theme-candy] {
+  --bg-color: #ffc2c0;
+  --bg-color-hover: #fdd1d0;
+  --card-bg-color: #ffeeed;
+  --card-bg-color-hover: #faefee;
+  --card-element-bg-color: #ffd1cd;
+  --card-element-bg-color-hover: #ffd9d5;
+  --language-bg-color: #ffeeed;
+  --language-bg-color-hover: #faefee;
+  --container-shadow: #00000014;
+  --option-btn--hover: #dfdfdf1e;
+  --text-color-1: #4a154b;
+  --text-color-2: #601e61;
+  --text-color-3: #852e87;
+  --text-color-4: #e46864;
+  --text-color-candy-grey-blue: #3c3e43;
+  --disabled-color: #e2b6b4;
+  --scrollbar-track: #eb9f9c;
+  --scrollbar-thumb: #d8716d;
+  --scrollbar-thumb--hover: #eb7470;
+  --rounded-corner: #ffeeed;
+  --actual-nav-color: #ffc2c0;
+  --border-table: #e2b6b4;
   --border-arrow: #e8e8e8;
 }
 @font-face {
