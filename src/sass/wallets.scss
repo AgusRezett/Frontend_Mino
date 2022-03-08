@@ -22,30 +22,13 @@
 
             .wallets-table-content {
                 @include displayFlex(column, flex-start, center);
+                @include customScrollBar();
                 width: 100%;
                 height: 100%;
                 padding: 15px 20px 5px;
 
                 @media screen and (max-width: 1270px) {
                     overflow-x: auto;
-                }
-
-                //webkit scroll style
-                &::-webkit-scrollbar {
-                    scroll-margin: 5px 10px;
-                    width: 5px;
-                    height: 5px;
-                }
-                &::-webkit-scrollbar-track {
-                    background: var(--scrollbar-track);
-                    border-radius: 20px;
-                }
-                &::-webkit-scrollbar-thumb {
-                    background: var(--scrollbar-thumb);
-                    border-radius: 20px;
-                }
-                &::-webkit-scrollbar-thumb:hover {
-                    background: var(--scrollbar-thumb--hover);
                 }
 
                 .wallets-table-header {

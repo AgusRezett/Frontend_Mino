@@ -38,6 +38,7 @@ export default function Configuration() {
                 break;
         }
         e.target.parentNode.classList.add('active');
+        navigator.vibrate(50);
     };
 
     return (

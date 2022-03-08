@@ -491,7 +491,9 @@
   font-weight: bold;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container::-webkit-scrollbar {
+  scroll-margin: 5px 10px;
   width: 5px;
+  height: 5px;
 }
 .row .my-wallets-space .my-wallets-container .wallets-items-container::-webkit-scrollbar-track {
   background: var(--scrollbar-track);

@@ -334,11 +334,31 @@
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  padding: 25px 25px 23px 25px;
   box-shadow: 0px 2px 5px #00000014;
   background-color: var(--card-bg-color);
 }
-.info-account-container .info-account-content .verify-user-status {
+.info-account-container .info-account-content .info-account-body {
+  width: 100%;
+  padding: 25px 25px 23px 25px;
+  overflow-x: auto;
+}
+.info-account-container .info-account-content .info-account-body::-webkit-scrollbar {
+  scroll-margin: 5px 10px;
+  width: 5px;
+  height: 5px;
+}
+.info-account-container .info-account-content .info-account-body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 20px;
+}
+.info-account-container .info-account-content .info-account-body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 20px;
+}
+.info-account-container .info-account-content .info-account-body::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb--hover);
+}
+.info-account-container .info-account-content .info-account-body .verify-user-status {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -346,7 +366,7 @@
   width: 100%;
   height: 100%;
 }
-.info-account-container .info-account-content .verify-user-status .verify-process-btn {
+.info-account-container .info-account-content .info-account-body .verify-user-status .verify-process-btn {
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 10px;
@@ -358,17 +378,17 @@
   background-color: var(--bg-color);
   opacity: 0.75;
 }
-.info-account-container .info-account-content .verify-user-status .verify-process-btn:hover {
+.info-account-container .info-account-content .info-account-body .verify-user-status .verify-process-btn:hover {
   opacity: 1;
   background-color: var(--bg-color-hover);
 }
-.info-account-container .info-account-content .verify-user-status .user-status-text {
+.info-account-container .info-account-content .info-account-body .verify-user-status .user-status-text {
   margin-top: 20px;
   color: var(--text-color-1);
   font-size: 15px;
   font-weight: 700;
 }
-.info-account-container .info-account-content .section-blur {
+.info-account-container .info-account-content .info-account-body .section-blur {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -383,7 +403,7 @@
   border-radius: 12px;
   background-color: #ffffffb9;
 }
-.info-account-container .info-account-content .section-blur .locked-content-desc {
+.info-account-container .info-account-content .info-account-body .section-blur .locked-content-desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -392,13 +412,19 @@
   height: 60%;
   border-radius: 12px;
   font-weight: 700;
+  white-space: nowrap;
 }
-.info-account-container .info-account-content .section-blur .locked-content-desc svg {
+@media screen and (max-width: 390px) {
+  .info-account-container .info-account-content .info-account-body .section-blur .locked-content-desc {
+    font-size: 14px;
+  }
+}
+.info-account-container .info-account-content .info-account-body .section-blur .locked-content-desc svg {
   width: 62px;
   height: 62px;
   stroke: #374349;
 }
-.info-account-container .info-account-content .verified-info-header {
+.info-account-container .info-account-content .info-account-body .verified-info-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -407,7 +433,7 @@
   height: 70px;
   position: relative;
 }
-.info-account-container .info-account-content .verified-info-header::after {
+.info-account-container .info-account-content .info-account-body .verified-info-header::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -416,11 +442,11 @@
   border-radius: 50px;
   background-color: #5a626f2f;
 }
-.info-account-container .info-account-content .verified-info-header .info-illustration {
+.info-account-container .info-account-content .info-account-body .verified-info-header .info-illustration {
   width: 64px;
   height: 64px;
 }
-.info-account-container .info-account-content .verified-info-header .header-info {
+.info-account-container .info-account-content .info-account-body .verified-info-header .header-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -429,32 +455,37 @@
   height: 100%;
   padding-left: 20px;
 }
-.info-account-container .info-account-content .verified-info-header .header-info .header-title {
+@media screen and (max-width: 360px) {
+  .info-account-container .info-account-content .info-account-body .verified-info-header .header-info {
+    white-space: nowrap;
+  }
+}
+.info-account-container .info-account-content .info-account-body .verified-info-header .header-info .header-title {
   font-size: 24px;
   font-weight: 700;
   color: var(--text-color-1);
 }
 @media screen and (max-width: 1013px) {
-  .info-account-container .info-account-content .verified-info-header .header-info .header-title {
+  .info-account-container .info-account-content .info-account-body .verified-info-header .header-info .header-title {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 376px) {
-  .info-account-container .info-account-content .verified-info-header .header-info .header-title {
+  .info-account-container .info-account-content .info-account-body .verified-info-header .header-info .header-title {
     font-size: 18px;
   }
 }
-.info-account-container .info-account-content .verified-info-header .header-info .header-description {
+.info-account-container .info-account-content .info-account-body .verified-info-header .header-info .header-description {
   font-size: 15px;
   font-weight: 500;
   color: var(--text-color-grey-blue);
 }
 @media screen and (max-width: 1141px) {
-  .info-account-container .info-account-content .verified-info-header .header-info .header-description {
+  .info-account-container .info-account-content .info-account-body .verified-info-header .header-info .header-description {
     font-size: 13px;
   }
 }
-.info-account-container .info-account-content .section-value {
+.info-account-container .info-account-content .info-account-body .section-value {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -465,14 +496,48 @@
   font-weight: 600;
 }
 @media screen and (max-width: 1150px) {
-  .info-account-container .info-account-content .section-value {
+  .info-account-container .info-account-content .info-account-body .section-value {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
   }
 }
-.info-account-container .info-account-content .section-value .change-value-btn {
+.info-account-container .info-account-content .info-account-body .section-value .general-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.info-account-container .info-account-content .info-account-body .section-value .general-info-container .general-info-row {
+  margin-top: 5px;
+}
+.info-account-container .info-account-content .info-account-body .section-value .general-info-container .general-info-row .general-info-password {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  cursor: pointer;
+  padding: 5px 8px;
+  margin-left: 5px;
+  border-radius: 5px;
+  transition: all 100ms ease-in-out;
+  background-color: var(--card-bg-color-hover);
+}
+.info-account-container .info-account-content .info-account-body .section-value .general-info-container .general-info-row span {
+  margin-left: 10px;
+  color: var(--text-color-1);
+}
+.info-account-container .info-account-content .info-account-body .section-value .change-value-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -484,12 +549,12 @@
   background-color: var(--bg-color);
   transition: all 150ms ease-in-out;
 }
-.info-account-container .info-account-content .section-value .change-value-btn:hover {
+.info-account-container .info-account-content .info-account-body .section-value .change-value-btn:hover {
   color: #dd9700;
   background-color: var(--bg-color-hover);
 }
 @media screen and (max-width: 1150px) {
-  .info-account-container .info-account-content .section-value .change-value-btn {
+  .info-account-container .info-account-content .info-account-body .section-value .change-value-btn {
     margin-top: 10px;
   }
 }

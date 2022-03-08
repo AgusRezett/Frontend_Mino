@@ -38,6 +38,7 @@ const optionButtons = [
 ];
 
 export default function Cuenta() {
+    // eslint-disable-next-line
     const [accountInfo, setAccountInfo] = useState(getAccountInfo());
 
     return (
@@ -46,39 +47,43 @@ export default function Cuenta() {
                 <AccountInfoSection
                     sectionType="email"
                     value={accountInfo.email}
+                    verified={accountInfo.verified}
                 />
                 <AccountInfoSection
                     sectionType="phone"
                     value={accountInfo.phone}
+                    verified={accountInfo.verified}
                 />
                 <AccountInfoSection
                     sectionType={'general'}
                     value={accountInfo.person}
+                    verified={accountInfo.verified}
                 />
                 <AccountInfoSection
                     sectionType={'verified'}
-                    value={accountInfo.verified}
+                    verified={accountInfo.verified}
                 />
             </div>
-            <section className="settings-options-container">
-                <div className="settings-options-content">
-                    <div className="button-option">Datos personales</div>
-                    {optionButtons.map((optionButton, index) => (
-                        <OptionButton
-                            key={index}
-                            icon={optionButton.icon}
-                            langMessageTitle={optionButton.langMessageTitle}
-                            langMessageDescription={
-                                optionButton.langMessageDescription
-                            }
-                            title={optionButton.defaultTitle}
-                            description={optionButton.defaultDescription}
-                            rightSide={optionButton.rightSide}
-                            responsive={optionButton.responsive}
-                        />
-                    ))}
-                </div>
-            </section>
+            {accountInfo.verified && (
+                <section className="settings-options-container">
+                    <div className="settings-options-content">
+                        {optionButtons.map((optionButton, index) => (
+                            <OptionButton
+                                key={index}
+                                icon={optionButton.icon}
+                                langMessageTitle={optionButton.langMessageTitle}
+                                langMessageDescription={
+                                    optionButton.langMessageDescription
+                                }
+                                title={optionButton.defaultTitle}
+                                description={optionButton.defaultDescription}
+                                rightSide={optionButton.rightSide}
+                                responsive={optionButton.responsive}
+                            />
+                        ))}
+                    </div>
+                </section>
+            )}
         </>
     );
 }

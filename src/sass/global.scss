@@ -25,8 +25,8 @@ p {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    @include displayFlex(column, null, null);
+    @include customScrollBar();
     width: calc(100% - 240px);
     height: calc(100% - 65px);
     padding: 20px 20px 20px 20px;
@@ -34,23 +34,6 @@ main {
     background-color: var(--bg-color);
     overflow-y: scroll;
     transition: all 170ms ease-in-out;
-
-    //webkit scroll style
-    &::-webkit-scrollbar {
-        scroll-margin: 5px 10px;
-        width: 7px;
-    }
-    &::-webkit-scrollbar-track {
-        background: var(--scrollbar-track);
-        border-radius: 20px;
-    }
-    &::-webkit-scrollbar-thumb {
-        background: var(--scrollbar-thumb);
-        border-radius: 20px;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-        background: var(--scrollbar-thumb--hover);
-    }
 
     @media screen and (max-width: 991px) {
         width: calc(100% - 75px);

@@ -77,6 +77,9 @@ export const getAccountInfo = () => {
             name: "Agustin",
             secondname: "Nazareno",
             surname: "Rezett",
+            id_type: "DNI",
+            id_value: "44.749.102",
+            password: "Holaquetal_1"
         },
         verified: true
     }

@@ -11277,7 +11277,8 @@ main {
 }
 main::-webkit-scrollbar {
   scroll-margin: 5px 10px;
-  width: 7px;
+  width: 5px;
+  height: 5px;
 }
 main::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
