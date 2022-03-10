@@ -7,7 +7,6 @@
     .info-account-content {
         @include displayFlex(column, space-between, center);
         width: 100%;
-        height: 100%;
         border-radius: 12px;
         box-shadow: 0px 2px 5px $container-shadow;
         background-color: var(--card-bg-color);
@@ -165,9 +164,6 @@
                             border-radius: 5px;
                             transition: all 100ms ease-in-out;
                             background-color: var(--card-bg-color-hover);
-
-                            &:hover {
-                            }
                         }
 
                         span {

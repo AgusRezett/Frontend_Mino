@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 // Components
 import { Helmet } from 'react-helmet-async';
+import { FormattedMessage } from 'react-intl';
 import TotalBalanceCard from '../common/HomeView/TotalBalanceCard';
 import DonutChart from '../common/HomeView/DonutChart';
 import Wallets from '../common/HomeView/Wallets';
@@ -52,7 +53,12 @@ export default function Home() {
                 <div className="my-wallets-space col-md-8">
                     <div className="my-wallets-container">
                         <div className="section-title-container">
-                            <div className="section-title">Mis billeteras</div>
+                            <div className="section-title">
+                                <FormattedMessage
+                                    id="home.title.wallets"
+                                    defaultMessage="Mis billeteras"
+                                />
+                            </div>
                         </div>
                         <Wallets />
                     </div>
@@ -60,7 +66,10 @@ export default function Home() {
                 <div className="money-line-chart col-md-4">
                     <div className="money-line-chart-container">
                         <div className="section-title">
-                            Cuentas vinculadas en{' '}
+                            <FormattedMessage
+                                id="home.title.participation"
+                                defaultMessage="Mis billeteras"
+                            />
                             {getPrincipalCurrency().toUpperCase()}
                         </div>
                         <DonutChart />
@@ -71,7 +80,10 @@ export default function Home() {
                 <div className="application-promo-container col-12">
                     <div className="application-promo">
                         <div className="application-promo-title">
-                            Obtené Mino en tú dispositivo móvil
+                            <FormattedMessage
+                                id="home.title.mobile-promo"
+                                defaultMessage="Obtené Mino en tú dispositivo móvil"
+                            />
                         </div>
                         <div className="application-promo-download-container">
                             <img

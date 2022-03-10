@@ -1,9 +1,8 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl';
 
 // Functions
 import { badgeDictionary } from '../../../functions/GlobalFunctions';
-
-
 
 export default function TotalBalanceCard({ badgeId, value }) {
     const expandCardBottom = (e) => {
@@ -19,13 +18,24 @@ export default function TotalBalanceCard({ badgeId, value }) {
 
     return (
         <div className="balance-card-space col-12 col-md-4">
-            <div className="balance-card-coin">{badgeDictionary[badgeId].title}</div>
+            <div className="balance-card-coin">
+                <FormattedMessage
+                    id={badgeDictionary[badgeId].title}
+                    defaultMessage="Error"
+                />
+            </div>
             <div className={`balance-card-container ${badgeDictionary[badgeId].backgroundClass}`}>
                 <img src={badgeDictionary[badgeId].flag} alt="" />
             </div>
             <div className="balance-card-bottom">
                 {`${badgeDictionary[badgeId].badge} ${value}`}
-                <div className='secondary-curreny-value'>{`Total: ${badgeDictionary[badgeId].badge} ${parseInt(value) + 6066.45}`}</div>
+                <div className='secondary-curreny-value'>
+                    <FormattedMessage
+                        id="home.card.balance.total"
+                        defaultMessage="Total"
+                    />
+                    : {badgeDictionary[badgeId].badge} {parseInt(value) + 6066.45}
+                </div>
                 <div className="expand-toggler" onClick={(e) => expandCardBottom(e)}>
                     <svg
                         width="48px"

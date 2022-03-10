@@ -332,7 +332,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%;
   border-radius: 12px;
   box-shadow: 0px 2px 5px #00000014;
   background-color: var(--card-bg-color);
@@ -621,7 +620,8 @@
 }
 .settings-modal-container .settings-modal-content .settings-modal-body::-webkit-scrollbar {
   scroll-margin: 5px 10px;
-  width: 7px;
+  width: 5px;
+  height: 5px;
 }
 .settings-modal-container .settings-modal-content .settings-modal-body::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
@@ -630,7 +630,6 @@
 .settings-modal-container .settings-modal-content .settings-modal-body::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 20px;
-  transition: all 150ms ease-in-out;
 }
 .settings-modal-container .settings-modal-content .settings-modal-body::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb--hover);

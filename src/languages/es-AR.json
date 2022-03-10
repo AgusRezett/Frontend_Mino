@@ -9,6 +9,15 @@
     "navbar.option.preferences": "Preferencias",
     "navbar.option.account": "Cuenta",
 
+    "home.title.wallets": "Mis billeteras",
+    "home.title.participation": "Cuentas vinculadas en: ",
+    "home.title.mobile-promo": "Obtené Mino en tú dispositivo móvil",
+    "home.card.balance.total": "Total",
+    "home.card.new-wallet": "Añadir billetera",
+
+    "wallets.view.row.balance": "Balance total",
+    "wallets.view.button.update": "Actualizar",
+
     "config.settings.option.title.language": "Idioma y región",
     "config.settings.option.description.language": "Elegí un idioma con el que mostrar la aplicación",
     "config.settings.option.title.notifications": "Notificaciones",
@@ -67,6 +76,11 @@
     "theme.option.dark": "Oscuro",
     "theme.option.dark-high": "Oscuro de alto contraste",
     "theme.option.candy": "Dulce",
+
+    "currency.title.bitcoin": "Bitcoin",
+    "currency.title.american-dollar": "Dólares americanos",
+    "currency.title.euro": "Euros",
+    "currency.title.argentine-peso": "Pesos argentinos",
 
     "common.message.notVerified": "Para acceder verificá tu cuenta"
 }

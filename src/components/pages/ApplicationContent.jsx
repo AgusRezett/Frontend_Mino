@@ -13,6 +13,7 @@ import { modalContext } from '../../hooks/useContext/ModalContext';
 // Navigation
 import Home from './Home';
 import Wallets from './Wallets';
+import WalletView from './WalletView';
 import Configuration from './Configuration';
 import SettingsModal from '../common/SettingsView/SettingsModal';
 
@@ -29,6 +30,7 @@ export default function ApplicationContent() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/billeteras" element={<Wallets />} />
+                    <Route path="/billeteras/:id" element={<WalletView />} />
                     <Route
                         path="/criptomonedas"
                         element={

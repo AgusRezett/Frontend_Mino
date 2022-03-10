@@ -30,6 +30,31 @@ header {
 
         box-shadow: 10px 1px 10px -2px var(--container-shadow);
 
+        .top-navbar-go-back {
+            cursor: pointer;
+            margin-left: 10px;
+            width: 35px;
+            height: 35px;
+
+            &:hover {
+                circle,
+                polyline {
+                    stroke: var(--text-color-3);
+                }
+            }
+
+            circle,
+            polyline {
+                fill: none;
+                stroke: var(--disabled-color);
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 8;
+                transition: all 150ms ease-in-out;
+            }
+        }
+
         .top-navbar-logo {
             width: fit-content;
             height: 100%;

@@ -16,28 +16,28 @@ import Usa from '../assets/svgs/flags/us.svg';
 
 export const badgeDictionary = [
     {
-        title: 'Bitcoin',
+        title: 'currency.title.bitcoin',
         flag: Btc,
         badge: 'BTC',
         color: "#ffae00",
         backgroundClass: "btc-flag",
     },
     {
-        title: 'Dólares americanos',
+        title: 'currency.title.american-dollar',
         flag: Usa,
         badge: 'US$',
         color: "#2da06e",
         backgroundClass: "usd-flag",
     },
     {
-        title: 'Euros',
+        title: 'currency.title.euro',
         flag: Eur,
         badge: '€',
         color: "#004aa2",
         backgroundClass: "eur-flag"
     },
     {
-        title: 'Pesos argentinos',
+        title: 'currency.title.argentine-peso',
         flag: Arg,
         badge: 'AR$',
         color: "#338af3",

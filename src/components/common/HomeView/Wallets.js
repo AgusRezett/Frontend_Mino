@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 // Components
 //import { Formik, Field, Form, ErrorMessage } from 'formik';
 import WalletCard from './WalletCard'
+import { FormattedMessage } from 'react-intl';
 
 // Functions
 import { getLinkedAccounts, toggleNewWallet } from '../../../functions/HomeFunctions';
@@ -21,7 +22,10 @@ export default function Wallets() {
             <div className='wallets-items-container col-12' id='wallet-items-container'>
                 <div className='wallet-card-container new-wallet-item-container col-12 col-sm-4 col-md-4 col-lg-3 col-xl-4'>
                     <div className='wallet-card-content new-wallet-item-content' onClick={() => toggleNewWallet("open")}>
-                        Añadir billetera
+                        <FormattedMessage
+                            id="home.card.new-wallet"
+                            defaultMessage="Añadir billetera"
+                        />
                     </div>
                 </div>
                 {wallets && wallets.map((wallet, index) => {

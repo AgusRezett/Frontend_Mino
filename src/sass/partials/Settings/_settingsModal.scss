@@ -46,29 +46,12 @@
         }
 
         .settings-modal-body {
+            @include customScrollBar();
             width: 100%;
             height: calc(100% - 52px);
             margin-top: 20px;
             padding-right: 12px;
             overflow-y: auto;
-
-            //webkit scroll style
-            &::-webkit-scrollbar {
-                scroll-margin: 5px 10px;
-                width: 7px;
-            }
-            &::-webkit-scrollbar-track {
-                background: var(--scrollbar-track);
-                border-radius: 20px;
-            }
-            &::-webkit-scrollbar-thumb {
-                background: var(--scrollbar-thumb);
-                border-radius: 20px;
-                transition: all 150ms ease-in-out;
-            }
-            &::-webkit-scrollbar-thumb:hover {
-                background: var(--scrollbar-thumb--hover);
-            }
 
             .language-option-container {
                 width: 100%;

@@ -135,3 +135,12 @@ export const getWallets = () => {
         },
     ];
 }
+
+export const getWalletInfo = (id) => {
+    return {
+        name: "Ualá",
+        brandColor: "#3E6BFD",
+        backgroundColor: "#fafafa",
+        totalBalance: "ARS 2,900.00"
+    }
+}
