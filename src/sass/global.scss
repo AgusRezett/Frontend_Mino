@@ -32,7 +32,7 @@ main {
     padding: 20px 10px;
     margin: 65px 10px 0px 240px;
     background-color: var(--bg-color);
-    overflow-y: scroll;
+    overflow-y: auto;
     transition: all 170ms ease-in-out;
 
     @media screen and (max-width: 991px) {

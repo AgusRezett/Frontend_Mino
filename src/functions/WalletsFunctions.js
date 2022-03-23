@@ -141,6 +141,44 @@ export const getWalletInfo = (id) => {
         name: "Ualá",
         brandColor: "#3E6BFD",
         backgroundColor: "#fafafa",
-        totalBalance: "ARS 2,900.00"
+        totalBalance: "ARS 2,900.00",
+        cardAvailable: true,
+        service: "Mastercard",
+        cardType: "Débito",
+        performanceDirection: "-",
+        performance: "37",
+        walletUrl: "https://web.uala.com.ar/home",
+        activity: [
+            {
+                id: 1,
+                operation: "transaction",
+                amount: "-$ 500",
+                date: "21/01/2022",
+            },
+            {
+                id: 2,
+                operation: "purchase",
+                amount: "-$ 1299",
+                date: "13/01/2022",
+            },
+            {
+                id: 3,
+                operation: "entry",
+                amount: "$ 3000",
+                date: "09/12/2021",
+            },
+            {
+                id: 3,
+                operation: "entry",
+                amount: "$ 3000",
+                date: "09/12/2021",
+            },
+            {
+                id: 3,
+                operation: "entry",
+                amount: "$ 3000",
+                date: "09/12/2021",
+            },
+        ]
     }
 }

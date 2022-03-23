@@ -77,4 +77,9 @@ $logo-color-black: #121212;
 
     --border-table: #{$disabled-color};
     --border-arrow: #{$border-arrow};
+
+    --validation-success: #{$bubble-validation-success};
+    --validation-success-bg: #{$bubble-validation-success-bg};
+    --validation-error: #{$bubble-validation-error};
+    --validation-error-bg: #{$bubble-validation-error-bg};
 }

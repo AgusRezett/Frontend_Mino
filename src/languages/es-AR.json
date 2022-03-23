@@ -15,8 +15,19 @@
     "home.card.balance.total": "Total",
     "home.card.new-wallet": "Añadir billetera",
 
-    "wallets.view.row.balance": "Balance total",
-    "wallets.view.button.update": "Actualizar",
+    "wallets.view.row.balance": "Dinero disponible",
+    "wallets.view.row.card-available": "Tarjeta disponible",
+    "wallets.view.row.card-unavailable": "Tarjeta no disponible",
+    "wallets.view.row.type": "Tipo de tarjeta",
+    "wallets.view.row.service": "Servicio",
+    "wallets.view.row.open-wallet": "Ir a mi cuenta de",
+    "wallets.view.button.account": "Credenciales",
+    "wallets.view.button.refresh": "Refrescar",
+
+    "wallets.view.activity.section.title": "Última actividad",
+    "wallets.view.activity.description.transaction": "Transacción",
+    "wallets.view.activity.description.purchase": "Compra",
+    "wallets.view.activity.description.entry": "Ingreso",
 
     "config.settings.option.title.language": "Idioma y región",
     "config.settings.option.description.language": "Elegí un idioma con el que mostrar la aplicación",

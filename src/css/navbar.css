@@ -30,6 +30,10 @@
   --actual-nav-color: #3d0052;
   --border-table: #e2e2e2;
   --border-arrow: #a9a9a9;
+  --validation-success: #0ec45a;
+  --validation-success-bg: #14ff7615;
+  --validation-error: #ff142f;
+  --validation-error-bg: #ff142f15;
 }
 
 :root[data-theme=theme-dark] {
@@ -82,6 +86,10 @@
   --actual-nav-color: #1f2023;
   --border-table: #535f6a;
   --border-arrow: #e8e8e8;
+  --validation-success: #0ec45a;
+  --validation-success-bg: #14ff7615;
+  --validation-error: #ff142f;
+  --validation-error-bg: #ff142f15;
 }
 
 :root[data-theme=theme-candy] {
@@ -162,6 +170,19 @@ header .top-navbar-container .top-navbar-go-back {
   margin-left: 10px;
   width: 35px;
   height: 35px;
+  transition: all 100ms ease-in-out;
+}
+@media screen and (min-width: 658px) and (max-width: 992px) {
+  header .top-navbar-container .top-navbar-go-back {
+    position: absolute;
+    margin-left: 0;
+    left: -55px;
+  }
+}
+@media screen and (max-width: 658px) {
+  header .top-navbar-container .top-navbar-go-back {
+    margin-left: 110px;
+  }
 }
 header .top-navbar-container .top-navbar-go-back:hover circle,
 header .top-navbar-container .top-navbar-go-back:hover polyline {
@@ -258,7 +279,7 @@ header .top-navbar-container .top-navbar-account li .navbar-account-image {
   background-repeat: no-repeat;
 }
 header .top-navbar-container .top-navbar-account li span {
-  margin-right: 15px;
+  margin-right: 0px;
   font-family: "Nunito";
   font-weight: 700;
   font-size: 16px;
@@ -289,6 +310,10 @@ header .top-navbar-container .top-navbar-account li span {
   --actual-nav-color: #3d0052;
   --border-table: #e2e2e2;
   --border-arrow: #a9a9a9;
+  --validation-success: #0ec45a;
+  --validation-success-bg: #14ff7615;
+  --validation-error: #ff142f;
+  --validation-error-bg: #ff142f15;
 }
 
 :root[data-theme=theme-dark] {
@@ -341,6 +366,10 @@ header .top-navbar-container .top-navbar-account li span {
   --actual-nav-color: #1f2023;
   --border-table: #535f6a;
   --border-arrow: #e8e8e8;
+  --validation-success: #0ec45a;
+  --validation-success-bg: #14ff7615;
+  --validation-error: #ff142f;
+  --validation-error-bg: #ff142f15;
 }
 
 :root[data-theme=theme-candy] {

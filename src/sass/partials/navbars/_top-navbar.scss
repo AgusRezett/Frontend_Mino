@@ -35,6 +35,17 @@ header {
             margin-left: 10px;
             width: 35px;
             height: 35px;
+            transition: all 100ms ease-in-out;
+
+            @media screen and (min-width: 658px) and (max-width: 992px) {
+                position: absolute;
+                margin-left: 0;
+                left: -55px;
+            }
+
+            @media screen and (max-width: 658px) {
+                margin-left: 110px;
+            }
 
             &:hover {
                 circle,
@@ -138,7 +149,7 @@ header {
                 }
 
                 span {
-                    margin-right: 15px;
+                    margin-right: 0px;
                     font-family: 'Nunito';
                     font-weight: 700;
                     font-size: 16px;
