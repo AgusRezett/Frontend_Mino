@@ -33,6 +33,7 @@
             white-space: nowrap;
             //font-family: 'Scorno', sans-serif;
             font-weight: 800;
+            color: var(--text-color-1);
         }
     }
 
@@ -88,6 +89,8 @@
                 transition: all 150ms ease-in-out;
                 z-index: 1;
 
+                color: var(--text-color-1) !important;
+
                 &:focus {
                     outline: none;
                     border-color: $logo-color-orange;
@@ -100,6 +103,7 @@
 
                 &:-webkit-autofill {
                     transition: background-color 50000s ease-in-out 0s !important;
+                    -webkit-text-fill-color: var(--text-color-1);
                 }
             }
 
@@ -109,7 +113,7 @@
             }
 
             .login-form-field--error {
-                color: $field-error;
+                color: $field-error !important;
             }
         }
 
@@ -189,7 +193,7 @@
         width: 100%;
         .login-submit-btn {
             width: 100%;
-            color: $submit-btn-color;
+            color: var(--bg-color);
             font-size: 18px;
             font-weight: 700;
             padding: 10px;
@@ -205,10 +209,10 @@
 
         .login-submit-btn--disabled {
             cursor: default;
-            background-color: $disabled-color;
+            background-color: var(--disabled-color);
 
             &:hover {
-                background-color: $disabled-color;
+                background-color: var(--disabled-color);
             }
         }
 

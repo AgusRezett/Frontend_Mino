@@ -13,6 +13,6 @@ export const getFirstTime = () => {
 //? Return TRUE if it's found a user session
 export const getSession = () => {
     let session = localStorage.getItem('user-token');
-    session === null ? (session = true) : (session = false);
+    session !== null ? (session = true) : (session = false);
     return session;
 };
