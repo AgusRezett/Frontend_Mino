@@ -81,6 +81,9 @@
     "wallets.view.activity.description.purchase": "Compra",
     "wallets.view.activity.description.entry": "Ingreso",
 
+    "crypto.page.consturcion.title": "Página en construcción",
+    "crypto.page.consturcion.message": "Disculpe, estamos fortaleciendo nuestra plataforma criptográfica para brindarle la mejor experiencia. Vuelve pronto.",
+
     "config.settings.option.title.language": "Idioma y región",
     "config.settings.option.description.language": "Elegí un idioma con el que mostrar la aplicación",
     "config.settings.option.title.notifications": "Notificaciones",

@@ -1,0 +1,135 @@
+:root[data-theme=theme-light] {
+  --bg-color: #faf9f9;
+  --bg-color-hover: #f0f0f0;
+  --card-bg-color: #fff;
+  --card-bg-color-hover: #edf2f5;
+  --card-element-bg-color: #f3f3f3;
+  --card-element-bg-color-hover: #f7f7f7;
+  --language-bg-color: #fff;
+  --language-bg-color-hover: #f0f0f0;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
+  --text-color-1: #323232;
+  --text-color-2: #575757;
+  --text-color-3: #888888;
+  --text-color-4: #666d77;
+  --text-color-candy-grey-blue: #99a1ae;
+  --disabled-color: #e2e2e2;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: rgba(136, 136, 136, 0.3882352941);
+  --scrollbar-thumb--hover: #555;
+  --rounded-corner: #fff;
+  --actual-nav-color: #3d0052;
+  --border-table: #e2e2e2;
+  --border-arrow: #a9a9a9;
+  --validation-success: #0ec45a;
+  --validation-success-bg: rgba(20, 255, 118, 0.0823529412);
+  --validation-error: #ff142f;
+  --validation-error-bg: rgba(255, 20, 47, 0.0823529412);
+}
+
+:root[data-theme=theme-dark] {
+  --bg-color: #47525b;
+  --bg-color-hover: #414b54;
+  --card-bg-color: #62707c;
+  --card-bg-color-hover: #697987;
+  --card-element-bg-color: #8d9aa7;
+  --card-element-bg-color-hover: #98a5b3;
+  --language-bg-color: #62707c;
+  --language-bg-color-hover: #697987;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
+  --text-color-1: #ffffff;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-4: #b6cee2;
+  --text-color-grey-blue: #bcd5eb;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #404a52;
+  --scrollbar-thumb: #373f46;
+  --scrollbar-thumb--hover: #333a41;
+  --rounded-corner: #62707c;
+  --actual-nav-color: #47525b;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+}
+
+:root[data-theme=theme-dark-high] {
+  --bg-color: #1f2023;
+  --bg-color-hover: #2e2f31;
+  --card-bg-color: #27282d;
+  --card-bg-color-hover: #32333a;
+  --card-element-bg-color: #3a3b43;
+  --card-element-bg-color-hover: #43444d;
+  --language-bg-color: #27282d;
+  --language-bg-color-hover: #32333a;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
+  --text-color-1: #f8f8f8;
+  --text-color-2: #dcdcdc;
+  --text-color-3: #c4c4c4;
+  --text-color-4: #b1bfd3;
+  --text-color-grey-blue: #bdc6d8;
+  --disabled-color: #535f6a;
+  --scrollbar-track: #27282c;
+  --scrollbar-thumb: #303237;
+  --scrollbar-thumb--hover: #3d3f46;
+  --rounded-corner: #27282d;
+  --actual-nav-color: #1f2023;
+  --border-table: #535f6a;
+  --border-arrow: #e8e8e8;
+  --validation-success: #0ec45a;
+  --validation-success-bg: rgba(20, 255, 118, 0.0823529412);
+  --validation-error: #ff142f;
+  --validation-error-bg: rgba(255, 20, 47, 0.0823529412);
+}
+
+:root[data-theme=theme-candy] {
+  --bg-color: #ffc2c0;
+  --bg-color-hover: #fdd1d0;
+  --card-bg-color: #ffeeed;
+  --card-bg-color-hover: #faefee;
+  --card-element-bg-color: #ffd1cd;
+  --card-element-bg-color-hover: #ffd9d5;
+  --language-bg-color: #ffeeed;
+  --language-bg-color-hover: #faefee;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
+  --text-color-1: #4a154b;
+  --text-color-2: #601e61;
+  --text-color-3: #852e87;
+  --text-color-4: #e46864;
+  --text-color-candy-grey-blue: #3c3e43;
+  --disabled-color: #e2b6b4;
+  --scrollbar-track: #eb9f9c;
+  --scrollbar-thumb: #d8716d;
+  --scrollbar-thumb--hover: #eb7470;
+  --rounded-corner: #ffeeed;
+  --actual-nav-color: #ffc2c0;
+  --border-table: #e2b6b4;
+  --border-arrow: #e8e8e8;
+}
+
+.crypto-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.crypto-page-container p {
+  width: 550px;
+  font-size: 20px;
+  margin-bottom: 50px !important;
+  text-align: center;
+  color: var(--text-color-4);
+}
+.crypto-page-container .page-construction-icon {
+  width: 15%;
+  height: "auto";
+  fill: var(--text-color-4);
+  margin-bottom: 70px;
+}
+
+/*# sourceMappingURL=crypto.css.map */

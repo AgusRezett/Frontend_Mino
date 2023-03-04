@@ -1,0 +1,23 @@
+@import './partials/colors/colors';
+@import 'mixins';
+
+.crypto-page-container {
+    @include displayFlex(column, center, center);
+    width: 100%;
+    height: 100%;
+
+    p {
+        width: 550px;
+        font-size: 20px;
+        margin-bottom: 50px !important;
+        text-align: center;
+        color: var(--text-color-4);
+    }
+
+    .page-construction-icon {
+        width: 15%;
+        height: 'auto';
+        fill: var(--text-color-4);
+        margin-bottom: 70px;
+    }
+}

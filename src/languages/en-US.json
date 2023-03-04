@@ -81,6 +81,9 @@
     "wallets.view.activity.description.purchase": "Purchase",
     "wallets.view.activity.description.entry": "Income",
 
+    "crypto.page.consturcion.title": "Under construction!",
+    "crypto.page.consturcion.message": "Sorry, we are strengthening our cryptocurrency platform to provide you with the best experience.",
+
     "config.settings.option.title.language": "Language & region",
     "config.settings.option.description.language": "Chose a language with which to display the application",
     "config.settings.option.title.notifications": "Notifications",

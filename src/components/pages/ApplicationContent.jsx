@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 // Components
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopNavbar from '../common/Navbar/TopNavbar';
 import SideNavbar from '../common/Navbar/SideNavbar';
@@ -14,6 +14,7 @@ import { modalContext } from '../../hooks/useContext/ModalContext';
 import Home from './Home';
 import Wallets from './Wallets';
 import WalletView from './WalletView';
+import Crypto from './Crypto';
 import Configuration from './Configuration';
 import SettingsModal from '../common/SettingsView/SettingsModal';
 
@@ -31,21 +32,7 @@ export default function ApplicationContent() {
                     <Route path="/" element={<Home />} />
                     <Route path="/billeteras" element={<Wallets />} />
                     <Route path="/billeteras/:id" element={<WalletView />} />
-                    <Route
-                        path="/criptomonedas"
-                        element={
-                            <main>
-                                <Helmet>
-                                    <title>Criptomonedas</title>
-                                    <meta
-                                        name="description"
-                                        content="Nested component"
-                                    />
-                                </Helmet>
-                                <h1>Criptomonedas</h1>
-                            </main>
-                        }
-                    />
+                    <Route path="/criptomonedas" element={<Crypto />} />
                     <Route path="/configuracion" element={<Configuration />} />
                 </Routes>
             </HelmetProvider>
