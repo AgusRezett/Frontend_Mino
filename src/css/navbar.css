@@ -15,8 +15,8 @@
   --card-element-bg-color-hover: #f7f7f7;
   --language-bg-color: #fff;
   --language-bg-color-hover: #f0f0f0;
-  --container-shadow: #00000014;
-  --option-btn--hover: #dfdfdf1e;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
   --text-color-1: #323232;
   --text-color-2: #575757;
   --text-color-3: #888888;
@@ -24,16 +24,16 @@
   --text-color-candy-grey-blue: #99a1ae;
   --disabled-color: #e2e2e2;
   --scrollbar-track: #f1f1f1;
-  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb: rgba(136, 136, 136, 0.3882352941);
   --scrollbar-thumb--hover: #555;
   --rounded-corner: #fff;
   --actual-nav-color: #3d0052;
   --border-table: #e2e2e2;
   --border-arrow: #a9a9a9;
   --validation-success: #0ec45a;
-  --validation-success-bg: #14ff7615;
+  --validation-success-bg: rgba(20, 255, 118, 0.0823529412);
   --validation-error: #ff142f;
-  --validation-error-bg: #ff142f15;
+  --validation-error-bg: rgba(255, 20, 47, 0.0823529412);
 }
 
 :root[data-theme=theme-dark] {
@@ -45,8 +45,8 @@
   --card-element-bg-color-hover: #98a5b3;
   --language-bg-color: #62707c;
   --language-bg-color-hover: #697987;
-  --container-shadow: #00000014;
-  --option-btn--hover: #dfdfdf1e;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
   --text-color-1: #ffffff;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
@@ -71,8 +71,8 @@
   --card-element-bg-color-hover: #43444d;
   --language-bg-color: #27282d;
   --language-bg-color-hover: #32333a;
-  --container-shadow: #00000014;
-  --option-btn--hover: #dfdfdf1e;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
   --text-color-1: #f8f8f8;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
@@ -87,9 +87,9 @@
   --border-table: #535f6a;
   --border-arrow: #e8e8e8;
   --validation-success: #0ec45a;
-  --validation-success-bg: #14ff7615;
+  --validation-success-bg: rgba(20, 255, 118, 0.0823529412);
   --validation-error: #ff142f;
-  --validation-error-bg: #ff142f15;
+  --validation-error-bg: rgba(255, 20, 47, 0.0823529412);
 }
 
 :root[data-theme=theme-candy] {
@@ -101,8 +101,8 @@
   --card-element-bg-color-hover: #ffd9d5;
   --language-bg-color: #ffeeed;
   --language-bg-color-hover: #faefee;
-  --container-shadow: #00000014;
-  --option-btn--hover: #dfdfdf1e;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
   --text-color-1: #4a154b;
   --text-color-2: #601e61;
   --text-color-3: #852e87;
@@ -295,8 +295,8 @@ header .top-navbar-container .top-navbar-account li span {
   --card-element-bg-color-hover: #f7f7f7;
   --language-bg-color: #fff;
   --language-bg-color-hover: #f0f0f0;
-  --container-shadow: #00000014;
-  --option-btn--hover: #dfdfdf1e;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
   --text-color-1: #323232;
   --text-color-2: #575757;
   --text-color-3: #888888;
@@ -304,16 +304,16 @@ header .top-navbar-container .top-navbar-account li span {
   --text-color-candy-grey-blue: #99a1ae;
   --disabled-color: #e2e2e2;
   --scrollbar-track: #f1f1f1;
-  --scrollbar-thumb: #88888863;
+  --scrollbar-thumb: rgba(136, 136, 136, 0.3882352941);
   --scrollbar-thumb--hover: #555;
   --rounded-corner: #fff;
   --actual-nav-color: #3d0052;
   --border-table: #e2e2e2;
   --border-arrow: #a9a9a9;
   --validation-success: #0ec45a;
-  --validation-success-bg: #14ff7615;
+  --validation-success-bg: rgba(20, 255, 118, 0.0823529412);
   --validation-error: #ff142f;
-  --validation-error-bg: #ff142f15;
+  --validation-error-bg: rgba(255, 20, 47, 0.0823529412);
 }
 
 :root[data-theme=theme-dark] {
@@ -325,8 +325,8 @@ header .top-navbar-container .top-navbar-account li span {
   --card-element-bg-color-hover: #98a5b3;
   --language-bg-color: #62707c;
   --language-bg-color-hover: #697987;
-  --container-shadow: #00000014;
-  --option-btn--hover: #dfdfdf1e;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
   --text-color-1: #ffffff;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
@@ -351,8 +351,8 @@ header .top-navbar-container .top-navbar-account li span {
   --card-element-bg-color-hover: #43444d;
   --language-bg-color: #27282d;
   --language-bg-color-hover: #32333a;
-  --container-shadow: #00000014;
-  --option-btn--hover: #dfdfdf1e;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
   --text-color-1: #f8f8f8;
   --text-color-2: #dcdcdc;
   --text-color-3: #c4c4c4;
@@ -367,9 +367,9 @@ header .top-navbar-container .top-navbar-account li span {
   --border-table: #535f6a;
   --border-arrow: #e8e8e8;
   --validation-success: #0ec45a;
-  --validation-success-bg: #14ff7615;
+  --validation-success-bg: rgba(20, 255, 118, 0.0823529412);
   --validation-error: #ff142f;
-  --validation-error-bg: #ff142f15;
+  --validation-error-bg: rgba(255, 20, 47, 0.0823529412);
 }
 
 :root[data-theme=theme-candy] {
@@ -381,8 +381,8 @@ header .top-navbar-container .top-navbar-account li span {
   --card-element-bg-color-hover: #ffd9d5;
   --language-bg-color: #ffeeed;
   --language-bg-color-hover: #faefee;
-  --container-shadow: #00000014;
-  --option-btn--hover: #dfdfdf1e;
+  --container-shadow: rgba(0, 0, 0, 0.0784313725);
+  --option-btn--hover: rgba(223, 223, 223, 0.1176470588);
   --text-color-1: #4a154b;
   --text-color-2: #601e61;
   --text-color-3: #852e87;

@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { Carousel } from '../common/WalletsView/Carrousel';
 import { Helmet } from 'react-helmet-async';
 import TableItemRow from '../common/WalletsView/TableItemRow';
+import { FormattedMessage } from 'react-intl';
 
 // Functions
 import {
@@ -38,7 +39,10 @@ export default function Wallets() {
                         <div className="wallets-table-content">
                             <div className="wallets-table-header">
                                 <div className="header-column-item">
-                                    Cuenta
+                                    <FormattedMessage
+                                        id="wallets.page.table.account"
+                                        defaultMessage="Cuenta"
+                                    />
                                     <div>
                                         <span className="order-up">
                                             <svg
@@ -63,7 +67,10 @@ export default function Wallets() {
                                     </div>
                                 </div>
                                 <div className="header-column-item">
-                                    Participación
+                                    <FormattedMessage
+                                        id="wallets.page.table.participation"
+                                        defaultMessage="Participación"
+                                    />
                                     <div>
                                         <span className="order-up">
                                             <svg
@@ -88,7 +95,10 @@ export default function Wallets() {
                                     </div>
                                 </div>
                                 <div className="header-column-item">
-                                    Disponible
+                                    <FormattedMessage
+                                        id="wallets.page.table.available"
+                                        defaultMessage="Disponible"
+                                    />
                                     <div>
                                         <span className="order-up">
                                             <svg
@@ -113,7 +123,10 @@ export default function Wallets() {
                                     </div>
                                 </div>
                                 <div className="header-column-item">
-                                    Rendimiento
+                                    <FormattedMessage
+                                        id="wallets.page.table.performance"
+                                        defaultMessage="Rendimiento"
+                                    />
                                     <div>
                                         <span className="order-up">
                                             <svg
@@ -280,7 +293,13 @@ export default function Wallets() {
                                 </g>
                             </svg>
                             <h5>
-                                <b>Dinero disponible:</b>
+                                <b>
+                                    <FormattedMessage
+                                        id="wallets.page.section.total"
+                                        defaultMessage="Dinero disponible"
+                                    />
+                                    :
+                                </b>
                             </h5>
                             <div className="total-balance-container">
                                 <span className="total-balance-currency">
@@ -295,15 +314,30 @@ export default function Wallets() {
                 </span>
             </div>
             <div className="wallets-row col-12">
-                <h2 className="carrousel-title">Bancos</h2>
+                <h2 className="carrousel-title">
+                    <FormattedMessage
+                        id="wallets.page.carrousel.title.banks"
+                        defaultMessage="Bancos"
+                    />
+                </h2>
                 <Carousel itemsArray={bankAccount} />
             </div>
             <div className="wallets-row col-12">
-                <h2 className="carrousel-title">Aplicaciones</h2>
+                <h2 className="carrousel-title">
+                    <FormattedMessage
+                        id="wallets.page.carrousel.title.apps"
+                        defaultMessage="Aplicaciones"
+                    />
+                </h2>
                 <Carousel itemsArray={appAccounts} />
             </div>
             <div className="wallets-row col-12">
-                <h2 className="carrousel-title">Billeteras manuales</h2>
+                <h2 className="carrousel-title">
+                    <FormattedMessage
+                        id="wallets.page.carrousel.title.wallet"
+                        defaultMessage="Billeteras manuales"
+                    />
+                </h2>
                 <Carousel itemsArray={wallets} />
             </div>
         </main>

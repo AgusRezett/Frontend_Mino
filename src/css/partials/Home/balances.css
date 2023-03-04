@@ -67,7 +67,7 @@
   width: 60px;
   height: 60px;
   margin: 50px 10px 10px 0;
-  filter: drop-shadow(0px 0px 5px #0000001f);
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.1215686275));
 }
 .balance-card-space .balance-card-bottom {
   display: flex;
@@ -84,7 +84,7 @@
   color: var(--text-color-2);
   overflow: hidden;
   border-radius: 0 0 12px 12px;
-  box-shadow: 0px 2px 5px #00000014;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.0784313725);
   background-color: var(--card-bg-color);
   transition: all 170ms ease-in-out;
 }
