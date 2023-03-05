@@ -41,18 +41,33 @@ function LoginForm({ changeForm }) {
                         loginEmailInput.classList.add(
                             'login-form-field--error'
                         );
-                        errors.email = 'Correo electrónico inválido';
+                        errors.email = (
+                            <FormattedMessage
+                                id="login.form.sign.up.field.email.error.invalid"
+                                defaultMessage="Correo electrónico inválido"
+                            />
+                        );
                     } else {
                         loginEmailInput.classList.remove(
                             'login-form-field--error'
                         );
                     }
                 } else {
-                    errors.email = 'Requerido';
+                    errors.email = (
+                        <FormattedMessage
+                            id="login.form.sign.up.field.error.required"
+                            defaultMessage="Campo requerido"
+                        />
+                    );
                 }
 
                 if (!values.password) {
-                    errors.password = 'Requerido';
+                    errors.password = (
+                        <FormattedMessage
+                            id="login.form.sign.up.field.error.required"
+                            defaultMessage="Campo requerido"
+                        />
+                    );
                 }
 
                 //? if errors is empty, the form is fine to submit
