@@ -16,3 +16,9 @@ export const getSession = () => {
     session !== null ? (session = true) : (session = false);
     return session;
 };
+
+//? Set a new user session
+export const setUserSession = () => {
+    localStorage.setItem('user-token', 'fe01ce2a7fbac8fafaed7c982a04e229');
+    window.location.href = './';
+};

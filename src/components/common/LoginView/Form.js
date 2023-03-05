@@ -5,6 +5,9 @@ import React, { useEffect, useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { FormattedMessage } from 'react-intl';
 
+// Functions
+import { setUserSession } from '../../../functions/LoginFunctions';
+
 // Config
 //import config from '../../../appconfig.json';
 
@@ -65,7 +68,8 @@ function LoginForm({ changeForm }) {
             }}
             onSubmit={(values, { setSubmitting }) => {
                 setSubmitting(false);
-                alert(JSON.stringify(values, null, 2));
+                //alert(JSON.stringify(values, null, 2));
+                setUserSession();
                 /* Axios.post(`http://${config.host}:${config.port}/login`, values).then((res) => {
 					console.log();
 				}); */
@@ -485,7 +489,8 @@ function RegisterForm({ changeForm }) {
             }}
             onSubmit={(values, { setSubmitting }) => {
                 setSubmitting(false);
-                alert(JSON.stringify(values, null, 2));
+                //alert(JSON.stringify(values, null, 2));
+                setUserSession();
                 /* Axios.post(`http://${config.host}:${config.port}/login`, values).then((res) => {
 					console.log();
 				}); */
@@ -854,6 +859,7 @@ function RecoverPassword({ changeForm }) {
             onSubmit={(values, { setSubmitting }) => {
                 setSubmitting(false);
                 alert(JSON.stringify(values, null, 2));
+                changeForm('ChangePassword');
                 /* Axios.post(`http://${config.host}:${config.port}/login`, values).then((res) => {
 					console.log();
 				}); */
@@ -1083,6 +1089,7 @@ function ChangePassword({ searchVars }) {
             onSubmit={(values, { setSubmitting }) => {
                 setSubmitting(false);
                 alert(JSON.stringify(values, null, 2));
+                setUserSession();
                 /* Axios.post(`http://${config.host}:${config.port}/login`, values).then((res) => {
 					console.log();
 				}); */
