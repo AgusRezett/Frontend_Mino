@@ -2,9 +2,7 @@ import React from 'react';
 
 // Components
 import OptionButton from './OptionButton';
-//import { FormattedMessage } from 'react-intl';
-
-// Components
+import { FormattedMessage } from 'react-intl';
 
 const sideArrow = (
     <div className="expand-toggler">
@@ -73,7 +71,10 @@ export default function Preferencias() {
             <section className="settings-options-container">
                 <div className="settings-options-content">
                     <div className="button-option clean-preferences">
-                        Limpiar mis preferencias
+                        <FormattedMessage
+                            id="config.preferences.option.title.clean-preferences"
+                            defaultMessage="Limpiar mis preferencias"
+                        />
                     </div>
                 </div>
             </section>

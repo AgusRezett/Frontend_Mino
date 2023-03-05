@@ -59,6 +59,11 @@
     "home.card.balance.total": "Total",
     "home.card.new-wallet": "Añadir billetera",
 
+    "home.card.new-wallet.first.title": "Añadí una billetera a tu cuenta Mino",
+    "home.card.new-wallet.first.option.bank": "Cuenta bancaria",
+    "home.card.new-wallet.first.option.apps": "Aplicaciones asociadas",
+    "home.card.new-wallet.first.option.manual": "Nueva billetera",
+
     "wallets.page.table.account": "Cuenta",
     "wallets.page.table.participation": "Participación",
     "wallets.page.table.available": "Disponible",
@@ -100,6 +105,7 @@
     "config.preferences.option.description.theme": "Buscá los colores que más se adapten a vos",
     "config.preferences.option.title.currencies": "Mis divisas",
     "config.preferences.option.description.currencies": "Elegí hasta 3 divisas para mostrar los valores de tus billeteras",
+    "config.preferences.option.title.clean-preferences": "Limpiar mis preferencias",
 
     "config.account.email.title": "Correo electrónico",
     "config.account.email.description": "Dirección de correo asociada a tú cuenta",

@@ -59,6 +59,11 @@
     "home.card.balance.total": "Total",
     "home.card.new-wallet": "Add wallet",
 
+    "home.card.new-wallet.first.title": "Add a new wallet to your Mino",
+    "home.card.new-wallet.first.option.bank": "Bank account",
+    "home.card.new-wallet.first.option.apps": "Asociated app",
+    "home.card.new-wallet.first.option.manual": "New wallet",
+
     "wallets.page.table.account": "Account",
     "wallets.page.table.participation": "Participation",
     "wallets.page.table.available": "Available",
@@ -101,6 +106,7 @@
 
     "config.preferences.option.title.currencies": "My currencies",
     "config.preferences.option.description.currencies": "Choose up to 3 currencies to display the values of your wallets",
+    "config.preferences.option.title.clean-preferences": "Clean preferences",
 
     "config.account.email.title": "Email",
     "config.account.email.description": "Your email account associated to Mino",
